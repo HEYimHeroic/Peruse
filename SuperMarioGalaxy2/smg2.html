@@ -12,6 +12,15 @@
   position: relative;
 }
 
+.name {
+  font-family: Delfino;
+  font-size: 2vw;
+  color: #3c3c3c;
+  text-align: left;
+  position: relative;
+  left: 3vw;
+}
+
 .smgTalk {
   position: absolute;
   top: 6.250vw;
@@ -90,20 +99,37 @@
 </head>
 <body>
 
-<div class="container">
+<label for="charactertag">Choose a character:</label>
+
+<select name="charactertag" id="charactertag" onchange="characterSort()">
+  <option value="lubba">Lubba</option>
+  <option value="rosalina">Rosalina</option>
+  <option value="hungryluma">Hungry Luma</option>
+</select>
+
+<script>
+function characterSort() {
+    console.log("hi");
+  }
+</script>
+
+<div class="name smgPurple">Lubba</div>
+<div class=container>
   <img src="smg.png" style="width: 64.323vw;">
-  <div class="smgTalk">AY-O! Is-- Is that... <img class=smgIcon src="icon/masterluma.png" alt="master-luma"> <font class=smgRed>young master</br>Luma</font>?<font class=smgTalkSmall> It is...isn't it?! Wow...</div>
+  <div class=smgTalk>AY-O! Is-- Is that... <img class=smgIcon src="icon/masterluma.png" alt="[Master Luma icon]"> <font class=smgRed>young master</br>Luma</font>?<font class=smgTalkSmall> It is...isn't it?! Wow...</div>
 </div>
 
-<div class="container">
+<div class="name smgBlue">Rosalina</div>
+<div class=container>
   <img src="smg.png" style="width: 64.323vw;">
-  <div class="smgTalk">We have ascertained the location of</br>your <font class=smgRed>special one</font>. Please take a look</br>at the <font class=smgBlue>circle</font> by your feet.</div>
+  <div class=smgTalk>We have ascertained the location of</br>your <font class=smgRed>special one</font>. Please take a look</br>at the <font class=smgBlue>circle</font> by your feet.</div>
 </div>
 
-<div class="container">
+<div class=name>Hungry Luma</div>
+<div class=container>
   <img src="smg.png" style="width: 64.323vw;">
-  <div class="smgTalk"><font class=smgTalkLarge><font class=smgRed>TRANSFOOOORM!</div>
+  <div class=smgTalk><font class="smgTalkLarge smgRed">TRANSFOOOORM!</div>
 </div>
 
 </body>
-</html> 
+</html>
