@@ -102,34 +102,65 @@
 <label for="charactertag">Choose a character:</label>
 
 <select name="charactertag" id="charactertag" onchange="characterSort()">
-  <option value="lubba">Lubba</option>
-  <option value="rosalina">Rosalina</option>
-  <option value="hungryluma">Hungry Luma</option>
+  <option value="None">None</option>
 </select>
 
+<div>
+  <div class="name smgPurple">Lubba</div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>AY-O! Is-- Is that... <img class=smgIcon src="icon/masterluma.png" alt="[Master Luma icon]"> <font class=smgRed>young master</br>Luma</font>?<font class=smgTalkSmall> It is...isn't it?! Wow...</div>
+  </div>
+</div>
+
+<div>
+  <div class="name smgBlue">Rosalina</div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>We have ascertained the location of</br>your <font class=smgRed>special one</font>. Please take a look</br>at the <font class=smgBlue>circle</font> by your feet.</div>
+  </div>
+</div>
+
+<div>
+  <div class="name">Hungry Luma</div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk><font class="smgTalkLarge smgRed">TRANSFOOOORM!</div>
+  </div>
+</div>
+
 <script>
-function characterSort() {
-    console.log("hi");
+(function () {
+  console.log("hi");
+  var nameElements = document.getElementsByClassName("name");
+  for(i = 0; i < nameElements.length; i++) {
+    console.log(nameElements[i]);
+    var option = document.createElement("option");
+    option.value = nameElements[i].innerHTML;
+    option.innerHTML = nameElements[i].innerHTML;
+    document.getElementById("charactertag").appendChild(option);
   }
+})();
+
+function characterSort() {
+  var characterName = document.getElementById("charactertag").value;
+  var nameElements = document.getElementsByClassName("name");
+  console.log(characterName);
+  for(i = 0; i < nameElements.length; i++) {
+    if(characterName != "None"){
+      console.log(nameElements[i]);
+      if(nameElements[i].innerHTML != characterName) {
+        nameElements[i].parentElement.style.display = "none";
+      }
+      else {
+        nameElements[i].parentElement.style.display = "revert";
+      }
+    } else {
+      nameElements[i].parentElement.style.display = "revert";
+    }
+  } 
+}
 </script>
-
-<div class="name smgPurple">Lubba</div>
-<div class=container>
-  <img src="smg.png" style="width: 64.323vw;">
-  <div class=smgTalk>AY-O! Is-- Is that... <img class=smgIcon src="icon/masterluma.png" alt="[Master Luma icon]"> <font class=smgRed>young master</br>Luma</font>?<font class=smgTalkSmall> It is...isn't it?! Wow...</div>
-</div>
-
-<div class="name smgBlue">Rosalina</div>
-<div class=container>
-  <img src="smg.png" style="width: 64.323vw;">
-  <div class=smgTalk>We have ascertained the location of</br>your <font class=smgRed>special one</font>. Please take a look</br>at the <font class=smgBlue>circle</font> by your feet.</div>
-</div>
-
-<div class=name>Hungry Luma</div>
-<div class=container>
-  <img src="smg.png" style="width: 64.323vw;">
-  <div class=smgTalk><font class="smgTalkLarge smgRed">TRANSFOOOORM!</div>
-</div>
 
 </body>
 </html>
