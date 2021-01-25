@@ -506,11 +506,19 @@ function characterSort() {
     if(characterName != "None"){
       console.log(nameElements[i]);
       if(name != characterName) {
-        nameElements[i].parentElement.style.display = "none";
+		if(nameElements[i].parentElement.parentElement.className === "conversation") {
+			nameElements[i].parentElement.parentElement.style.display = "none";
+		} else {
+			nameElements[i].parentElement.style.display = "none";
+		}
       }
       else {
-        nameElements[i].parentElement.style.display = "revert";
-      }
+		if(nameElements[i].parentElement.parentElement.className === "conversation") {
+			nameElements[i].parentElement.parentElement.style.display = "revert";
+		} else {
+			nameElements[i].parentElement.style.display = "revert";
+		}      
+		}
     } else {
       nameElements[i].parentElement.style.display = "revert";
     }
