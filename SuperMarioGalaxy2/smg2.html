@@ -143,6 +143,12 @@
   <option value="None">None</option>
 </select>
 
+<label for="charactertag">Choose a stage:</label>
+
+<select name="stagetag" id="stagetag" onchange="stageSort()">
+  <option value="None">None</option>
+</select>
+
 <div class=conversation>
 <div>
   <div class="name">Bob-omb Buddy <font class="galaxy"> Starship Mario</font></div>
@@ -497,6 +503,18 @@
 		document.getElementById("charactertag").appendChild(option);
 	}
   }
+  for(i = 0; i < nameElements.length; i++) {
+    console.log(nameElements[i]);
+    var name = nameElements[i].firstElementChild.innerText; 
+	console.log(name);
+	if(document.getElementsByClassName(name).length < 1) {
+		var option = document.createElement("option");
+		option.value = name;
+		option.innerHTML = name;
+		option.className = name;
+		document.getElementById("stagetag").appendChild(option);
+	}
+  }
 })();
 
 function characterSort() {
@@ -515,11 +533,39 @@ function characterSort() {
 		}
       }
       else {
+			if(nameElements[i].parentElement.parentElement.className === "conversation") {
+				nameElements[i].parentElement.parentElement.style.display = "revert";
+			} else {
+				nameElements[i].parentElement.style.display = "revert";
+			}
+		}
+    } else {
+      nameElements[i].parentElement.style.display = "revert";
+	  nameElements[i].parentElement.parentElement.style.display = "revert";
+    }
+  } 
+}
+
+function stageSort() {
+  var stageName = document.getElementById("stagetag").value;
+  var nameElements = document.getElementsByClassName("name");
+  for(i = 0; i < nameElements.length; i++) {
+    var stage = nameElements[i].firstElementChild.innerText;
+    if(stageName != "None"){
+      console.log(stage);
+      if(stage.trim() != stageName) {
 		if(nameElements[i].parentElement.parentElement.className === "conversation") {
-			nameElements[i].parentElement.parentElement.style.display = "revert";
+			nameElements[i].parentElement.parentElement.style.display = "none";
 		} else {
-			nameElements[i].parentElement.style.display = "revert";
-		}      
+			nameElements[i].parentElement.style.display = "none";
+		}
+      }
+      else {
+			if(nameElements[i].parentElement.parentElement.className === "conversation") {
+				nameElements[i].parentElement.parentElement.style.display = "revert";
+			} else {
+				nameElements[i].parentElement.style.display = "revert";
+			}
 		}
     } else {
       nameElements[i].parentElement.style.display = "revert";
