@@ -485,10 +485,15 @@
   var nameElements = document.getElementsByClassName("name");
   for(i = 0; i < nameElements.length; i++) {
     console.log(nameElements[i]);
-    var option = document.createElement("option");
-    option.value = nameElements[i].innerHTML;
-    option.innerHTML = nameElements[i].innerHTML;
-    document.getElementById("charactertag").appendChild(option);
+    var name = nameElements[i].innerHTML.replace(/ <.*$/,''); //remove everything past <
+	console.log(name);
+	if(document.getElementsByClassName(name).length < 1) {
+		var option = document.createElement("option");
+		option.value = name;
+		option.innerHTML = name;
+		option.className = name;
+		document.getElementById("charactertag").appendChild(option);
+	}
   }
 })();
 
@@ -497,9 +502,10 @@ function characterSort() {
   var nameElements = document.getElementsByClassName("name");
   console.log(characterName);
   for(i = 0; i < nameElements.length; i++) {
+    var name = nameElements[i].innerHTML.replace(/ <.*$/,''); //remove everything past <
     if(characterName != "None"){
       console.log(nameElements[i]);
-      if(nameElements[i].innerHTML != characterName) {
+      if(name != characterName) {
         nameElements[i].parentElement.style.display = "none";
       }
       else {
