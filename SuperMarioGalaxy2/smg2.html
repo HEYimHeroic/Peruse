@@ -20,6 +20,7 @@
   text-align: left;
   position: relative;
   left: 3vw;
+  white-space: pre
 }
 
 .description {
@@ -58,7 +59,8 @@
   line-height: 1.3;
   letter-spacing: -0.017vw;
   word-spacing: 0.434vw;
-  text-shadow: 0.174vw 0.174vw #3c3c3c66;
+  text-shadow: 0.174vw 0.174vw #3c3c3c3c;
+  white-space: pre;
 }
 
 .smgInfo {
@@ -73,7 +75,24 @@
   line-height: 1.3;
   letter-spacing: -0.01vw;
   word-spacing: 0.434vw;
-  text-shadow: 0.174vw 0.174vw #3c3c3c66;
+  text-shadow: 0.174vw 0.174vw #3c3c3c3c;
+  white-space: pre;
+}
+
+.smgSign {
+  position: absolute;
+  top: 7.45vw;
+  left: 4vw;
+  transform: translate(0%, -50%) rotate(359deg);
+  text-align: left;
+  font-size: 2.8vw;
+  color: #3c3c3c;
+  font-family: Delfino;
+  line-height: 1.3;
+  letter-spacing: -0.01vw;
+  word-spacing: 0.434vw;
+  text-shadow: 0.174vw 0.174vw #3c3c3c3c;
+  white-space: pre;
 }
 
 .smgTalkSmall {
@@ -94,43 +113,43 @@
   word-spacing: 0.347vw;
 }
 
-.smgNone {
+.none {
   color: #3c3c3c;
 }
 
-.smgRed {
+.red {
   color: #be4343;
 }
 
-.smgBlue {
+.blue {
   color: #194dad;
 }
 
-.smgGreen {
+.green {
   color: #197219;
 }
 
-.smgYellow {
+.yellow {
   color: #d99d00;
 }
 
-.smgGray {
+.gray {
   color: #8e8e9d;
 }
 
-.smgOrange {
+.orange {
   color: #ff6527;
 }
 
-.smgPurple {
+.purple {
   color: #7f2f9d;
 }
 
 .smgIcon {
   width: 3.125vw;
   transform: translate(0%, 20%);
-  -webkit-filter: drop-shadow(0.174vw 0.174vw #3c3c3c66);
-  filter: drop-shadow(0.174vw 0.174vw #3c3c3c66);
+  -webkit-filter: drop-shadow(0.174vw 0.174vw #3c3c3c3c);
+  filter: drop-shadow(0.174vw 0.174vw #3c3c3c3c);
 }
 
 </style>
@@ -151,15 +170,69 @@
 
 <div class=conversation>
 <div>
-  <div class="name">Bob-omb Buddy <font class="galaxy"> Starship Mario</font></div>
+  <div class="name">Luma <font class="galaxy">Sky Station Galaxy</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>Have you heard of this <font class=smgRed>mythical,</br>legendary world<font class=smgNone>?</div>
+    <div class=smgTalk>The other <font class=yellow><img class=smgIcon src="icon/luma.png" alt="[Luma icon]"> Lumas </font>told me about</br>you! Thank you for helping us!</div>
   </div>
 </div>
 
 <div>
-  <div class="name">Bob-omb Buddy <font class="galaxy"> Starship Mario</font></div>
+  <div class="name">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>I'm going to transform into a</br><font class=red><img class=smgIcon src="icon/slingstar.png" alt="[Star icon]"> Launch Star</font>. Come over and fly!</div>
+  </div>
+</div>
+</div>
+
+<div>
+  <div class="name">Sign Board <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign>Hello, friend! Please go<font class=blue> around back</font>!</br>                               <img class=smgIcon src="icon/yoshi.png" alt="[Yoshi icon]"> <font class=green>Yoshi</font></div>
+  </div>
+  <div class="description">The sign on the underside of the first planet in the first star in Sky Station Galaxy.</div>
+</div>
+
+<div>
+  <div class="name">Sign Board <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign>Hello! I'm out helping some friends</br>right now. Sorry if I missed you!</br>                               <img class=smgIcon src="icon/yoshi.png" alt="[Yoshi icon]"> <font class=green>Yoshi</font></div>
+  </div>
+  <div class="description">The sign on top of Yoshi's house in the first star in Sky Station Galaxy.</div>
+</div>
+
+<div>
+  <div class="name">Sign Board <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign>Hello, friend! Please go<font class=blue> around back</font>!</br>             <img class=smgIcon src="icon/yoshi.png" alt="[Yoshi icon]"> <font class=green>Yoshi </font>the space dragon</div>
+  </div>
+  <div class="description">The sign in front of Yoshi's house in the third star in Sky Station Galaxy.</div>
+</div>
+
+<div>
+  <div class="name">Sign Board <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign>Hello! I'm out helping some friends</br>right now. Sorry if I missed you!</br>            <img class=smgIcon src="icon/yoshi.png" alt="[Yoshi icon]"> <font class=green>Yoshi </font>the space dragon</div>
+  </div>
+  <div class="description">The sign on top of Yoshi's house in the third star in Sky Station Galaxy.</div>
+</div>
+
+<div class=conversation>
+<div>
+  <div class="name">Bob-omb Buddy <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Have you heard of this <font class=red>mythical,</br>legendary world<font class=none>?</div>
+  </div>
+</div>
+
+<div>
+  <div class="name">Bob-omb Buddy <font class="galaxy">Starship Mario</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
     <div class=smgTalk>It sounds like an amazing place, but I</br>wonder how you get there...</div>
@@ -169,59 +242,59 @@
 
 <div class=conversation>
 <div>
-  <div class="name smgPurple">Lubba <font class="galaxy"> Cutscene</font></div>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>So you're this <font class=smgRed>Mario </font>guy my little</br><img class=smgIcon src="icon/luma.png" alt="[Luma icon]"> <font class=smgYellow>Lumas</font> won't stop blabbing</br>about, am I right?</div>
+    <div class=smgTalk>So you're this <font class=red>Mario </font>guy my little</br><img class=smgIcon src="icon/luma.png" alt="[Luma icon]"> <font class=yellow>Lumas</font> won't stop blabbing</br>about, am I right?</div>
   </div>
   <div class="description">The first interaction after completing the first star in Sky Station Galaxy. The start of the cutscene.</div>
 </div>
 
 <div>
-  <div class="name smgPurple">Lubba <font class="galaxy"> Cutscene</font></div>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>Sorry to hear about the excitement</br>you had with that <img class=smgIcon src="icon/bowser.png" alt="[Bowser icon]"> <font class=smgBlue/>monster</font> down</br>in the Mushroom Kingdom.</div>
+    <div class=smgTalk>Sorry to hear about the excitement</br>you had with that <img class=smgIcon src="icon/bowser.png" alt="[Bowser icon]"> <font class=blue/>monster</font> down</br>in the Mushroom Kingdom.</div>
   </div>
 </div>
 
 <div>
-  <div class="name smgPurple">Lubba <font class="galaxy"> Cutscene</font></div>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>I sure appreciate you bringing us</br>this <img class=smgIcon src="icon/powerstar.png" alt="[Power Star icon]"> <font class=smgRed>Power Star</font>, though! We need</br>as many of these as we can get!</div>
+    <div class=smgTalk>I sure appreciate you bringing us</br>this <img class=smgIcon src="icon/powerstar.png" alt="[Power Star icon]"> <font class=red>Power Star</font>, though! We need</br>as many of these as we can get!</div>
   </div>
 </div>
 
 <div>
-  <div class="name smgPurple">Lubba <font class="galaxy"> Cutscene</font></div>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>The name's <font class=smgRed>Lubba</font>, by the by. I'm the</br><font class=smgBlue>head honcho </font>of this <font class=smgYellow><img class=smgIcon src="icon/luma.png" alt="[Luma icon]"> Luma </font>crew.</div>
+    <div class=smgTalk>The name's <font class=red>Lubba</font>, by the by. I'm the</br><font class=blue>head honcho </font>of this <font class=yellow><img class=smgIcon src="icon/luma.png" alt="[Luma icon]"> Luma </font>crew.</div>
   </div>
 </div>
 </div>
 
 <div class=conversation>
 <div>
-  <div class="name smgPurple">Lubba <font class="galaxy"> Cutscene</font></div>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>See, believe it or not, we're on a</br><font class=smgBlue>spaceship </font>right now.</div>
+    <div class=smgTalk>See, believe it or not, we're on a</br><font class=blue>spaceship </font>right now.</div>
   </div>
   <div class="description">The second interaction after completing the first star in Sky Station Galaxy. The camera pans out to show the planet the player is standing on.</div>
 </div>
 
 <div>
-  <div class="name smgPurple">Lubba <font class="galaxy"> Cutscene</font></div>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>Took some real elbow grease to</br>convert this little planetoid into a</br><font class=smgBlue>ship</font>, but we <font class=smgRed>Lumas</font> pulled it off!</div>
+    <div class=smgTalk>Took some real elbow grease to</br>convert this little planetoid into a</br><font class=blue>ship</font>, but we <font class=red>Lumas</font> pulled it off!</div>
   </div>
 </div>
 
 <div>
-  <div class="name smgPurple">Lubba <font class="galaxy"> Cutscene</font></div>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
     <div class=smgTalk>May not look like much...<wait time="15"/>but it's home.</div>
@@ -231,63 +304,63 @@
 
 <div class=conversation>
 <div>
-  <div class="name smgPurple">Lubba <font class="galaxy"> Cutscene</font></div>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>Truth be told, the <font class=smgBlue>ship</font>...<wait time="15"/>she's not in</br>such hot shape right now.</div>
+    <div class=smgTalk>Truth be told, the <font class=blue>ship</font>...<wait time="15"/>she's not in</br>such hot shape right now.</div>
   </div>
   <div class="description">The third interaction after completing the first star in Sky Station Galaxy. The camera returns to Lubba and the player.</div>
 </div>
 
 <div>
-  <div class="name smgPurple">Lubba <font class="galaxy"> Cutscene</font></div>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>We ran into that <font class=smgRed><img class=smgIcon src="icon/bowser.png" alt="[Bowser icon]"> monster</font> too! He</br>blasted us with meteors, and some of</br>my <font class=smgYellow>crew </font>were thrown overboard!</div>
+    <div class=smgTalk>We ran into that <font class=red><img class=smgIcon src="icon/bowser.png" alt="[Bowser icon]"> monster</font> too! He</br>blasted us with meteors, and some of</br>my <font class=yellow>crew </font>were thrown overboard!</div>
   </div>
 </div>
 </div>
 
 <div>
-  <div class="name smgPurple">Lubba <font class="galaxy"> Cutscene</font></div>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>So that <img class=smgIcon src="icon/bowser.png" alt="[Bowser icon]"> <font class=smgRed>monster </font>kidnapped</br>your <font class=smgBlue><img class=smgIcon src="icon/peach.png" alt="[Princess Peach icon]"> princess</font>, eh? That's cold...</br>Deep-space cold, if ya ask me.</div>
+    <div class=smgTalk>So that <img class=smgIcon src="icon/bowser.png" alt="[Bowser icon]"> <font class=red>monster </font>kidnapped</br>your <font class=blue><img class=smgIcon src="icon/peach.png" alt="[Princess Peach icon]"> princess</font>, eh? That's cold...</br>Deep-space cold, if ya ask me.</div>
   </div>
   <div class="description">The fourth interaction after completing the first star in Sky Station Galaxy. The camera zooms in onto Mario's face.</div>
 </div>
 
 <div class=conversation>
 <div>
-  <div class="name smgPurple">Lubba <font class="galaxy"> Cutscene</font></div>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>Ya know what else is cold? That</br><img class=smgIcon src="icon/bowser.png" alt="[Bowser icon]"> <font class=smgRed>monster </font>stealing every last one of</br>our <img class=smgIcon src="icon/powerstar.png" alt="[Power Star icon]"> <font class=smgYellow>Power Stars</font>!</div>
+    <div class=smgTalk>Ya know what else is cold? That</br><img class=smgIcon src="icon/bowser.png" alt="[Bowser icon]"> <font class=red>monster </font>stealing every last one of</br>our <img class=smgIcon src="icon/powerstar.png" alt="[Power Star icon]"> <font class=yellow>Power Stars</font>!</div>
   </div>
   <div class="description">The fifth interaction after completing the first star in Sky Station Galaxy. The camera returns to Lubba and the player.</div>
 </div>
 
 <div>
-  <div class="name smgPurple">Lubba <font class="galaxy"> Cutscene</font></div>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>See, that's our fuel. Our <font class=smgBlue>spaceship</br>runs on energy from </font><img class=smgIcon src="icon/powerstar.png" alt="[Power Star icon]">! Without</br>that, we're stranded here!</div>
+    <div class=smgTalk>See, that's our fuel. Our <font class=blue>spaceship</br>runs on energy from </font><img class=smgIcon src="icon/powerstar.png" alt="[Power Star icon]">! Without</br>that, we're stranded here!</div>
   </div>
 </div>
 </div>
 
 <div class=conversation>
 <div>
-  <div class="name smgPurple">Lubba <font class="galaxy"> Cutscene</font></div>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>AY-O! Is-- Is that... <img class=smgIcon src="icon/masterluma.png" alt="[Master Luma icon]"> <font class=smgRed>young master</br>Luma</font>?<font class=smgTalkSmall> It is...isn't it?! Wow...</font></div>
+    <div class=smgTalk>AY-O! Is-- Is that... <img class=smgIcon src="icon/masterluma.png" alt="[Master Luma icon]"> <font class=red>young master</br>Luma</font>?<font class=smgTalkSmall> It is...isn't it?! Wow...</font></div>
   </div>
   <div class="description">The sixth interaction after completing the first star in Sky Station Galaxy. Baby Luma appears out from under Mario's cap, to Lubba's surprise.</div>
 </div>
 
 <div>
-  <div class="name smgPurple">Lubba <font class="galaxy"> Cutscene</font></div>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
     <div class=smgTalk>Wait--if you have the trust of young</br>master Luma...<wait time="15"/>hmm<wait time="15"/>.<wait time="15"/>.<wait time="15"/>.<wait time="30"/> Say, I just might</br>have a little proposition for ya.</div>
@@ -295,10 +368,10 @@
 </div>
 
 <div>
-  <div class="name smgPurple">Lubba <font class="galaxy"> Cutscene</font></div>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
   <div class=container>
     <img src="smg-n.png" style="width: 64.323vw;">
-    <div class=smgTalk>Hear me out, now... Your <font class=smgBlue>special</br>someone</font> got kidnapped and now you</br>gotta save her, am I right?</div>
+    <div class=smgTalk>Hear me out, now... Your <font class=blue>special</br>someone</font> got kidnapped and now you</br>gotta save her, am I right?</div>
   </div>
   <div class="description">The player is given two choices: "That's right", and "Yes". They both lead to the next textbox.</div>
 </div>
@@ -306,16 +379,16 @@
 
 <div class=conversation>
 <div>
-  <div class="name smgPurple">Lubba <font class="galaxy"> Cutscene</font></div>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>And we need fuel for our <font class=smgBlue>ship</font>.<wait time="15"/> Now,</br>if you think you could get some of</br>our <img class=smgIcon src="icon/powerstar.png" alt="[Power Star icon]"> back for us...</div>
+    <div class=smgTalk>And we need fuel for our <font class=blue>ship</font>.<wait time="15"/> Now,</br>if you think you could get some of</br>our <img class=smgIcon src="icon/powerstar.png" alt="[Power Star icon]"> back for us...</div>
   </div>
   <div class="description">After Mario agrees with Lubba, the seventh interaction after completing the first star in Sky Station Galaxy.</div>
 </div>
 
 <div>
-  <div class="name smgPurple">Lubba <font class="galaxy"> Cutscene</font></div>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
   <div class=container>
     <img src="smg-n.png" style="width: 64.323vw;">
     <div class=smgTalk>I'd be willing to make this ship</br>your very own for a bit. <wait time="30"/>That's a</br>fair exchange! Am I right, Mario?</div>
@@ -326,7 +399,7 @@
 
 <div class=conversation>
 <div>
-  <div class="name smgPurple">Lubba <font class="galaxy"> Cutscene</font></div>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
     <div class=smgTalk>All right! It's a deal!</div>
@@ -335,16 +408,16 @@
 </div>
 
 <div>
-  <div class="name smgPurple">Lubba <font class="galaxy"> Cutscene</font></div>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>OK, gang! Let's get cracking, yeah?</br>I want everything <font class=smgBlue>space-shipshape</font>!</div>
+    <div class=smgTalk>OK, gang! Let's get cracking, yeah?</br>I want everything <font class=blue>space-shipshape</font>!</div>
   </div>
 </div>
 </div>
 
 <div>
-  <div class="name">System <font class="galaxy"> Cutscene</font></div>
+  <div class="name">System <font class="galaxy">Cutscene</font></div>
   <div class=container>
     <img src="smginfo.png" style="width: 64.323vw;">
     <div class=smgInfo>Lubba's crew rebuilt the spaceship to</br>look just like Mario!</div>
@@ -353,7 +426,7 @@
 </div>
 
 <div>
-  <div class="name smgPurple">Lubba <font class="galaxy"> Cutscene</font></div>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
     <div class=smgTalk>Well? Whaddya think?</div>
@@ -363,16 +436,16 @@
 
 <div class=conversation>
 <div>
-  <div class="name smgPurple">Lubba <font class="galaxy"> Cutscene</font></div>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>Nice spaceship, yeah? More like a</br><font class=smgBlue>faceship</font>!<wait time="15"/> Har har!</div>
+    <div class=smgTalk>Nice spaceship, yeah? More like a</br><font class=blue>faceship</font>!<wait time="15"/> Har har!</div>
   </div>
   <div class="description">The 11th interaction after completing the first star in Sky Station Galaxy. The camera moves to show the face of Starship Mario.</div>
 </div>
 
 <div>
-  <div class="name smgPurple">Lubba <font class="galaxy"> Cutscene</font></div>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
     <div class=smgTalk>Well, at least you'll never lose it in a</br>parking lot! Am I right? Har har!</div>
@@ -381,7 +454,7 @@
 </div>
 
 <div>
-  <div class="name smgPurple">Lubba <font class="galaxy"> Cutscene</font></div>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
     <div class=smgTalk>So what's next? <wait time="15"/>Don't look at me--this</br>ship has your face on it, not mine!<wait time="15"/></br>The decision is yours!</div>
@@ -390,16 +463,16 @@
 </div>
 
 <div>
-  <div class="name smgPurple">Lubba <font class="galaxy"> Cutscene</font></div>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>Feel free to explore <font class=smgRed>Starship Mario</font>,</br>or take the helm if you're ready to</br><font class=smgBlue>ship out</font>! It's your call, Captain!</div>
+    <div class=smgTalk>Feel free to explore <font class=red>Starship Mario</font>,</br>or take the helm if you're ready to</br><font class=blue>ship out</font>! It's your call, Captain!</div>
   </div>
   <div class="description">The 13th interaction after completing the first star in Sky Station Galaxy. The camera zooms in on Lubba. Afterwards, the game saves, and returns to normal gameplay.</div>
 </div>
 
 <div>
-  <div class="name">Gearmo Hunter <font class="galaxy"> Starship Mario</font></div>
+  <div class="name">Gearmo Hunter <font class="galaxy">Starship Mario</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
     <div class=smgTalk>Hiya! Thanks again for all your</br>help. Take this <img class=smgIcon src="icon/1up.png" alt="[1-UP icon]">!</div>
@@ -408,16 +481,16 @@
 </div>
 
 <div>
-  <div class="name">Gearmo Hunter <font class="galaxy"> Starship Mario</font></div>
+  <div class="name">Gearmo Hunter <font class="galaxy">Starship Mario</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>I kinda dig those <img class=smgIcon src="icon/goomba.png" alt="[Goomba icon]"> <font class=smgRed>guys</font>!</div>
+    <div class=smgTalk>I kinda dig those <img class=smgIcon src="icon/goomba.png" alt="[Goomba icon]"> <font class=red>guys</font>!</div>
   </div>
   <div class="description">The second+ interaction after completing the Goomba Gearmo Hunter star.</div>
 </div>
 
 <div>
-  <div class="name">Gearmo Hunter <font class="galaxy"> Starship Mario</font></div>
+  <div class="name">Gearmo Hunter <font class="galaxy">Starship Mario</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
     <div class=smgTalk>Hiya! You sure were helpful back</br>there! Take this <img class=smgIcon src="icon/1up.png" alt="[1-UP icon]">!</div>
@@ -426,65 +499,49 @@
 </div>
 
 <div>
-  <div class="name">Gearmo Hunter <font class="galaxy"> Starship Mario</font></div>
+  <div class="name">Gearmo Hunter <font class="galaxy">Starship Mario</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>I just love the way those li'l <img class=smgIcon src="icon/topman.png" alt="[Topman icon]"> <font class=smgRed>red</br>guys</font> spin!</div>
+    <div class=smgTalk>I just love the way those li'l <img class=smgIcon src="icon/topman.png" alt="[Topman icon]"> <font class=red>red</br>guys</font> spin!</div>
   </div>
   <div class="description">The second+ interaction after completing the Topman Gearmo Hunter star.</div>
 </div>
 
 <div class=conversation>
 <div>
-  <div class="name">Honeybee <font class="galaxy"> Starship Mario</font></div>
+  <div class="name">Honeybee <font class="galaxy">Starship Mario</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>Bet you'd like to know <font class=smgBlue>our secret</font>...</div>
+    <div class=smgTalk>Bet you'd like to know <font class=blue>our secret</font>...</div>
   </div>
 </div>
 
 <div>
-  <div class="name">Honeybee <font class="galaxy"> Starship Mario</font></div>
+  <div class="name">Honeybee <font class="galaxy">Starship Mario</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>When we get <img class=smgIcon src="icon/coin.png" alt="[Coin icon]"> <font class=smgYellow>coins </font>in the air,</br>we can <font class=smgBlue>fly farther</font>!</div>
+    <div class=smgTalk>When we get <img class=smgIcon src="icon/coin.png" alt="[Coin icon]"> <font class=yellow>coins </font>in the air,</br>we can <font class=blue>fly farther</font>!</div>
   </div>
 </div>
 </div>
 
 <div class=conversation>
 <div>
-  <div class="name">Captain Toad <font class="galaxy"> Starship Mario</font></div>
+  <div class="name">Captain Toad <font class="galaxy">Starship Mario</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>Hi, Mario! We are the <font class=smgRed>Toad Brigade</font>!</br>Our goal is to find <img class=smgIcon src="icon/powerstar.png" alt="[Power Star icon]"> <font class=smgYellow>Power Stars</br></font>and save <font class=smgRed>Princess Peach</font>!</div>
+    <div class=smgTalk>Hi, Mario! We are the <font class=red>Toad Brigade</font>!</br>Our goal is to find <img class=smgIcon src="icon/powerstar.png" alt="[Power Star icon]"> <font class=yellow>Power Stars</br></font>and save <font class=red>Princess Peach</font>!</div>
   </div>
   <div class="description">Captain Toad, the first time he appears on Starship Mario in World 1.</div>
 </div>
 
 <div>
-  <div class="name">Captain Toad <font class="galaxy"> Starship Mario</font></div>
+  <div class="name">Captain Toad <font class="galaxy">Starship Mario</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>Worry not, because we've got it all</br>under control. This mission is child's</br>play for the <font class=smgRed>Toad Brigade</font>!</div>
+    <div class=smgTalk>Worry not, because we've got it all</br>under control. This mission is child's</br>play for the <font class=red>Toad Brigade</font>!</div>
   </div>
 </div>
-</div>
-
-<div>
-  <div class="name smgBlue">Rosalina <font class="galaxy"> Comet Observatory</font></div>
-  <div class=container>
-    <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>We have ascertained the location of</br>your <font class=smgRed>special one</font>. Please take a look</br>at the <font class=smgBlue>circle</font> by your feet.</div>
-  </div>
-</div>
-
-<div>
-  <div class="name">Hungry Luma <font class="galaxy"> Common</font></div>
-  <div class=container>
-    <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk><font class="smgTalkLarge smgRed">TRANSFOOOORM!</div>
-  </div>
 </div>
 
 <script>
