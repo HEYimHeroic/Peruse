@@ -5,5 +5,5 @@ https://heyimheroic.github.io/Peruse/
 
 current games supported:
 * Super Mario Galaxy 2 
-** USA English (partly)
-** All others (none)
+  * USA English (partly)
+  * All others (none)
