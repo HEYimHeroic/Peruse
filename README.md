@@ -7,3 +7,7 @@ current games supported:
 * Super Mario Galaxy 2 
   * USA English (partly)
   * All others (none)
+
+Special Thanks
+* [Twitter](https://twitter.com/coolreader18)/[GitHub user "coolreader18"](https://github.com/coolreader18/)
+* [GitHub user sticks-stuff](https://github.com/sticks-stuff)
