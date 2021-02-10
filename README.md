@@ -10,4 +10,4 @@ current games supported:
 
 Special Thanks
 * [Twitter](https://twitter.com/coolreader18)/[GitHub user "coolreader18"](https://github.com/coolreader18/)
-* [GitHub user sticks-stuff](https://github.com/sticks-stuff)
+* [GitHub user "sticks-stuff"](https://github.com/sticks-stuff)
