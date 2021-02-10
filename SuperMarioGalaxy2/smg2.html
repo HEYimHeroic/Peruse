@@ -11,6 +11,7 @@
 .container {
   position: relative;
   width: 64.323vw;
+  font-size: 0;
 }
 
 .name {
@@ -32,6 +33,7 @@
   left: 2vw;
   letter-spacing: -0.05vw;
   word-spacing: 0.2vw;
+  white-space: pre;
 }
 
 .conversation {
@@ -63,6 +65,24 @@
   white-space: pre;
 }
 
+.smgBook {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50%;
+  font-size: 1.865vw;
+  color: #ffffff;
+  font-family: Delfino;
+  line-height: 1.3;
+  letter-spacing: -0.017vw;
+  word-spacing: 0.434vw;
+  text-shadow: 0.174vw 0.174vw #3c3c3c4d;
+  white-space: pre;
+  background-color: #0000007f;
+  width: 100%;
+}
+
 .smgShout {
   position: absolute;
   top: 50%;
@@ -87,6 +107,39 @@
   text-align: left;
   font-size: 2.865vw;
   color: #3c3c3c;
+  font-family: Delfino;
+  line-height: 1.3;
+  letter-spacing: -0.01vw;
+  word-spacing: 0.434vw;
+  text-shadow: 0.174vw 0.174vw #3c3c3c4d;
+  white-space: pre;
+}
+
+.smgPlain {
+  position: absolute;
+  background-color: #ffffff;
+  top: 6vw;
+  left: 3.2vw;
+  transform: translate(0%, -50%);
+  text-align: left;
+  font-size: 2.865vw;
+  color: #00b4b4;
+  font-family: Delfino;
+  line-height: 1.3;
+  letter-spacing: -0.01vw;
+  word-spacing: 0.434vw;
+  text-shadow: 0.174vw 0.174vw #3c3c3c4d;
+  white-space: pre;
+}
+
+.smgPlain1 {
+  position: absolute;
+  top: 6vw;
+  left: 3.2vw;
+  transform: translate(0%, -50%);
+  text-align: left;
+  font-size: 2.865vw;
+  color: #ffffff;
   font-family: Delfino;
   line-height: 1.3;
   letter-spacing: -0.01vw;
@@ -125,7 +178,7 @@
 
 .talkLarge {
   font-size: 150%;
-  letter-spacing: -0.156vw;
+  letter-spacing: 0vw;
   word-spacing: 0.347vw;
 }
 
@@ -175,6 +228,21 @@
   filter: drop-shadow(0.174vw 0.174vw #3c3c3c4d);
 }
 
+.iconBook {
+  height: 2.5vw;
+  position: relative;
+  -webkit-filter: drop-shadow(0.174vw 0.174vw #3c3c3c4d);
+  filter: drop-shadow(0.174vw 0.174vw #3c3c3c4d);
+}
+
+.iconBookL {
+  display: inline-block;
+  height: 3.5vw;
+  position: absolute;
+  -webkit-filter: drop-shadow(0.174vw 0.174vw #3c3c3c4d);
+  filter: drop-shadow(0.174vw 0.174vw #3c3c3c4d);
+}
+
 .icon1 {
   object-position: right 1px left 0px;
   height: 3.698vw;
@@ -189,10 +257,22 @@
   height: 0.1vw
 }
 
+.icoLarge {
+  display: inline-block;
+  width: 3.377vw;
+  height: 0.1vw
+}
+
+.plainSpan {
+  display: inline-block;
+  width: 0.1vw;
+  height: 12vw;
+}
+
 .icox {
   display: inline-block;
   width: 2.5vw;
-  height: 0.1vw
+  height: 0.1vw;
 }
 
 </style>
@@ -211,9 +291,646 @@
   <option value="None">None</option>
 </select>
 
+<label for="playerChoice1">Select a player:</label>
+
+<select id="playerChoice">
+  <option value="Mario">Mario</option>
+  <option value="Luigi">Luigi</option>
+</select>
+
 <div class=conversation>
 <div>
-  <div class="name">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class="name">System <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <span class=plainSpan></span>
+    <div class=smgPlain>Now, let me tell you a new story that</br>also begins with stardust...</div>
+  </div>
+  <div class="description">The text that first appears when starting a new save file.</div>
+</div>
+
+<div>
+  <div class="name">System <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <span class=plainSpan></span>
+    <div class=smgPlain1>Shimmering stardust falls on the</br>Mushroom Kingdom once a century.</br>That time had come again...</div>
+  </div>
+  <div class="description">DEV NOTE: The text is supposed to look white. But since the page is also white, it doesn't appear correctly.</br>A feature is planned to allow the user to change the color of the background of the page, which would solve this.</br>For now, you can highlight the text with your cursor to read it better.</div>
+</div>
+</div>
+
+<div>
+  <div class="name">Storybook <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgBookBottom.png" style="width: 64.323vw; white-space-collapsing: discard;">
+    <div class=smgBook>The Star Festival had just begun. Toads</br>everywhere were celebrating...</div>
+  </div>
+  <div class="description">The first storybook text in Peach's Castle.</div>
+</div>
+
+<div>
+  <div class="name green">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Hey, --character--!</div>
+  </div>
+  <div class="description">The green Toad that the player encounters in the first area of Peach's Castle.</div>
+</div>
+
+<div>
+  <div class="name purple">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Woohoo! <img class=icon src="icon/starbit.png" alt="[Purple Star Bit icon]"><span class=ico></span> Star Bits!</div>
+  </div>
+  <div class="description">The purple Toad that the player encounters in the first area of Peach's Castle.</div>
+</div>
+
+<div>
+  <div class="name red">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Grab the <img class=icon src="icon/starbit.png" alt="[Purple Star Bit icon]"><span class=ico></span>!</div>
+  </div>
+  <div class="description">The red Toad that the player encounters in the the first area of Peach's Castle.</div>
+</div>
+
+<div>
+  <div class="name">Storybook <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgBookBottom.png" style="width: 64.323vw;">
+    <div class=smgBook>Star Bits rained down from the sky...</div>
+  </div>
+  <div class="description">The second storybook text in Peach's Castle.</div>
+</div>
+
+<div>
+  <div class="name yellow">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Point <img class=icon src="icon/wiimote.png" alt="[Wii Remote icon]"><span class=ico></span> at the screen and...</div>
+  </div>
+  <div class="description">The yellow Toad that the player encounters in the first area of Peach's Castle.</div>
+</div>
+
+<div>
+  <div class="name blue">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Use <img class=icon src="icon/pointerP1.png" alt="[P1 Pointer icon]"><span class=ico></span> to grab them!</div>
+  </div>
+  <div class="description">The first blue Toad that the player encounters in the first area of Peach's Castle.</div>
+</div>
+
+<div>
+  <div class="name blue">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Happy Star Festival! Yay!</div>
+  </div>
+  <div class="description">The second blue Toad that the player encounters in the first area of Peach's Castle.</div>
+</div>
+
+<div>
+  <div class="name">Storybook <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <div class=smgBook><font class=talkLarge>"△××△△×?!"</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <div class="description">The third storybook text in Peach's Castle, during the meeting with Master Luma. Spoken by Master Luma.</div>
+</div>
+
+<div class=conversation>
+<div>
+  <div class="name">Storybook <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <div class=smgBook>The strange little fellow seemed confused...</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <div class="description">The fourth storybook text in Peach's Castle, during the meeting with Master Luma.</div>
+</div>
+
+<div>
+  <div class="name">Storybook <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <div class=smgBook>Was he lost?</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+</div>
+</div>
+
+<div>
+  <div class="name">Storybook <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <div class=smgBook>He seemed to take a shine to --character--!</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <div class="description">The fifth storybook text in Peach's Castle, during the meeting with Master Luma.</div>
+</div>
+
+<div>
+  <div class="name">Storybook <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <div class=smgBook>--character--'s cap filled with warmth as he felt a new</br>power surging through him!</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <div class="description">The sixth storybook text in Peach's Castle, during the meeting with Master Luma. Master Luma jumps into Mario's cap.</div>
+</div>
+
+<div>
+  <div class="name">Storybook <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <div class=smgBook><img class=iconBook src="icon/masterluma.png" alt="[Master Luma icon]"> "... △△... Um..."<soundeffect></div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <div class="description">The seventh storybook text in Peach's Castle, after the meeting with Master Luma. Spoken by Master Luma.</div>
+</div>
+
+<div>
+  <div class="name yellow">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>This thing fell from the sky!</div>
+  </div>
+  <div class="description">The yellow Toad that the player encounters in the second area of Peach's Castle, before smashing the crystal in front of him.</div>
+</div>
+
+<div>
+  <div class="name">Storybook <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <div class=smgBook><img class=iconBook src="icon/masterluma.png" alt="[Master Luma icon]"> "Shake <img class=iconBook src="icon/wiimote.png" alt="[Wii Remote icon]"> to spin!"<soundeffect></div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <div class="description">The eigth storybook text in Peach's Castle. Spoken by Master Luma.</div>
+</div>
+
+<div>
+  <div class="name yellow">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Wow, --character--!</div>
+  </div>
+  <div class="description">The yellow Toad that the player encounters in the second area of Peach's Castle, after smashing the crystal in front of him.</div>
+</div>
+
+<div>
+  <div class="name green">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Hey, can you break <font class=blue>this</font>?</div>
+  </div>
+  <div class="description">The green Toad that the player encounters in the second area of Peach's Castle, before smashing the crystal in front of him.</div>
+</div>
+
+<div>
+  <div class="name green">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Nice one, --character--!</div>
+  </div>
+  <div class="description">The green Toad that the player encounters in the second area of Peach's Castle, after smashing the crystal in front of him.</div>
+</div>
+
+<div>
+  <div class="name purple">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>How about <font class=blue>this</font>?</div>
+  </div>
+  <div class="description">The purple Toad that the player encounters in the second area of Peach's Castle, before smashing the crystal in front of him.</div>
+</div>
+
+<div>
+  <div class="name purple">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Wow, --character--!</div>
+  </div>
+  <div class="description">The purple Toad that the player encounters in the second area of Peach's Castle, after smashing the crystal in front of him.</div>
+</div>
+
+<div>
+  <div class="name red">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>The <font class=red>princess</font> is in the castle!</div>
+  </div>
+  <div class="description">The red Toad that the player encounters in the second area of Peach's Castle.</div>
+</div>
+
+<div>
+  <div class="name">Storybook <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgBookBottom.png" style="width: 64.323vw; white-space-collapsing: discard;">
+    <div class=smgBook>What's this? Was this one of the little</br>fellow's friends?</div>
+  </div>
+  <div class="description">The ninth storybook text in Peach's Castle.</div>
+</div>
+
+<div>
+  <div class="name">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Thanks!</div>
+  </div>
+  <div class="description">The first of five randomly selected phrases for yellow and orange Lumas to say when shot with a Star Bit.</div>
+</div>
+
+<div>
+  <div class="name">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>YUMM! ♪</div>
+  </div>
+  <div class="description">The second of five randomly selected phrases for yellow and orange Lumas to say when shot with a Star Bit.</div>
+</div>
+
+<div>
+  <div class="name">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Mmmmm...happy... ♪</div>
+  </div>
+  <div class="description">The third of five randomly selected phrases for yellow and orange Lumas to say when shot with a Star Bit.</div>
+</div>
+
+<div>
+  <div class="name">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Eeheehee...</div>
+  </div>
+  <div class="description">The fourth of five randomly selected phrases for yellow and orange Lumas to say when shot with a Star Bit.</div>
+</div>
+
+<div>
+  <div class="name">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Tasty! ♪</div>
+  </div>
+  <div class="description">The last of five randomly selected phrases for yellow and orange Lumas to say when shot with a Star Bit.</div>
+</div>
+
+<div>
+  <div class="name yellow">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Phew! I'm free! But...where am I?</div>
+  </div>
+  <div class="description">The Luma trapped in a crystal that the player encounters in the third area of Peach's Castle.</div>
+</div>
+
+<div>
+  <div class="name yellow">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Welcome, --character--!</div>
+  </div>
+  <div class="description">The yellow Toad that the player encounters in the third area of Peach's Castle.</div>
+</div>
+
+<div>
+  <div class="name yellow">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>What's that scary sound?!</div>
+  </div>
+  <div class="description">The first Luma trapped in a crystal that the player encounters in the fourth area of Peach's Castle.</div>
+</div>
+
+<div>
+  <div class="name green">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>It's Bowser!</div>
+  </div>
+  <div class="description">The first green Toad that the player encounters in the fourth area of Peach's Castle.</div>
+</div>
+
+<div>
+  <div class="name purple">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>AGGH! Everyone panic!</div>
+  </div>
+  <div class="description">The first purple Toad that the player encounters in the fourth area of Peach's Castle.</div>
+</div>
+
+<div>
+  <div class="name yellow">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>It's a monster!</div>
+  </div>
+  <div class="description">The second Luma trapped in a crystal that the player encounters in the fourth area of Peach's Castle.</div>
+</div>
+
+<div>
+  <div class="name red">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>The sky is falling!</div>
+  </div>
+  <div class="description">The first red Toad that the player encounters in the fourth area of Peach's Castle.</div>
+</div>
+
+<div>
+  <div class="name yellow">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Where's the ship?!</div>
+  </div>
+  <div class="description">The third Luma trapped in a crystal that the player encounters in the fourth area of Peach's Castle.</div>
+</div>
+
+<div class=conversation>
+<div>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"You're too late, --character--!"<soundeffect></div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <div class="description">The 10th storybook text in Peach's Castle. Spoken by Bowser, who is giant and attacking Peach's Castle.</div>
+</div>
+
+<div>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"The power of the stars is already MINE!</br> And look what else I got..."<soundeffect></div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+</div>
+</div>
+
+<div>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook> "GWAHAHAAH!"<soundeffect></div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <div class="description">The 11th storybook text in Peach's Castle. Spoken by Bowser. The camera shows he's holding Princess Peach.</div>
+</div>
+
+<div>
+  <div class="name">Princess Peach <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout><font class=red>HELP ME!</font></div>
+  </div>
+  <div class="description">Princess Peach while being held by Bowser in the fourth area of Peach's Castle.</div>
+</div>
+
+<div class=conversation>
+<div>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"I'm HUUUUGE!"<soundeffect></div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <div class="description">The 12th storybook text in Peach's Castle. Spoken by Bowser.</div>
+</div>
+
+<div>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"Even scarier up close, huh?"<soundeffect></div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+</div>
+</div>
+
+<div class=conversation>
+<div>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"Maybe I'll have Peach bake ME something</br> for once..."<soundeffect></div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <div class="description">The 13th storybook text in Peach's Castle. Spoken by Bowser. The camera zooms in on Princess Peach again.</div>
+</div>
+
+<div>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"I sure could go for a galaxy-sized slice</br> of cake right now!"<soundeffect></div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+</div>
+</div>
+
+<div class=conversation>
+<div>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"I'm way too huge for this puny planet!"<soundeffect></div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <div class="description">The 14th storybook text in Peach's Castle. Spoken by Bowser.</div>
+</div>
+
+<div>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"I deserve an empire that's more ME size!"<soundeffect></div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+</div>
+
+<div>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"And I'll put it in the center of the universe!"<soundeffect></div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+</div>
+</div>
+
+<div>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"Have fun with your stupid mushrooms!"<soundeffect></div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <div class="description">The 15th storybook text in Peach's Castle. Spoken by Bowser, as he flies away with Princess Peach.</div>
+</div>
+
+<div>
+  <div class="name red">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>STAY CALM! STAY CALM!</div>
+  </div>
+  <div class="description">The second red Toad that the player encounters in the fourth area of Peach's Castle.</div>
+</div>
+
+<div>
+  <div class="name purple">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>What do we do?!</div>
+  </div>
+  <div class="description">The second purple Toad that the player encounters in the fourth area of Peach's Castle.</div>
+</div>
+
+<div>
+  <div class="name green">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>That was awful!</div>
+  </div>
+  <div class="description">The second green Toad that the player encounters in the fourth area of Peach's Castle.</div>
+</div>
+
+<div>
+  <div class="name blue">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>You must save Princess Peach!</div>
+  </div>
+  <div class="description">The blue Toad that the player encounters in the fourth area of Peach's Castle.</div>
+</div>
+
+<div>
+  <div class="name yellow">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Why, <font class=red>Bowser</font>? WHY?!</div>
+  </div>
+  <div class="description">The yellow Toad that the player encounters in the fourth area of Peach's Castle.</div>
+</div>
+
+<div>
+  <div class="name yellow">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>--character--!</div>
+  </div>
+  <div class="description">The second Luma waiting for the player at the doors of Peach's Castle in the fourth area, if the player is too far away.</div>
+</div>
+
+<div class=conversation>
+<div>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"--character--? Where did that monster come from?!"</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <div class="description">The 16th storybook text in Peach's Castle. Spoken by a Luma at the gate of Peach's Castle, once Mario approaches.</div>
+</div>
+
+<div>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"He took your princess to the center of the</br>universe! You must hurry and save her!"</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+</div>
+</div>
+
+<div class=conversation>
+<div>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"<font class=talkLarge>OH! Master <img class=iconBookL src="icon/masterluma.png" alt="[Master Luma icon]"><span class=icoLarge></span> Luma!"</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <div class="description">The 17th storybook text in Peach's Castle. Spoken by the second Luma at the gate of Peach's Castle. Master Luma pops out of Mario's cap.</div>
+</div>
+
+<div>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"Young master <img class=iconBook src="icon/masterluma.png" alt="[Master Luma icon]"> Luma, did you get thrown</br> overboard too? Good thing you're safe!"</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <div class="description">DEV NOTE: This sucks, and I hate it. I have spent hours trying to fix it now, and you know what? The beauty of GitHub means</br>someone else who *actually* knows how to code can fix it. I have no idea what I'm doing. Good day.</br>          -Alice</div>
+</div>
+
+<div>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"I see... So you're going to stay in --character--'s cap?</br> That should be safe for now..."</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+</div>
+
+<div>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"But, --character--, you have other things to worry</br> about...like saving the princess! ...But how?"</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+</div>
+</div>
+
+<div class=conversation>
+<div>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"I know! With young master <img class=iconBook src="icon/masterluma.png" alt="[Master Luma icon]"> Luma's help,</br> you can use the power of the stars!"</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <div class="description">The 18th storybook text in Peach's Castle. Spoken by the second Luma at the gate of Peach's Castle.</div>
+  <div class="description">DEV NOTE: This sucks, and I hate it. I have spent hours trying to fix it now, and you know what? The beauty of GitHub means</br>someone else who *actually* knows how to code can fix it. I have no idea what I'm doing. Good day.</br>          -Alice</div>
+</div>
+
+<div>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"And we <img class=iconBook src="icon/luma.png" alt="[Luma icon]"> Lumas can help a little too!"</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+</div>
+</div>
+
+<div class=conversation>
+<div>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"As thanks for saving our friends..."</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <div class="description">The 19th storybook text in Peach's Castle. Spoken by the second Luma at the gate of Peach's Castle. The first Luma transforms into a Launch Star.</div>
+</div>
+
+<div>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"We'll send you into space to get that monster!"</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+</div>
+
+<div>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"Now! Let's go after them!"</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+</div>
+</div>
+
+<div>
+  <div class="name">Launch Star <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Come here! Shake your <font class=red><img class=icon src="icon/wiimote.png" alt="[Wii Remote icon]"><span class=ico></span></font>!</div>
+  </div>
+  <div class="description">The first Luma waiting for the player at the doors of Peach's Castle in the fourth area, after they transform into a Launch Star.</div>
+</div>
+
+<div>
+  <div class="name yellow">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Fly with the <img class=icon src="icon/star.png" alt="[Launch Star icon]"><span class=ico></span>! Go after them!</div>
+  </div>
+  <div class="description">The second Luma waiting for the player at the doors of Peach's Castle in the fourth area, if the player gets close to them after the first Luma transforms into a Launch Star.</div>
+</div>
+
+<div class=conversation>
+<div>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
     <div class=smgTalk>Our <font class=red><img class=icon src="icon/powerstar.png" alt="[Power Star icon]"><span class=ico></span> Power Stars</font>... They're gone!</br>Some gigantic <img class=icon src="icon/bowser.png" alt="[Bowser icon]"><span class=ico></span> <font class=blue>monster </font>stole them!</div>
@@ -222,7 +939,7 @@
 </div>
 
 <div>
-  <div class="name">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
     <div class=smgTalk>If you're going after that <font class=blue>monster</font>,</br>you might see our <img class=icon src="icon/powerstar.png" alt="[Power Star icon]"><span class=ico></span> <font class=red>Power Stars</br></font>out there too!</div>
@@ -230,12 +947,21 @@
 </div>
 
 <div>
-  <div class="name">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
     <div class=smgTalk>Please bring our <img class=icon src="icon/powerstar.png" alt="[Power Star icon]"><span class=ico></span> <font class=red>Power Stars</font></br>back. We <font class=yellow><img class=icon src="icon/luma.png" alt="[Luma icon]"><span class=ico></span> Lumas </font>will help you along</br>your way!</div>
   </div>
 </div>
+</div>
+
+<div>
+  <div class="name">Sign Board <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign>Hello, friend! Please go<font class=blue> around back</font>!</br>                               <img class=icon src="icon/yoshi.png" alt="[Yoshi icon]"><span class=ico></span> <font class=green>Yoshi</font></div>
+  </div>
+  <div class="description">The sign in front of Yoshi's house in the first star in Sky Station Galaxy.</div>
 </div>
 
 <div>
@@ -272,7 +998,7 @@
     <img src="smg.png" style="width: 64.323vw;">
     <div class=smgTalk>Get close to an enemy and shake <img class=icon src="icon/wiimote.png" alt="[Wii Remote icon]"><span class=ico></span></br>to <font class=red>spin</font>! Once they're <font class=blue>dazed</font>, <font class=blue>kick 'em</br></font>outta this world!</div>
   </div>
-  <div class="description">The Tip Network in the first star in Sky Station Galaxy that teaches the player how to spin attack, after the demo video is done playing.</div>
+  <div class="description">The Tip Network in the first star in Sky Station Galaxy that teaches the player how to spin attack, at the end of the demo video.</div>
 </div>
 
 <div>
@@ -285,16 +1011,7 @@
 </div>
 
 <div>
-  <div class="name">Sign Board <font class="galaxy">Sky Station Galaxy</font></div>
-  <div class=container>
-    <img src="smgSign.png" style="width: 64.323vw;">
-    <div class=smgSign>Hello, friend! Please go<font class=blue> around back</font>!</br>                               <img class=icon src="icon/yoshi.png" alt="[Yoshi icon]"><span class=ico></span> <font class=green>Yoshi</font></div>
-  </div>
-  <div class="description">The sign in front of Yoshi's house in the first star in Sky Station Galaxy.</div>
-</div>
-
-<div>
-  <div class="name">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
     <div class=smgTalk>Whew... You saved me! But that</br><font class=red><img class=icon src="icon/bowser.png" alt="[Bowser icon]"><span class=ico></span> monster </font>got away...</div>
@@ -312,7 +1029,7 @@
 </div>
 
 <div>
-  <div class="name">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
     <div class=smgTalk>I looked all around for a <img class=icon src="icon/powerstar.png" alt="[Power Star icon]"><span class=ico></span> <font class=red>Power</br>Star</font>! There isn't one anywhere in</br>this house, though!</div>
@@ -321,7 +1038,7 @@
 </div>
 
 <div>
-  <div class="name">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
   <div class=container>
     <img src="smgShout.png" style="width: 64.323vw;">
     <div class=smgShout>Over here!</div>
@@ -331,7 +1048,7 @@
 
 <div class=conversation>
 <div>
-  <div class="name">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
     <div class=smgTalk>The other <font class=yellow><img class=icon src="icon/luma.png" alt="[Luma icon]"><span class=ico></span> Lumas </font>told me about</br>you! Thank you for helping us!</div>
@@ -340,10 +1057,10 @@
 </div>
 
 <div>
-  <div class="name">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>I'm going to transform into a</br><font class=red><img class=icon src="icon/star.png" alt="[Star icon]"><span class=ico></span> Launch Star</font>. Come over and fly!</div>
+    <div class=smgTalk>I'm going to transform into a</br><font class=red><img class=icon src="icon/star.png" alt="[Launch Star icon]"><span class=ico></span> Launch Star</font>. Come over and fly!</div>
   </div>
 </div>
 </div>
@@ -367,37 +1084,37 @@
 </div>
 
 <div>
-  <div class="name">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
   <div class=container>
     <img src="smgShout.png" style="width: 64.323vw;">
-    <div class=smgShout>Follow me!</div>
+    <div class=smgShout>This way!</div>
   </div>
   <div class="description">The first of four messages shouted by the Luma on the Green Hill Planet in the first and third stars in Sky Station Galaxy.</div>
 </div>
 
 <div>
-  <div class="name">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
   <div class=container>
     <img src="smgShout.png" style="width: 64.323vw;">
-    <div class=smgShout>This way!</div>
+    <div class=smgShout>Follow me!</div>
   </div>
   <div class="description">The second of four messages shouted by the Luma on the Green Hill Planet in the first and third stars in Sky Station Galaxy.</div>
 </div>
 
 <div>
-  <div class="name">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
   <div class=container>
     <img src="smgShout.png" style="width: 64.323vw;">
-    <div class=smgShout>Look out!</div>
+    <div class=smgShout>Careful! <font class=blue>Octoombas</font>!</div>
   </div>
   <div class="description">The third of four messages shouted by the Luma on the Green Hill Planet in the first and third stars in Sky Station Galaxy.</div>
 </div>
 
 <div>
-  <div class="name">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
   <div class=container>
     <img src="smgShout.png" style="width: 64.323vw;">
-    <div class=smgShout>Careful! <font class=blue>Octoombas</font>!</div>
+    <div class=smgShout>Look out!</div>
   </div>
   <div class="description">The last of four messages shouted by the Luma on the Green Hill Planet in the first and third stars in Sky Station Galaxy.</div>
 </div>
@@ -412,12 +1129,30 @@
 </div>
 
 <div>
+  <div class="name">System <font class="galaxy">Common</font></div>
+  <div class=container>
+    <img src="smginfo.png" style="width: 64.323vw;">
+    <div class=smgInfo>You got a <img class=icon src="icon/cometmedal.png" alt="[Comet Medal icon]"><span class=ico></span><font class=red> Comet Medal</font>!</br>Collect them to make <font class=red>comets </font>appear.</div>
+  </div>
+  <div class="description">The message that appears the first time the player obtains a Comet Medal.</div>
+</div>
+
+<div>
   <div class="name">Launch Star <font class="galaxy">Sky Station Galaxy</font></div>
   <div class=container>
     <img src="smgShout.png" style="width: 64.323vw;">
     <div class=smgShout>There's a <font class=red>monster </font>up ahead!</div>
   </div>
   <div class="description">After the Luma transforms into a Launch Star at the end of the Cylindrical Planet in the first star in Sky Station Galaxy.</div>
+</div>
+
+<div>
+  <div class="name">System <font class="galaxy">Common</font></div>
+  <div class=container>
+    <img src="smginfo.png" style="width: 64.323vw;">
+    <div class=smgInfo>You now have<font class=red> 6 health</font>! If it drops</br>below 4, it will go back to normal.</div>
+  </div>
+  <div class="description">The message that appears the first time the player obtains a Life Shroom.</div>
 </div>
 
 <div>
@@ -439,7 +1174,7 @@
 </div>
 
 <div>
-  <div class="name">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
   <div class=container>
     <img src="smgShout.png" style="width: 64.323vw;">
     <div class=smgShout>Over here!</div>
@@ -448,7 +1183,7 @@
 </div>
 
 <div>
-  <div class="name">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
     <div class=smgTalk>Get me out of here! There must be</br>a <font class=red>key </font>somewhere!</div>
@@ -457,10 +1192,10 @@
 </div>
 
 <div>
-  <div class="name">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>Oh, thank you! Now I can transform</br>into a <img class=icon src="icon/star.png" alt="[Star icon]"><span class=ico></span> <font class=yellow>Launch Star</font>! Just hop in and</br>shake <img class=icon src="icon/wiimote.png" alt="[Wii Remote icon]"><span class=ico></span> to go flying!</div>
+    <div class=smgTalk>Oh, thank you! Now I can transform</br>into a <img class=icon src="icon/star.png" alt="[Launch Star icon]"><span class=ico></span> <font class=yellow>Launch Star</font>! Just hop in and</br>shake <img class=icon src="icon/wiimote.png" alt="[Wii Remote icon]"><span class=ico></span> to go flying!</div>
   </div>
   <div class="description">The Luma stuck in the key cage on the Starter Planet in the second star in Sky Station Galaxy, after being freed.</div>
 </div>
@@ -515,7 +1250,7 @@
   <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>So you're this <font class=red>Mario </font>guy my little</br><img class=icon src="icon/luma.png" alt="[Luma icon]"><span class=ico></span> <font class=yellow>Lumas</font> won't stop blabbing</br>about, am I right?</div>
+    <div class=smgTalk>So you're this <font class=red>--character-- </font>guy my little</br><img class=icon src="icon/luma.png" alt="[Luma icon]"><span class=ico></span> <font class=yellow>Lumas</font> won't stop blabbing</br>about, am I right?</div>
   </div>
   <div class="description">The first interaction after completing the first star in Sky Station Galaxy. The start of the cutscene.</div>
 </div>
@@ -661,7 +1396,7 @@
   <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
   <div class=container>
     <img src="smg-n.png" style="width: 64.323vw;">
-    <div class=smgTalk>I'd be willing to make this ship</br>your very own for a bit. <wait time="30"/>That's a</br>fair exchange! Am I right, Mario?</div>
+    <div class=smgTalk>I'd be willing to make this ship</br>your very own for a bit. <wait time="30"/>That's a</br>fair exchange! Am I right, --character--?</div>
   </div>
   <div class="description">The player is given two choices: "That's right", and "Yes". They both lead to the next textbox.</div>
 </div>
@@ -806,7 +1541,7 @@
 
 <div class=conversation>
 <div>
-  <div class=name>Luma <font class="galaxy">Starship Mario</font></div>
+  <div class="name blue">Luma <font class="galaxy">Starship Mario</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
     <div class=smgTalk><font class=red>When you want to quit</font>, press <img class=icon src="icon/MINUSbutton.png" alt="[Minus Button icon]"><span class=ico></span> or</br><img class=icon src="icon/PLUSbutton.png" alt="[Plus Button icon]"><span class=ico></span> and choose <font class=red>Save and Quit</font>.</div>
@@ -815,7 +1550,7 @@
 </div>
 
 <div>
-  <div class=name>Luma <font class="galaxy">Starship Mario</font></div>
+  <div class="name blue">Luma <font class="galaxy">Starship Mario</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
     <div class=smgTalk>On a long trip like this...<wait time="15"/>be sure to</br>take breaks from time to time!</div>
@@ -834,7 +1569,7 @@
 
 <div class=conversation>
 <div>
-  <div class=name>Luma <font class="galaxy">Starship Mario</font></div>
+  <div class="name orange">Luma <font class="galaxy">Starship Mario</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
     <div class=smgTalk>Even heroes need a hand sometimes!</br>If you have<font class=blue> one more </font><img class=icon src="icon/wiimote.png" alt="[Wii Remote icon]"><span class=ico></span>, a <font class=orange><img class=icon src="icon/costarluma.png" alt="[Co-Star Luma icon]"><span class=ico></span> friend</br></font>can help you.</div>
@@ -843,7 +1578,7 @@
 </div>
 
 <div>
-  <div class=name>Luma <font class="galaxy">Starship Mario</font></div>
+  <div class="name orange">Luma <font class="galaxy">Starship Mario</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
     <div class=smgTalk>Your <font class=orange><img class=icon src="icon/costarluma.png" alt="[Co-Star Luma icon]"><span class=ico></span> friend</font> can stop enemies with</br><img class=icon src="icon/Abutton.png" alt="[A Button icon]"><span class=ico></span> and then <font class=blue>shake <img class=icon src="icon/wiimote.png" alt="[Wii Remote icon]"><span class=ico></span> </font>to <font class=red>spin them</br>into the air</font>!</div>
@@ -852,7 +1587,7 @@
 </div>
 
 <div>
-  <div class="name">Luma <font class="galaxy">Starship Mario</font></div>
+  <div class="name yellow">Luma <font class="galaxy">Starship Mario</font></div>
   <div class=container>
     <img src="smgShout.png" style="width: 64.323vw;">
     <div class=smgShout>This has turned out to be a fine ship!</div>
@@ -889,7 +1624,7 @@
 
 <div class=conversation>
 <div>
-  <div class=name>Luma <font class="galaxy">Starship Mario</font></div>
+  <div class="name yellow">Luma <font class="galaxy">Starship Mario</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
     <div class=smgTalk>Point <img class=icon src="icon/wiimote.png" alt="[Wii Remote icon]"><span class=ico></span> at the screen to make</br>the <img class=icon src="icon/pointerP1.png" alt="[P1 Pointer icon]"><span class=ico></span> <font class=red>cursor </font>appear!</div>
@@ -898,25 +1633,25 @@
 </div>
 
 <div>
-  <div class=name>Luma <font class="galaxy">Starship Mario</font></div>
+  <div class="name yellow">Luma <font class="galaxy">Starship Mario</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>All you have to do is touch a</br><img class=icon src="icon/starbit.png" alt="[Purple Starbit icon]"><span class=ico></span> <font class=purple>Star Bit </font>with the <img class=icon src="icon/pointerP1.png" alt="[P1 Pointer icon]"><span class=ico></span> <font class=red>cursor </font>to</br>pick it up!</div>
+    <div class=smgTalk>All you have to do is touch a</br><img class=icon src="icon/starbit.png" alt="[Purple Star Bit icon]"><span class=ico></span> <font class=purple>Star Bit </font>with the <img class=icon src="icon/pointerP1.png" alt="[P1 Pointer icon]"><span class=ico></span> <font class=red>cursor </font>to</br>pick it up!</div>
   </div>
 </div>
 
 <div>
-  <div class=name>Luma <font class="galaxy">Starship Mario</font></div>
+  <div class="name yellow">Luma <font class="galaxy">Starship Mario</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>Then you can aim with the <img class=icon src="icon/pointerP1.png" alt="[P1 Pointer icon]"><span class=ico></span> <font class=red>cursor</font></br>and press <img class=icon src="icon/Bbutton.png" alt="[B Button icon]"><span class=ico></span> to shoot a <img class=icon src="icon/starbit.png" alt="[Purple Starbit icon]"><span class=ico></span>!</div>
+    <div class=smgTalk>Then you can aim with the <img class=icon src="icon/pointerP1.png" alt="[P1 Pointer icon]"><span class=ico></span> <font class=red>cursor</font></br>and press <img class=icon src="icon/Bbutton.png" alt="[B Button icon]"><span class=ico></span> to shoot a <img class=icon src="icon/starbit.png" alt="[Purple Star Bit icon]"><span class=ico></span>!</div>
   </div>
 </div>
 </div>
 
 <div class=conversation>
 <div>
-  <div class=name>Luma <font class="galaxy">Starship Mario</font></div>
+  <div class="name blue">Luma <font class="galaxy">Starship Mario</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
     <div class=smgTalk>While out adventuring, you can grab</br>a <img class=icon src="icon/coin.png" alt="[Coin icon]"><span class=ico></span> <font class=yellow>coin </font>to <font class=blue>restore some life</font>!</div>
@@ -925,7 +1660,7 @@
 </div>
 
 <div>
-  <div class=name>Luma <font class="galaxy">Starship Mario</font></div>
+  <div class="name blue">Luma <font class="galaxy">Starship Mario</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
     <div class=smgTalk>If you don't see any <img class=icon src="icon/coin.png" alt="[Coin icon]"><span class=ico></span> around, you</br>can just <font class=red>stomp an enemy</font> to get one!</div>
@@ -934,7 +1669,7 @@
 </div>
 
 <div>
-  <div class=name>Luma <font class="galaxy">Starship Mario</font></div>
+  <div class="name red">Luma <font class="galaxy">Starship Mario</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
     <div class=smgTalk>What're you lollygagging around for?</br>Go get those <img class=icon src="icon/powerstar.png" alt="[Power Star icon]"><span class=ico></span> <font class=yellow>Power Stars</font>!</div>
@@ -952,7 +1687,7 @@
 </div>
 
 <div>
-  <div class=name>Luma <font class="galaxy">Starship Mario</font></div>
+  <div class="name yellow">Luma <font class="galaxy">Starship Mario</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
     <div class=smgTalk>My job is to take energy from</br>each <img class=icon src="icon/powerstar.png" alt="[Power Star icon]"><span class=ico></span> and <font class=blue>convert it into fuel</font>!</div>
@@ -1004,6 +1739,33 @@
     <div class=smgTalk>So let's do it! For your princess and</br>my crew! <wait time="15"/>Take it away, Captain!</div>
   </div>
 </div>
+</div>
+
+<div>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>So...sleepy...</div>
+  </div>
+  <div class="description">When playing the game after the Wii system time is set to somewhere between 12:00 AM and 4:59 AM, and if the player is far from Lubba.</div>
+</div>
+
+<div>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Geez. It's kinda early, isn't it?</br>I feel so sleepy...</div>
+  </div>
+  <div class="description">When playing the game after the Wii system time is set to somewhere between 12:00 AM and 4:59 AM.</div>
+</div>
+
+<div>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>OK! First things first! If ya wanna</br>fly, ya gotta learn how to steer! Grab</br>the helm and give her a spin!</div>
+  </div>
+  <div class="description">Before collecting a second star, returning to Starship Mario from the World Map and talking to Lubba.</div>
 </div>
 
 <div class=conversation>
@@ -1083,7 +1845,7 @@
   <div class="name">Captain Toad <font class="galaxy">Starship Mario</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>Hi, Mario! We are the <font class=red>Toad Brigade</font>!</br>Our goal is to find <img class=icon src="icon/powerstar.png" alt="[Power Star icon]"><span class=ico></span> <font class=yellow>Power Stars</br></font>and save <font class=red>Princess Peach</font>!</div>
+    <div class=smgTalk>Hi, --character--! We are the <font class=red>Toad Brigade</font>!</br>Our goal is to find <img class=icon src="icon/powerstar.png" alt="[Power Star icon]"><span class=ico></span> <font class=yellow>Power Stars</br></font>and save <font class=red>Princess Peach</font>!</div>
   </div>
   <div class="description">Captain Toad, the first time he appears on Starship Mario in World 1.</div>
 </div>
@@ -1183,6 +1945,27 @@ function stageSort() {
     }
   } 
 }
+
+function setup_replace(to_replace, div_class, select_id) {
+  const texts = [];
+  for (const div of document.getElementsByClassName(div_class)) {
+    const walker = document.createTreeWalker(div, NodeFilter.SHOW_TEXT, null, false);
+    let text;
+    while (text = walker.nextNode()) {
+      texts.push([text, text.data])
+    }
+  }
+  const selector = document.getElementById(select_id)
+  function onchange() {
+    for (const [text, orig_text] of texts) {
+      text.data = orig_text.replace(to_replace, selector.value)
+    }
+  }
+  selector.addEventListener("change", onchange)
+  onchange()
+}
+setup_replace("--character--", "container", "playerChoice")
+// thanks to Twitter/GitHub user "coolreader18" for the character selection code :D
 </script>
 
 </body>
