@@ -1,0 +1,2768 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@font-face {
+  font-family: 'Delfino';
+  src: url('Delfino.ttf') format('truetype');
+}
+
+.container {
+  position: relative;
+  width: 64.323vw;
+  font-size: 0;
+}
+
+.name {
+  font-family: Delfino;
+  font-size: 2vw;
+  color: #3c3c3c;
+  text-align: left;
+  position: relative;
+  left: 3vw;
+  white-space: pre
+}
+
+.description {
+  font-family: Delfino;
+  font-size: 1vw;
+  color: #3c3c3c;
+  text-align: left;
+  position: relative;
+  left: 2vw;
+  letter-spacing: -0.05vw;
+  word-spacing: 0.2vw;
+  white-space: pre;
+}
+
+.conversation {
+  border: 0.5vw solid #080808;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.galaxy {
+  text-align: right;
+  right: 41vw;
+  color: #3c3c3c;
+  position: absolute;
+}
+
+.smgTalk {
+  position: absolute;
+  top: 6.250vw;
+  left: 2.622vw;
+  transform: translate(0%, -50%);
+  text-align: left;
+  font-size: 2.865vw;
+  color: #3c3c3c;
+  font-family: Delfino;
+  line-height: 1.3;
+  letter-spacing: -0.017vw;
+  word-spacing: 0.434vw;
+  text-shadow: 0.174vw 0.174vw #3c3c3c4d;
+  white-space: pre;
+}
+
+.smgBook {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50%;
+  font-size: 1.865vw;
+  color: #ffffff;
+  font-family: Delfino;
+  line-height: 1.3;
+  letter-spacing: -0.017vw;
+  word-spacing: 0.434vw;
+  text-shadow: 0.174vw 0.174vw #3c3c3c4d;
+  white-space: pre;
+  background-color: #0000007f;
+  width: 100%;
+}
+
+.smgShout {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: 2.865vw;
+  color: #3c3c3c;
+  font-family: Delfino;
+  line-height: 1.3;
+  letter-spacing: -0.017vw;
+  word-spacing: 0.434vw;
+  text-shadow: 0.174vw 0.174vw #3c3c3c4d;
+  white-space: pre;
+}
+
+.smgInfo {
+  position: absolute;
+  top: 5.3vw;
+  left: 3.2vw;
+  transform: translate(0%, -50%);
+  text-align: left;
+  font-size: 2.865vw;
+  color: #3c3c3c;
+  font-family: Delfino;
+  line-height: 1.3;
+  letter-spacing: -0.01vw;
+  word-spacing: 0.434vw;
+  text-shadow: 0.174vw 0.174vw #3c3c3c4d;
+  white-space: pre;
+}
+
+.smgPlain {
+  position: absolute;
+  background-color: #ffffff;
+  top: 6vw;
+  left: 3.2vw;
+  transform: translate(0%, -50%);
+  text-align: left;
+  font-size: 2.865vw;
+  color: #00b4b4;
+  font-family: Delfino;
+  line-height: 1.3;
+  letter-spacing: -0.01vw;
+  word-spacing: 0.434vw;
+  text-shadow: 0.174vw 0.174vw #3c3c3c4d;
+  white-space: pre;
+}
+
+.smgPlain1 {
+  position: absolute;
+  top: 6vw;
+  left: 3.2vw;
+  transform: translate(0%, -50%);
+  text-align: left;
+  font-size: 2.865vw;
+  color: #ffffff;
+  font-family: Delfino;
+  line-height: 1.3;
+  letter-spacing: -0.01vw;
+  word-spacing: 0.434vw;
+  text-shadow: 0.174vw 0.174vw #3c3c3c4d;
+  white-space: pre;
+}
+
+.smgSign {
+  position: absolute;
+  top: 7.45vw;
+  left: 4vw;
+  transform: translate(0%, -50%) rotate(359deg);
+  text-align: left;
+  font-size: 2.8vw;
+  color: #3c3c3c;
+  font-family: Delfino;
+  line-height: 1.3;
+  letter-spacing: -0.01vw;
+  word-spacing: 0.434vw;
+  text-shadow: 0.174vw 0.174vw #3c3c3c4d;
+  white-space: pre;
+}
+
+.talkSmall {
+  font-size: 68.3394924858369%;
+  letter-spacing: -0.01vw;
+  word-spacing: 0.45vw;
+}
+
+.talkNormal {
+  font-size: 2.865vw;
+  letter-spacing: -0.017vw;
+  word-spacing: 0.434vw;
+}
+
+.talkLarge {
+  font-size: 150%;
+  letter-spacing: 0vw;
+  word-spacing: 0.347vw;
+}
+
+.none {
+  color: #3c3c3c;
+}
+
+.black {
+  color: #3c3c3c;
+}
+
+.red {
+  color: #be4343;
+}
+
+.blue {
+  color: #194dad;
+}
+
+.green {
+  color: #197219;
+}
+
+.yellow {
+  color: #d99d00;
+}
+
+.gray {
+  color: #8e8e9d;
+}
+
+.orange {
+  color: #ff6527;
+}
+
+.purple {
+  color: #7f2f9d;
+}
+
+.icondesc {
+  width: 1vw;
+  position: absolute;
+}
+
+.iconLink {
+  width: 1vw;
+  position: absolute;
+}
+
+.icon {
+  height: 3.698vw;
+  position: absolute;
+  -webkit-filter: drop-shadow(0.174vw 0.174vw #3c3c3c4d);
+  filter: drop-shadow(0.174vw 0.174vw #3c3c3c4d);
+}
+
+.iconBook {
+  height: 2.5vw;
+  position: relative;
+  -webkit-filter: drop-shadow(0.174vw 0.174vw #3c3c3c4d);
+  filter: drop-shadow(0.174vw 0.174vw #3c3c3c4d);
+}
+
+.iconBookL {
+  display: inline-block;
+  height: 3.5vw;
+  position: absolute;
+  -webkit-filter: drop-shadow(0.174vw 0.174vw #3c3c3c4d);
+  filter: drop-shadow(0.174vw 0.174vw #3c3c3c4d);
+}
+
+.icon1 {
+  object-position: right 1px left 0px;
+  height: 3.698vw;
+  position: absolute;
+  -webkit-filter: drop-shadow(0.174vw 0.174vw #3c3c3c4d);
+  filter: drop-shadow(0.174vw 0.174vw #3c3c3c4d);
+}
+
+.ico {
+  display: inline-block;
+  width: 3.177vw;
+  height: 0.1vw
+}
+
+.icoLarge {
+  display: inline-block;
+  width: 3.377vw;
+  height: 0.1vw
+}
+
+.plainSpan {
+  display: inline-block;
+  width: 0.1vw;
+  height: 12vw;
+}
+
+.icox {
+  display: inline-block;
+  width: 2.5vw;
+  height: 0.1vw;
+}
+
+</style>
+</head>
+<body style="overflow-x: hidden;">
+
+<label for="charactertag">Sort by character:</label>
+
+<select name="charactertag" id="charactertag" onchange="characterSort()">
+  <option value="None">None</option>
+</select>
+
+<label for="charactertag">Sort by galaxy:</label>
+
+<select name="stagetag" id="stagetag" onchange="stageSort()">
+  <option value="None">None</option>
+</select>
+
+<label for="playerChoice1">Select a player:</label>
+
+<select id="playerChoice">
+  <option value="Mario">Mario</option>
+  <option value="Luigi">Luigi</option>
+</select>
+</br>
+<label for="playerChoice1">Enter a price for the Hungry Lumas (default is "300"):</label>
+
+<input type="text" id="hlPrice" value="300" maxlength="8" placeholder="300"/> Note that it can not normally be blank, normally only contains numbers, and normally only goes up to 4 characters.
+
+<div class=conversation id=Layout_PrologueText-PrologueText_Pro>
+<a href="#Layout_PrologueText-PrologueText_Pro"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=Layout_PrologueText-PrologueText_Pro00>
+  <div class="name">System <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <span class=plainSpan></span>
+    <div class=smgPlain>Now, let me tell you a new story that</br>also begins with stardust...</div>
+  </div>
+  <a href="#Layout_PrologueText-PrologueText_Pro00"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The text that first appears when starting a new save file.</div>
+</div>
+
+<div id=Layout_PrologueText-PrologueText_Pro01>
+  <div class="name">System <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <span class=plainSpan></span>
+    <div class=smgPlain1>Shimmering stardust falls on the</br>Mushroom Kingdom once a century.</br>That time had come again...</div>
+  </div>
+  <a href="#Layout_PrologueText-PrologueText_Pro01"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">DEV NOTE: The text is supposed to look white. But since the page is also white, it doesn't appear correctly.</br>A feature is planned to allow the user to change the color of the background of the page, which would solve this.</br>For now, you can highlight the text with your cursor to read it better.</div>
+</div>
+</div>
+
+<div id=PeachCastle2DZone-StoryBook013>
+  <div class="name">Storybook <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgBookBottom.png" style="width: 64.323vw; white-space-collapsing: discard;">
+    <div class=smgBook>The Star Festival had just begun. Toads</br>everywhere were celebrating...</div>
+  </div>
+  <a href="#PeachCastle2DZone-StoryBook013"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The first storybook text in Peach's Castle.</div>
+</div>
+
+<div id=PeachCastle2DZone-Kinopio000>
+  <div class="name green">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Hey, --character--!</div>
+  </div>
+  <a href="#PeachCastle2DZone-Kinopio000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The green Toad that the player encounters in the first area of Peach's Castle.</div>
+</div>
+
+<div id=PeachCastle2DZone-Kinopio001>
+  <div class="name purple">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Woohoo! <img class=icon src="icon/starbit.png" alt="[Purple Star Bit icon]"><span class=ico></span> Star Bits!</div>
+  </div>
+  <a href="#PeachCastle2DZone-Kinopio001"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The purple Toad that the player encounters in the first area of Peach's Castle.</div>
+</div>
+
+<div id=PeachCastle2DZone-Kinopio002>
+  <div class="name red">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Grab the <img class=icon src="icon/starbit.png" alt="[Purple Star Bit icon]"><span class=ico></span>!</div>
+  </div>
+  <a href="#PeachCastle2DZone-Kinopio002"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The red Toad that the player encounters in the the first area of Peach's Castle.</div>
+</div>
+
+<div id=PeachCastle2DZone-StoryBook014>
+  <div class="name">Storybook <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgBookBottom.png" style="width: 64.323vw;">
+    <div class=smgBook>Star Bits rained down from the sky...</div>
+  </div>
+  <a href="#PeachCastle2DZone-StoryBook014"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The second storybook text in Peach's Castle.</div>
+</div>
+
+<div id=PeachCastle2DZone-Kinopio004>
+  <div class="name yellow">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Point <img class=icon src="icon/wiimote.png" alt="[Wii Remote icon]"><span class=ico></span> at the screen and...</div>
+  </div>
+  <a href="#PeachCastle2DZone-Kinopio004"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The yellow Toad that the player encounters in the first area of Peach's Castle.</div>
+</div>
+
+<div id=PeachCastle2DZone-Kinopio005>
+  <div class="name blue">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Use <img class=icon src="icon/pointerP1.png" alt="[P1 Pointer icon]"><span class=ico></span> to grab them!</div>
+  </div>
+  <a href="#PeachCastle2DZone-Kinopio005"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The first blue Toad that the player encounters in the first area of Peach's Castle.</div>
+</div>
+
+<div id=PeachCastle2DZone-Kinopio003>
+  <div class="name blue">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Happy Star Festival! Yay!</div>
+  </div>
+  <a href="#PeachCastle2DZone-Kinopio003"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The second blue Toad that the player encounters in the first area of Peach's Castle.</div>
+</div>
+
+<div id=StoryBook-StoryBook_MeetTicoBaby000>
+  <div class="name">Storybook <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <div class=smgBook><font class=talkLarge>"△××△△×?!"</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#StoryBook-StoryBook_MeetTicoBaby000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The third storybook text in Peach's Castle, during the meeting with Master Luma. Spoken by Master Luma.</div>
+</div>
+
+<div class=conversation id=StoryBook-StoryBook_MeetTicoBaby001>
+<a href="#StoryBook-StoryBook_MeetTicoBaby001"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=StoryBook-StoryBook_MeetTicoBaby001-0>
+  <div class="name">Storybook <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <div class=smgBook>The strange little fellow seemed confused...</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#StoryBook-StoryBook_MeetTicoBaby001-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The fourth storybook text in Peach's Castle, during the meeting with Master Luma.</div>
+</div>
+
+<div id=StoryBook-StoryBook_MeetTicoBaby001-1>
+  <div class="name">Storybook <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <div class=smgBook>Was he lost?</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#StoryBook-StoryBook_MeetTicoBaby001-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div id=StoryBook-StoryBook_MeetTicoBaby002>
+  <div class="name">Storybook <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <div class=smgBook>He seemed to take a shine to --character--!</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#StoryBook-StoryBook_MeetTicoBaby002"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The fifth storybook text in Peach's Castle, during the meeting with Master Luma.</div>
+</div>
+
+<div id=StoryBook-StoryBook_MeetTicoBaby003>
+  <div class="name">Storybook <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <div class=smgBook>--character--'s cap filled with warmth as he felt a new</br>power surging through him!</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#StoryBook-StoryBook_MeetTicoBaby003"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The sixth storybook text in Peach's Castle, during the meeting with Master Luma. Master Luma jumps into Mario's cap.</div>
+</div>
+
+<div id=PeachCastle2DTicoMeetsZone-StoryBook007>
+  <div class="name">Storybook <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <div class=smgBook><img class=iconBook src="icon/masterluma.png" alt="[Master Luma icon]"> "... △△... Um..."<soundeffect></div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#PeachCastle2DTicoMeetsZone-StoryBook007"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The seventh storybook text in Peach's Castle, after the meeting with Master Luma. Spoken by Master Luma.</div>
+</div>
+
+<div id=PeachCastle2DTicoMeetsZone-Kinopio004_Flow002>
+  <div class="name yellow">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>This thing fell from the sky!</div>
+  </div>
+  <a href="#PeachCastle2DTicoMeetsZone-Kinopio004_Flow002"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The yellow Toad that the player encounters in the second area of Peach's Castle, before smashing the crystal in front of him.</div>
+</div>
+
+<div id=PeachCastle2DTicoMeetsZone-StoryBook008>
+  <div class="name">Storybook <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <div class=smgBook><img class=iconBook src="icon/masterluma.png" alt="[Master Luma icon]"> "Shake <img class=iconBook src="icon/wiimote.png" alt="[Wii Remote icon]"> to spin!"<soundeffect></div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#PeachCastle2DTicoMeetsZone-StoryBook008"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The eigth storybook text in Peach's Castle. Spoken by Master Luma.</div>
+</div>
+
+<div id=PeachCastle2DTicoMeetsZone-Kinopio004_Flow001>
+  <div class="name yellow">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Wow, --character--!</div>
+  </div>
+  <a href="#PeachCastle2DTicoMeetsZone-Kinopio004_Flow001"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The yellow Toad that the player encounters in the second area of Peach's Castle, after smashing the crystal in front of him.</div>
+</div>
+
+<div id=PeachCastle2DTicoMeetsZone-Kinopio006_Flow004>
+  <div class="name green">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Hey, can you break <font class=blue>this</font>?</div>
+  </div>
+  <a href="#PeachCastle2DTicoMeetsZone-Kinopio006_Flow004"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The green Toad that the player encounters in the second area of Peach's Castle, before smashing the crystal in front of him.</div>
+</div>
+
+<div id=PeachCastle2DTicoMeetsZone-Kinopio006_Flow003>
+  <div class="name green">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Nice one, --character--!</div>
+  </div>
+  <a href="#PeachCastle2DTicoMeetsZone-Kinopio006_Flow003"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The green Toad that the player encounters in the second area of Peach's Castle, after smashing the crystal in front of him.</div>
+</div>
+
+<div id=PeachCastle2DTicoMeetsZone-Kinopio030_Flow002>
+  <div class="name purple">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>How about <font class=blue>this</font>?</div>
+  </div>
+  <a href="#PeachCastle2DTicoMeetsZone-Kinopio030_Flow002"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The purple Toad that the player encounters in the second area of Peach's Castle, before smashing the crystal in front of him.</div>
+</div>
+
+<div id=PeachCastle2DTicoMeetsZone-Kinopio030_Flow001>
+  <div class="name purple">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Wow, --character--!</div>
+  </div>
+  <a href="#PeachCastle2DTicoMeetsZone-Kinopio030_Flow001"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The purple Toad that the player encounters in the second area of Peach's Castle, after smashing the crystal in front of him.</div>
+</div>
+
+<div id=PeachCastle2DTicoMeetsZone-Kinopio009>
+  <div class="name red">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>The <font class=red>princess</font> is in the castle!</div>
+  </div>
+  <a href="#PeachCastle2DTicoMeetsZone-Kinopio009"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The red Toad that the player encounters in the second area of Peach's Castle.</div>
+</div>
+
+<div id=PeachCastle2DTicoMeetsZone-StoryBook005>
+  <div class="name">Storybook <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgBookBottom.png" style="width: 64.323vw; white-space-collapsing: discard;">
+    <div class=smgBook>What's this? Was this one of the little</br>fellow's friends?</div>
+  </div>
+  <a href="#PeachCastle2DTicoMeetsZone-StoryBook005"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The ninth storybook text in Peach's Castle.</div>
+</div>
+
+<div id=Tico-Tico_StarPiece0_Flow000>
+  <div class="name">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Thanks!</div>
+  </div>
+  <a href="#Tico-Tico_StarPiece0_Flow000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The first of five randomly selected phrases for yellow and orange Lumas to say when shot with a Star Bit.</div>
+</div>
+
+<div id=Tico-Tico_StarPiece0_Flow001>
+  <div class="name">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>YUMM! ♪</div>
+  </div>
+  <a href="#Tico-Tico_StarPiece0_Flow001"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The second of five randomly selected phrases for yellow and orange Lumas to say when shot with a Star Bit.</div>
+</div>
+
+<div id=Tico-Tico_StarPiece0_Flow002>
+  <div class="name">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Mmmmm...happy... ♪</div>
+  </div>
+  <a href="#Tico-Tico_StarPiece0_Flow002"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The third of five randomly selected phrases for yellow and orange Lumas to say when shot with a Star Bit.</div>
+</div>
+
+<div id=Tico-Tico_StarPiece0_Flow003>
+  <div class="name">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Eeheehee...</div>
+  </div>
+  <a href="#Tico-Tico_StarPiece0_Flow003"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The fourth of five randomly selected phrases for yellow and orange Lumas to say when shot with a Star Bit.</div>
+</div>
+
+<div id=Tico-Tico_StarPiece0_Flow004>
+  <div class="name">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Tasty! ♪</div>
+  </div>
+  <a href="#Tico-Tico_StarPiece0_Flow004"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The last of five randomly selected phrases for yellow and orange Lumas to say when shot with a Star Bit.</div>
+</div>
+
+<div id=PeachCastle2DTicoMeetsZone-Tico002>
+  <div class="name yellow">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Phew! I'm free! But...where am I?</div>
+  </div>
+  <a href="#PeachCastle2DTicoMeetsZone-Tico002"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Luma trapped in a crystal that the player encounters in the third area of Peach's Castle.</div>
+</div>
+
+<div id=PeachCastle2DTicoMeetsZone-Kinopio010>
+  <div class="name yellow">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Welcome, --character--!</div>
+  </div>
+  <a href="#PeachCastle2DTicoMeetsZone-Kinopio010"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The yellow Toad that the player encounters in the third area of Peach's Castle.</div>
+</div>
+
+<div id=PeachCastleTown3DZone-Tico002>
+  <div class="name yellow">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>What's that scary sound?!</div>
+  </div>
+  <a href="#PeachCastleTown3DZone-Tico002"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The first Luma trapped in a crystal that the player encounters in the fourth area of Peach's Castle.</div>
+</div>
+
+<div id=PeachCastleTown3DZone-Kinopio011>
+  <div class="name green">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>It's Bowser!</div>
+  </div>
+  <a href="#PeachCastleTown3DZone-Kinopio011"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The first green Toad that the player encounters in the fourth area of Peach's Castle.</div>
+</div>
+
+<div id=PeachCastleTown3DZone-Kinopio000>
+  <div class="name purple">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>AGGH! Everyone panic!</div>
+  </div>
+  <a href="#PeachCastleTown3DZone-Kinopio000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The first purple Toad that the player encounters in the fourth area of Peach's Castle.</div>
+</div>
+
+<div id=PeachCastleTown3DZone-Tico003>
+  <div class="name yellow">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>It's a monster!</div>
+  </div>
+  <a href="#PeachCastleTown3DZone-Tico003"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The second Luma trapped in a crystal that the player encounters in the fourth area of Peach's Castle.</div>
+</div>
+
+<div id=PeachCastleTown3DZone-Kinopio013>
+  <div class="name red">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>The sky is falling!</div>
+  </div>
+  <a href="#PeachCastleTown3DZone-Kinopio013"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The first red Toad that the player encounters in the fourth area of Peach's Castle.</div>
+</div>
+
+<div id=PeachCastleTown3DZone-Tico001>
+  <div class="name yellow">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Where's the ship?!</div>
+  </div>
+  <a href="#PeachCastleTown3DZone-Tico001"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The third Luma trapped in a crystal that the player encounters in the fourth area of Peach's Castle.</div>
+</div>
+
+<div class=conversation id=StoryBook-StoryBook_MeetKoopa000>
+<a href="#StoryBook-StoryBook_MeetKoopa000"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=StoryBook-StoryBook_MeetKoopa000-0>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"You're too late, --character--!"<soundeffect></div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#StoryBook-StoryBook_MeetKoopa000-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The 10th storybook text in Peach's Castle. Spoken by Bowser, who is giant and attacking Peach's Castle.</div>
+</div>
+
+<div id=StoryBook-StoryBook_MeetKoopa000-1>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"The power of the stars is already MINE!</br> And look what else I got..."<soundeffect></div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#StoryBook-StoryBook_MeetKoopa000-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div id=StoryBook-StoryBook_MeetKoopa001>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook> "GWAHAHAAH!"<soundeffect></div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#StoryBook-StoryBook_MeetKoopa001"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The 11th storybook text in Peach's Castle. Spoken by Bowser. The camera shows he's holding Princess Peach.</div>
+</div>
+
+<div id=StoryBook-StoryBook_MeetKoopa_PeachHelp>
+  <div class="name">Princess Peach <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout><font class=red>HELP ME!</font></div>
+  </div>
+  <a href="#StoryBook-StoryBook_MeetKoopa_PeachHelp"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">Princess Peach while being held by Bowser in the fourth area of Peach's Castle.</div>
+</div>
+
+<div class=conversation id=StoryBook-StoryBook_MeetKoopa002>
+<a href="#StoryBook-StoryBook_MeetKoopa002"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=StoryBook-StoryBook_MeetKoopa002-0>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"I'm HUUUUGE!"<soundeffect></div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#StoryBook-StoryBook_MeetKoopa002-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The 12th storybook text in Peach's Castle. Spoken by Bowser.</div>
+</div>
+
+<div id=StoryBook-StoryBook_MeetKoopa002-1>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"Even scarier up close, huh?"<soundeffect></div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#StoryBook-StoryBook_MeetKoopa002-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div class=conversation id=StoryBook-StoryBook_MeetKoopa003>
+<a href="#StoryBook-StoryBook_MeetKoopa003"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=StoryBook-StoryBook_MeetKoopa003-0>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"Maybe I'll have Peach bake ME something</br> for once..."<soundeffect></div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#StoryBook-StoryBook_MeetKoopa003-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The 13th storybook text in Peach's Castle. Spoken by Bowser. The camera zooms in on Princess Peach again.</div>
+</div>
+
+<div id=StoryBook-StoryBook_MeetKoopa003-1>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"I sure could go for a galaxy-sized slice</br> of cake right now!"<soundeffect></div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#StoryBook-StoryBook_MeetKoopa003-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div class=conversation id=StoryBook-StoryBook_MeetKoopa004>
+<a href="#StoryBook-StoryBook_MeetKoopa004"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=StoryBook-StoryBook_MeetKoopa004-0>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"I'm way too huge for this puny planet!"<soundeffect></div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#StoryBook-StoryBook_MeetKoopa004-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The 14th storybook text in Peach's Castle. Spoken by Bowser.</div>
+</div>
+
+<div id=StoryBook-StoryBook_MeetKoopa004-1>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"I deserve an empire that's more ME size!"<soundeffect></div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#StoryBook-StoryBook_MeetKoopa004-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+
+<div id=StoryBook-StoryBook_MeetKoopa004-2>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"And I'll put it in the center of the universe!"<soundeffect></div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#StoryBook-StoryBook_MeetKoopa004-2"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div id=StoryBook-StoryBook_MeetKoopa005>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"Have fun with your stupid mushrooms!"<soundeffect></div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#StoryBook-StoryBook_MeetKoopa005"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The 15th storybook text in Peach's Castle. Spoken by Bowser, as he flies away with Princess Peach.</div>
+</div>
+
+<div id=PeachCastleTown3DZone-Kinopio004>
+  <div class="name red">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>STAY CALM! STAY CALM!</div>
+  </div>
+  <a href="#PeachCastleTown3DZone-Kinopio004"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The second red Toad that the player encounters in the fourth area of Peach's Castle.</div>
+</div>
+
+<div id=PeachCastleTown3DZone-Kinopio003>
+  <div class="name purple">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>What do we do?!</div>
+  </div>
+  <a href="#PeachCastleTown3DZone-Kinopio003"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The second purple Toad that the player encounters in the fourth area of Peach's Castle.</div>
+</div>
+
+<div id=PeachCastleTown3DZone-Kinopio005>
+  <div class="name green">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>That was awful!</div>
+  </div>
+  <a href="#PeachCastleTown3DZone-Kinopio005"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The second green Toad that the player encounters in the fourth area of Peach's Castle.</div>
+</div>
+
+<div id=PeachCastleTown3DZone-Kinopio012>
+  <div class="name blue">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>You must save Princess Peach!</div>
+  </div>
+  <a href="#PeachCastleTown3DZone-Kinopio012"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The blue Toad that the player encounters in the fourth area of Peach's Castle.</div>
+</div>
+
+<div id=PeachCastleTown3DZone-Kinopio006>
+  <div class="name yellow">Toad <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Why, <font class=red>Bowser</font>? WHY?!</div>
+  </div>
+  <a href="#PeachCastleTown3DZone-Kinopio006"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The yellow Toad that the player encounters in the fourth area of Peach's Castle.</div>
+</div>
+
+<div id=PeachCastleTown3DZone-Tico014_Flow000>
+  <div class="name yellow">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>--character--!</div>
+  </div>
+  <a href="#PeachCastleTown3DZone-Tico014_Flow000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The second Luma waiting for the player at the doors of Peach's Castle in the fourth area, if the player is too far away.</div>
+</div>
+
+<div class=conversation id=StoryBook-StoryBook_RideSpinDriver000>
+<a href="#StoryBook-StoryBook_RideSpinDriver000"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=StoryBook-StoryBook_RideSpinDriver000-0>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"--character--? Where did that monster come from?!"</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#StoryBook-StoryBook_RideSpinDriver000-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The 16th storybook text in Peach's Castle. Spoken by a Luma at the gate of Peach's Castle, once Mario approaches.</div>
+</div>
+
+<div id=StoryBook-StoryBook_RideSpinDriver000-1>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"He took your princess to the center of the</br>universe! You must hurry and save her!"</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#StoryBook-StoryBook_RideSpinDriver000-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div class=conversation id=StoryBook-StoryBook_RideSpinDriver001>
+<a href="#StoryBook-StoryBook_RideSpinDriver001"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=StoryBook-StoryBook_RideSpinDriver001-0>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"<font class=talkLarge>OH! Master <img class=iconBookL src="icon/masterluma.png" alt="[Master Luma icon]"><span class=icoLarge></span> Luma!"</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#StoryBook-StoryBook_RideSpinDriver001-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The 17th storybook text in Peach's Castle. Spoken by the second Luma at the gate of Peach's Castle. Master Luma pops out of Mario's cap.</div>
+</div>
+
+<div id=StoryBook-StoryBook_RideSpinDriver001-1>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"Young master <img class=iconBook src="icon/masterluma.png" alt="[Master Luma icon]"> Luma, did you get thrown</br> overboard too? Good thing you're safe!"</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#StoryBook-StoryBook_RideSpinDriver001-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">DEV NOTE: This sucks, and I hate it. I have spent hours trying to fix it now, but unfortunately I just don't have the knowledge to.</br>Someone else who *actually* knows how to code can fix it. I have no idea what I'm doing. :) (For now, you can still copy/paste, and it will display correctly.)</br>          -Alice</div>
+</div>
+
+<div id=StoryBook-StoryBook_RideSpinDriver001-2>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"I see... So you're going to stay in --character--'s cap?</br> That should be safe for now..."</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#StoryBook-StoryBook_RideSpinDriver001-2"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+
+<div id=StoryBook-StoryBook_RideSpinDriver001-3>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"But, --character--, you have other things to worry</br> about...like saving the princess! ...But how?"</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#StoryBook-StoryBook_RideSpinDriver001-3"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div class=conversation id=StoryBook-StoryBook_RideSpinDriver002>
+<a href="#StoryBook-StoryBook_RideSpinDriver002"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=StoryBook-StoryBook_RideSpinDriver002-0>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"I know! With young master <img class=iconBook src="icon/masterluma.png" alt="[Master Luma icon]"> Luma's help,</br> you can use the power of the stars!"</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#StoryBook-StoryBook_RideSpinDriver002-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The 18th storybook text in Peach's Castle. Spoken by the second Luma at the gate of Peach's Castle.</div>
+  <div class="description">DEV NOTE: This sucks, and I hate it. I have spent hours trying to fix it now, but unfortunately I just don't have the knowledge to.</br>Someone else who *actually* knows how to code can fix it. I have no idea what I'm doing. :) (For now, you can still copy/paste, and it will display correctly.)</br>          -Alice</div>
+</div>
+
+<div id=StoryBook-StoryBook_RideSpinDriver002-1>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"And we <img class=iconBook src="icon/luma.png" alt="[Luma icon]"> Lumas can help a little too!"</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#StoryBook-StoryBook_RideSpinDriver002-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div class=conversation id=StoryBook-StoryBook_RideSpinDriver003>
+<a href="#StoryBook-StoryBook_RideSpinDriver003"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=StoryBook-StoryBook_RideSpinDriver003-0>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"As thanks for saving our friends..."</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#StoryBook-StoryBook_RideSpinDriver003-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The 19th storybook text in Peach's Castle. Spoken by the second Luma at the gate of Peach's Castle. The first Luma transforms into a Launch Star.</div>
+</div>
+
+<div id=StoryBook-StoryBook_RideSpinDriver003-1>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"We'll send you into space to get that monster!"</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#StoryBook-StoryBook_RideSpinDriver003-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+
+<div id=StoryBook-StoryBook_RideSpinDriver003-2>
+  <div class="name">Storybook <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <div class=smgBook>"Now! Let's go after them!"</div>
+    <img src="smgBookTop.png" style="width: 64.323vw; display: block; margin: 0 auto;">
+  </div>
+  <a href="#StoryBook-StoryBook_RideSpinDriver003-2"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div id=PeachCastleTown3DZone-SuperSpinDriver000>
+  <div class="name">Launch Star <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Come here! Shake your <font class=red><img class=icon src="icon/wiimote.png" alt="[Wii Remote icon]"><span class=ico></span></font>!</div>
+  </div>
+  <a href="#PeachCastleTown3DZone-SuperSpinDriver000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The first Luma waiting for the player at the doors of Peach's Castle in the fourth area, after they transform into a Launch Star.</div>
+</div>
+
+<div id=PeachCastleTown3DZone-Tico014_Flow001>
+  <div class="name yellow">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Fly with the <img class=icon src="icon/star.png" alt="[Launch Star icon]"><span class=ico></span>! Go after them!</div>
+  </div>
+  <a href="#PeachCastleTown3DZone-Tico014_Flow001"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The second Luma waiting for the player at the doors of Peach's Castle in the fourth area, if the player gets close to them after the first Luma transforms into a Launch Star.</div>
+</div>
+
+<div class=conversation id=HoleSphere3Zone-Tico004_Flow000>
+<a href="#HoleSphere3Zone-Tico004_Flow000"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=HoleSphere3Zone-Tico004_Flow000-0>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Our <font class=red><img class=icon src="icon/powerstar.png" alt="[Power Star icon]"><span class=ico></span> Power Stars</font>... They're gone!</br>Some gigantic <img class=icon src="icon/bowser.png" alt="[Bowser icon]"><span class=ico></span> <font class=blue>monster </font>stole them!</div>
+  </div>
+  <a href="#HoleSphere3Zone-Tico004_Flow000-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Luma that automatically talks to the player when they first land in the first and third stars in Sky Station Galaxy.</div>
+</div>
+
+<div id=HoleSphere3Zone-Tico004_Flow000-1>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>If you're going after that <font class=blue>monster</font>,</br>you might see our <img class=icon src="icon/powerstar.png" alt="[Power Star icon]"><span class=ico></span> <font class=red>Power Stars</br></font>out there too!</div>
+  </div>
+  <a href="#HoleSphere3Zone-Tico004_Flow000-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+
+<div id=HoleSphere3Zone-Tico004_Flow000-2>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Please bring our <img class=icon src="icon/powerstar.png" alt="[Power Star icon]"><span class=ico></span> <font class=red>Power Stars</font></br>back. We <font class=yellow><img class=icon src="icon/luma.png" alt="[Luma icon]"><span class=ico></span> Lumas </font>will help you along</br>your way!</div>
+  </div>
+  <a href="#HoleSphere3Zone-Tico004_Flow000-2"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div id=HoleSphere3Zone-SignBoard000>
+  <div class="name">Sign Board <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign>Hello, friend! Please go<font class=blue> around back</font>!</br>                               <img class=icon src="icon/yoshi.png" alt="[Yoshi icon]"><span class=ico></span> <font class=green>Yoshi</font></div>
+  </div>
+  <a href="#HoleSphere3Zone-SignBoard000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The sign in front of Yoshi's house in the first star in Sky Station Galaxy.</div>
+</div>
+
+<div id=HoleSphere3Zone-Dreamer_Flow000>
+  <div class="name">Tip Network <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smg-n.png" style="width: 64.323vw;">
+    <div class=smgTalk>Here's a tip!<wait time="30"/> You can <font class=red>spin </font>to defeat</br>enemies! Want to see how?</div>
+  </div>
+  <a href="#HoleSphere3Zone-Dreamer_Flow000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Tip Network in the first star in Sky Station Galaxy that teaches the player how to spin attack. The player is given two choices: <a href="#HoleSphere3Zone-Dreamer_Flow002">"No"</a> and <a href="#HoleSphere3Zone-Dreamer_Flow001">"Yes"</a>.</br><a href="#HoleSphere3Zone-Dreamer_Flow002">"No"</a> leads to the next textbox (<a href="#HoleSphere3Zone-Dreamer_Flow002">#HoleSphere3Zone-Dreamer_Flow002</a>). <a href="#HoleSphere3Zone-Dreamer_Flow001">"Yes"</a> leads to <a href="#HoleSphere3Zone-Dreamer_Flow001">#HoleSphere3Zone-Dreamer_Flow001</a>, and plays a demo video.</div>
+</div>
+
+<div id=HoleSphere3Zone-Dreamer_Flow002>
+  <div class="name">Tip Network <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Good luck out there!</div>
+  </div>
+  <a href="#HoleSphere3Zone-Dreamer_Flow002"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Tip Network in the first star in Sky Station Galaxy that teaches the player how to spin attack, if the player says "No".</div>
+</div>
+
+<div id=HoleSphere3Zone-Dreamer_Flow001>
+  <div class="name">Tip Network <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Here you go!</div>
+  </div>
+  <a href="#HoleSphere3Zone-Dreamer_Flow001"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Tip Network in the first star in Sky Station Galaxy that teaches the player how to spin attack, if the player says "Yes". A demo video plays after.</div>
+</div>
+
+<div class=conversation id=HoleSphere3Zone-DreamerEnd003>
+<a href="#HoleSphere3Zone-DreamerEnd003"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=HoleSphere3Zone-DreamerEnd003-0>
+  <div class="name">Tip Network <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Get close to an enemy and shake <img class=icon src="icon/wiimote.png" alt="[Wii Remote icon]"><span class=ico></span></br>to <font class=red>spin</font>! Once they're <font class=blue>dazed</font>, <font class=blue>kick 'em</br></font>outta this world!</div>
+  </div>
+  <a href="#HoleSphere3Zone-DreamerEnd003-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Tip Network in the first star in Sky Station Galaxy that teaches the player how to spin attack, at the end of the demo video.</div>
+</div>
+
+<div id=HoleSphere3Zone-DreamerEnd003-1>
+  <div class="name">Tip Network <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>If you jump on top of an enemy,</br>a <img class=icon src="icon/coin.png" alt="[Coin icon]"><span class=ico></span> <font class=red>coin </font>will appear.<font class=red> </font>Grab <font class=yellow><img class=icon src="icon/coin.png" alt="[Coin icon]"><span class=ico></span> coins</br><font class=blue>to restore life<font class=none>!</div>
+  </div>
+  <a href="#HoleSphere3Zone-DreamerEnd003-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div id=HoleSphere3Zone-Tico010>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Whew... You saved me! But that</br><font class=red><img class=icon src="icon/bowser.png" alt="[Bowser icon]"><span class=ico></span> monster </font>got away...</div>
+  </div>
+  <a href="#HoleSphere3Zone-Tico010"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Luma trapped inside the large crystal on the underside of the first planet in the first star in Sky Station Galaxy, who automatically talks to the player.</div>
+</div>
+
+<div id=HoleSphere3Zone-SignBoard001>
+  <div class="name">Sign Board <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign>Hello! I'm out helping some friends</br>right now. Sorry if I missed you!</br>                               <img class=icon src="icon/yoshi.png" alt="[Yoshi icon]"><span class=ico></span> <font class=green>Yoshi</font></div>
+  </div>
+  <a href="#HoleSphere3Zone-SignBoard001"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The sign on top of Yoshi's house in the first star in Sky Station Galaxy.</div>
+</div>
+
+<div id=HoleSphere3Zone-Tico000>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>I looked all around for a <img class=icon src="icon/powerstar.png" alt="[Power Star icon]"><span class=ico></span> <font class=red>Power</br>Star</font>! There isn't one anywhere in</br>this house, though!</div>
+  </div>
+  <a href="#HoleSphere3Zone-Tico000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">A Luma on top of the first planet in the first and third stars in Sky Station Galaxy.</div>
+</div>
+
+<div id=IslandFleetGalaxy-Tico000_Flow001>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Over here!</div>
+  </div>
+  <a href="#IslandFleetGalaxy-Tico000_Flow001"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Luma that turns into a Launch Star on top of the first planet in the first and third stars in Sky Station Galaxy, when the player is too far from the Luma.</div>
+</div>
+
+<div class=conversation id=IslandFleetGalaxy-Tico000_Flow000>
+<a href="#IslandFleetGalaxy-Tico000_Flow000"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=IslandFleetGalaxy-Tico000_Flow000-0>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>The other <font class=yellow><img class=icon src="icon/luma.png" alt="[Luma icon]"><span class=ico></span> Lumas </font>told me about</br>you! Thank you for helping us!</div>
+  </div>
+  <a href="#IslandFleetGalaxy-Tico000_Flow000-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Luma that turns into a Launch Star on top of the first planet in the first and third stars in Sky Station Galaxy.</div>
+</div>
+
+<div id=IslandFleetGalaxy-Tico000_Flow000-1>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>I'm going to transform into a</br><font class=red><img class=icon src="icon/star.png" alt="[Launch Star icon]"><span class=ico></span> Launch Star</font>. Come over and fly!</div>
+  </div>
+  <a href="#IslandFleetGalaxy-Tico000_Flow000-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div id=IslandFleetGalaxy-SuperSpinDriver000>
+  <div class="name">Launch Star <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Get close and <font class=red>shake </font><img class=icon src="icon/wiimote.png" alt="[Wii remote icon]"><span class=ico></span>!</div>
+  </div>
+  <a href="#IslandFleetGalaxy-SuperSpinDriver000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">After the Luma transforms into a Launch Star on top of the Starting Planet in the first and third stars in Sky Station Galaxy.</div>
+</div>
+
+<div id=DrumActionPlanetZone-SignBoard000>
+  <div class="name">Sign Board <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout><font class=red>P2</font>!<font class=red> </font>Point <img class=icon src="icon/pointerP2.png" alt="[P2 Pointer icon]"><span class=ico></span> at</br><font class=blue>enemies</font>! Press <font class=blue><img class=icon src="icon/Abutton.png" alt="[A Button icon]"><span class=ico></span></font>!</div>
+  </div>
+  <a href="#DrumActionPlanetZone-SignBoard000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The sign on the Green Hill Planet in the first star in Sky Station Galaxy. Only appears in P2 mode.</div>
+</div>
+
+<div id=DrumActionPlanetZone-Tico000_Flow002>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>This way!</div>
+  </div>
+  <a href="#DrumActionPlanetZone-Tico000_Flow002"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The first of four messages shouted by the Luma on the Green Hill Planet in the first and third stars in Sky Station Galaxy.</div>
+</div>
+
+<div id=DrumActionPlanetZone-Tico000_Flow003>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Follow me!</div>
+  </div>
+  <a href="#DrumActionPlanetZone-Tico000_Flow003"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The second of four messages shouted by the Luma on the Green Hill Planet in the first and third stars in Sky Station Galaxy.</div>
+</div>
+
+<div id=DrumActionPlanetZone-Tico000_Flow000>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Careful! <font class=blue>Octoombas</font>!</div>
+  </div>
+  <a href="#DrumActionPlanetZone-Tico000_Flow000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The third of four messages shouted by the Luma on the Green Hill Planet in the first and third stars in Sky Station Galaxy.</div>
+</div>
+
+<div id=DrumActionPlanetZone-Tico000_Flow001>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Look out!</div>
+  </div>
+  <a href="#DrumActionPlanetZone-Tico000_Flow001"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The last of four messages shouted by the Luma on the Green Hill Planet in the first and third stars in Sky Station Galaxy.</div>
+</div>
+
+<div id=IslandFleetGalaxy-SuperSpinDriver001>
+  <div class="name">Launch Star <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Let's fly!</div>
+  </div>
+  <a href="#IslandFleetGalaxy-SuperSpinDriver001"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">After the Luma transforms into a Launch Star at the end of the Green Hill Planet in the first star in Sky Station Galaxy.</div>
+</div>
+
+<div id=InformationMessage-InformationObserverCometMedal>
+  <div class="name">System <font class="galaxy">Common</font></div>
+  <div class=container>
+    <img src="smginfo.png" style="width: 64.323vw;">
+    <div class=smgInfo>You got a <img class=icon src="icon/cometmedal.png" alt="[Comet Medal icon]"><span class=ico></span><font class=red> Comet Medal</font>!</br>Collect them to make <font class=red>comets </font>appear.</div>
+  </div>
+  <a href="#InformationMessage-InformationObserverCometMedal"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The message that appears the first time the player obtains a Comet Medal.</div>
+</div>
+
+<div id=IslandFleetGalaxy-SuperSpinDriver002>
+  <div class="name">Launch Star <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>There's a <font class=red>monster </font>up ahead!</div>
+  </div>
+  <a href="#IslandFleetGalaxy-SuperSpinDriver002"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">After the Luma transforms into a Launch Star at the end of the Cylindrical Planet in the first star in Sky Station Galaxy.</div>
+</div>
+
+<div id=InformationMessage-InformationObserverLifeUpMario>
+  <div class="name">System <font class="galaxy">Common</font></div>
+  <div class=container>
+    <img src="smginfo.png" style="width: 64.323vw;">
+    <div class=smgInfo>You now have<font class=red> 6 health</font>! If it drops</br>below 4, it will go back to normal.</div>
+  </div>
+  <a href="#InformationMessage-InformationObserverLifeUpMario"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The message that appears the first time the player obtains a Life Shroom.</div>
+</div>
+
+<div id=IslandFleetGalaxy-SuperSpinDriver003>
+  <div class="name">Launch Star <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>I see <img class=icon src="icon/powerstar.png" alt="[Power Star icon]"><span class=ico></span> light over there!</div>
+  </div>
+  <a href="#IslandFleetGalaxy-SuperSpinDriver003"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Launch Star at the end of the Two-Sided Planet in the first star in Sky Station Galaxy.</div>
+</div>
+
+<div class=conversation id=MarioFaceShipZone-Meister002_Flow000>
+<a href="#MarioFaceShipZone-Meister002_Flow000"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=MarioFaceShipZone-Meister002_Flow000-0>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>So you're this <font class=red>--character-- </font>guy my little</br><img class=icon src="icon/luma.png" alt="[Luma icon]"><span class=ico></span> <font class=yellow>Lumas</font> won't stop blabbing</br>about, am I right?</div>
+  </div>
+  <a href="#MarioFaceShipZone-Meister002_Flow000-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The first interaction after completing the first star in Sky Station Galaxy. The start of the cutscene.</div>
+</div>
+
+<div id=MarioFaceShipZone-Meister002_Flow000-1>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Sorry to hear about the excitement</br>you had with that <img class=icon src="icon/bowser.png" alt="[Bowser icon]"><span class=ico></span> <font class=blue/>monster</font> down</br>in the Mushroom Kingdom.</div>
+  </div>
+  <a href="#MarioFaceShipZone-Meister002_Flow000-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+
+<div id=MarioFaceShipZone-Meister002_Flow000-2>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>I sure appreciate you bringing us</br>this <img class=icon src="icon/powerstar.png" alt="[Power Star icon]"><span class=ico></span> <font class=red>Power Star</font>, though! We need</br>as many of these as we can get!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Meister002_Flow000-2"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+
+<div id=MarioFaceShipZone-Meister002_Flow000-3>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>The name's <font class=red>Lubba</font>, by the by. I'm the</br><font class=blue>head honcho </font>of this <font class=yellow><img class=icon src="icon/luma.png" alt="[Luma icon]"><span class=ico></span> Luma </font>crew.</div>
+  </div>
+  <a href="#MarioFaceShipZone-Meister002_Flow000-3"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div class=conversation id=MarioFaceShipZone-Meister002_Flow001>
+<a href="#MarioFaceShipZone-Meister002_Flow001"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=MarioFaceShipZone-Meister002_Flow001-0>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>See, believe it or not, we're on a</br><font class=blue>spaceship </font>right now.</div>
+  </div>
+  <a href="#MarioFaceShipZone-Meister002_Flow001-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The second interaction after completing the first star in Sky Station Galaxy. The camera pans out to show the planet the player is standing on.</div>
+</div>
+
+<div id=MarioFaceShipZone-Meister002_Flow001-1>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Took some real elbow grease to</br>convert this little planetoid into a</br><font class=blue>ship</font>, but we <font class=red>Lumas</font> pulled it off!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Meister002_Flow001-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+
+<div id=MarioFaceShipZone-Meister002_Flow001-2>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>May not look like much...<wait time="15"/>but it's home.</div>
+  </div>
+  <a href="#MarioFaceShipZone-Meister002_Flow001-2"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div class=conversation id=MarioFaceShipZone-Meister002_Flow002>
+<a href="#MarioFaceShipZone-Meister002_Flow002"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=MarioFaceShipZone-Meister002_Flow002-0>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Truth be told, the <font class=blue>ship</font>...<wait time="15"/>she's not in</br>such hot shape right now.</div>
+  </div>
+  <a href="#MarioFaceShipZone-Meister002_Flow002-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The third interaction after completing the first star in Sky Station Galaxy. The camera returns to Lubba and the player.</div>
+</div>
+
+<div id=MarioFaceShipZone-Meister002_Flow002-1>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>We ran into that <font class=red><img class=icon src="icon/bowser.png" alt="[Bowser icon]"><span class=ico></span> monster</font> too! He</br>blasted us with meteors, and some of</br>my <font class=yellow>crew </font>were thrown overboard!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Meister002_Flow002-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div id=MarioFaceShipZone-Meister002_Flow003>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>So that <img class=icon src="icon/bowser.png" alt="[Bowser icon]"><span class=ico></span> <font class=red>monster </font>kidnapped</br>your <font class=blue><img class=icon src="icon/peach.png" alt="[Princess Peach icon]"><span class=ico></span> princess</font>, eh? That's cold...</br>Deep-space cold, if ya ask me.</div>
+  </div>
+  <a href="#MarioFaceShipZone-Meister002_Flow003"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The fourth interaction after completing the first star in Sky Station Galaxy. The camera zooms in onto Mario's face.</div>
+</div>
+
+<div class=conversation id=MarioFaceShipZone-Meister002_Flow004>
+<a href="#MarioFaceShipZone-Meister002_Flow004"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=MarioFaceShipZone-Meister002_Flow004-0>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Ya know what else is cold? That</br><img class=icon src="icon/bowser.png" alt="[Bowser icon]"><span class=ico></span> <font class=red>monster </font>stealing every last one of</br>our <img class=icon src="icon/powerstar.png" alt="[Power Star icon]"><span class=ico></span> <font class=yellow>Power Stars</font>!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Meister002_Flow004-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The fifth interaction after completing the first star in Sky Station Galaxy. The camera returns to Lubba and the player.</div>
+</div>
+
+<div id=MarioFaceShipZone-Meister002_Flow004-1>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>See, that's our fuel. Our <font class=blue>spaceship</br>runs on energy from </font><img class=icon src="icon/powerstar.png" alt="[Power Star icon]"><span class=ico></span>! Without</br>that, we're stranded here!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Meister002_Flow004-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div class=conversation id=MarioFaceShipZone-Meister002_Flow005>
+<a href="#MarioFaceShipZone-Meister002_Flow005"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=MarioFaceShipZone-Meister002_Flow005-0>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>AY-O! Is-- Is that... <img class=icon src="icon/masterluma.png" alt="[Master Luma icon]"><span class=ico></span> <font class=red>young master</br>Luma</font>?<font class=talkSmall> It is...isn't it?! Wow...</font></div>
+  </div>
+  <a href="#MarioFaceShipZone-Meister002_Flow005-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The sixth interaction after completing the first star in Sky Station Galaxy. Baby Luma appears out from under Mario's cap, to Lubba's surprise.</div>
+</div>
+
+<div id=MarioFaceShipZone-Meister002_Flow005-1>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Wait--if you have the trust of young</br>master Luma...<wait time="15"/>hmm<wait time="15"/>.<wait time="15"/>.<wait time="15"/>.<wait time="30"/> Say, I just might</br>have a little proposition for ya.</div>
+  </div>
+  <a href="#MarioFaceShipZone-Meister002_Flow005-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+
+<div id=MarioFaceShipZone-Meister002_Flow005-2>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <img src="smg-n.png" style="width: 64.323vw;">
+    <div class=smgTalk>Hear me out, now... Your <font class=blue>special</br>someone</font> got kidnapped and now you</br>gotta save her, am I right?</div>
+  </div>
+  <a href="#MarioFaceShipZone-Meister002_Flow005-2"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The player is given two choices: <a href="#MarioFaceShipZone-Meister002_Flow006">"That's right"</a>, and <a href="#MarioFaceShipZone-Meister002_Flow006">"Yes"</a>. They both lead to the next textbox (<a href="#MarioFaceShipZone-Meister002_Flow006">#MarioFaceShipZone-Meister002_Flow006</a>).</div>
+</div>
+</div>
+
+<div class=conversation id=MarioFaceShipZone-Meister002_Flow006>
+<a href="#MarioFaceShipZone-Meister002_Flow006"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=MarioFaceShipZone-Meister002_Flow006-0>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>And we need fuel for our <font class=blue>ship</font>.<wait time="15"/> Now,</br>if you think you could get some of</br>our <img class=icon src="icon/powerstar.png" alt="[Power Star icon]"><span class=ico></span> back for us...</div>
+  </div>
+  <a href="#MarioFaceShipZone-Meister002_Flow006-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">After Mario agrees with Lubba, the seventh interaction after completing the first star in Sky Station Galaxy.</div>
+</div>
+
+<div id=MarioFaceShipZone-Meister002_Flow006-1>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <img src="smg-n.png" style="width: 64.323vw;">
+    <div class=smgTalk>I'd be willing to make this ship</br>your very own for a bit. <wait time="30"/>That's a</br>fair exchange! Am I right, --character--?</div>
+  </div>
+  <a href="#MarioFaceShipZone-Meister002_Flow006-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The player is given two choices: <a href="#MarioFaceShipZone-Meister002_Flow007">"That's right"</a>, and <a href="#MarioFaceShipZone-Meister002_Flow007">"Yes"</a>. They both lead to the next textbox (<a href="#MarioFaceShipZone-Meister002_Flow007">#MarioFaceShipZone-Meister002_Flow007</a>).</div>
+</div>
+</div>
+
+<div class=conversation id=MarioFaceShipZone-Meister002_Flow007>
+<a href="#MarioFaceShipZone-Meister002_Flow007"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=MarioFaceShipZone-Meister002_Flow007-0>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>All right! It's a deal!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Meister002_Flow007-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">After Mario agrees with Lubba, the eigth interaction after completing the first star in Sky Station Galaxy.</div>
+</div>
+
+<div id=MarioFaceShipZone-Meister002_Flow007-1>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>OK, gang! Let's get cracking, yeah?</br>I want everything <font class=blue>space-shipshape</font>!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Meister002_Flow007-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div id=InformationMessage-InformationObserverMarioFacePlanet>
+  <div class="name">System <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <img src="smginfo.png" style="width: 64.323vw;">
+    <div class=smgInfo>Lubba's crew rebuilt the spaceship to</br>look just like Mario!</div>
+  </div>
+  <a href="#InformationMessage-InformationObserverMarioFacePlanet"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">After Lubba transforms the planet into Starship Mario, the ninth interaction after completing the first star in Sky Station Galaxy. The camera zooms out to show Starship Mario.</div>
+</div>
+
+<div id=MarioFaceShipZone-Meister002_Flow008>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Well? Whaddya think?</div>
+  </div>
+  <a href="#MarioFaceShipZone-Meister002_Flow008"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The 10th interaction after completing the first star in Sky Station Galaxy. The camera returns to Lubba.</div>
+</div>
+
+<div class=conversation id=MarioFaceShipZone-Meister002_Flow009>
+<a href="#MarioFaceShipZone-Meister002_Flow009"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=MarioFaceShipZone-Meister002_Flow009-0>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Nice spaceship, yeah? More like a</br><font class=blue>faceship</font>!<wait time="15"/> Har har!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Meister002_Flow009-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The 11th interaction after completing the first star in Sky Station Galaxy. The camera moves to show the face of Starship Mario.</div>
+</div>
+
+<div id=MarioFaceShipZone-Meister002_Flow009-1>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Well, at least you'll never lose it in a</br>parking lot! Am I right? Har har!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Meister002_Flow009-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div id=MarioFaceShipZone-Meister002_Flow010>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>So what's next? <wait time="15"/>Don't look at me--this</br>ship has your face on it, not mine!<wait time="15"/></br>The decision is yours!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Meister002_Flow010"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The 12th interaction after completing the first star in Sky Station Galaxy. The camera moves back to Lubba and Mario.</div>
+</div>
+
+<div id=MarioFaceShipZone-Meister002_Flow011>
+  <div class="name purple">Lubba <font class="galaxy">Cutscene</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Feel free to explore <font class=red>Starship Mario</font>,</br>or take the helm if you're ready to</br><font class=blue>ship out</font>! It's your call, Captain!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Meister002_Flow011"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The 13th interaction after completing the first star in Sky Station Galaxy. The camera zooms in on Lubba. Afterwards, the game saves, and returns to normal gameplay.</div>
+</div>
+
+<div id=MeisterTalk-Meister_StarPieceReaction_Flow000>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Mmmm. Thanks!</div>
+  </div>
+  <a href="#MeisterTalk-Meister_StarPieceReaction_Flow000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The first of six randomly selected phrases Lubba says after shooting a Star Bit at him.</div>
+</div>
+
+<div id=MeisterTalk-Meister_StarPieceReaction_Flow001>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Yum! Not bad at all!</div>
+  </div>
+  <a href="#MeisterTalk-Meister_StarPieceReaction_Flow001"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The second of six randomly selected phrases Lubba says after shooting a Star Bit at him.</div>
+</div>
+
+<div id=MeisterTalk-Meister_StarPieceReaction_Flow002>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Yeah, that's the stuff!</div>
+  </div>
+  <a href="#MeisterTalk-Meister_StarPieceReaction_Flow002"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The third of six randomly selected phrases Lubba says after shooting a Star Bit at him.</div>
+</div>
+
+<div id=MeisterTalk-Meister_StarPieceReaction_Flow003>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>SMACK, SMACK! Hm... Needs salt.</div>
+  </div>
+  <a href="#MeisterTalk-Meister_StarPieceReaction_Flow003"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The fourth of six randomly selected phrases Lubba says after shooting a Star Bit at him.</div>
+</div>
+
+<div id=MeisterTalk-Meister_StarPieceReaction_Flow004>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Ahh, just a touch of sweetness!</div>
+  </div>
+  <a href="#MeisterTalk-Meister_StarPieceReaction_Flow004"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The fifth of six randomly selected phrases Lubba says after shooting a Star Bit at him.</div>
+</div>
+
+<div id=MeisterTalk-Meister_StarPieceReaction_Flow005>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Tastes like <font class=blue>Star Bit bread</font>...</div>
+  </div>
+  <a href="#MeisterTalk-Meister_StarPieceReaction_Flow005"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The last of six randomly selected phrases Lubba says after shooting a Star Bit at him.</div>
+</div>
+
+<div id=Meister-Meister_AfterIslandFleetGalaxy_Flow000>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>All right then! Grab that wheel, and</br>let's head out, Captain!</div>
+  </div>
+  <a href="#Meister-Meister_AfterIslandFleetGalaxy_Flow000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">Talking to Lubba before flying Starship Mario for the first time.</div>
+</div>
+
+<div class=conversation id=MarioFaceShipZone-Tico060>
+<a href="#MarioFaceShipZone-Tico060"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=MarioFaceShipZone-Tico060-0>
+  <div class="name blue">Luma <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk><font class=red>When you want to quit</font>, press <img class=icon src="icon/MINUSbutton.png" alt="[Minus Button icon]"><span class=ico></span> or</br><img class=icon src="icon/PLUSbutton.png" alt="[Plus Button icon]"><span class=ico></span> and choose <font class=red>Save and Quit</font>.</div>
+  </div>
+  <a href="#MarioFaceShipZone-Tico060-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">A blue Luma on the deck of Starship Mario.</div>
+</div>
+
+<div id=MarioFaceShipZone-Tico060-1>
+  <div class="name blue">Luma <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>On a long trip like this...<wait time="15"/>be sure to</br>take breaks from time to time!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Tico060-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div id=MarioFaceShipZone-SignBoard003>
+  <div class=name>Sign Board <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign>If you run and then press <img class=icon src="icon/Zbutton.png" alt="[Z Button icon]"><span class=ico></span> right</br>before a <font class=blue>jump</font>, you'll do a <font class=red>long jump</font>!</br>Try it! It feels pretty great!</div>
+  </div>
+  <a href="#MarioFaceShipZone-SignBoard003"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">A Sign Board near the deck of Starship Mario.</div>
+</div>
+
+<div class=conversation id=MarioFaceShipZone-Tico061>
+<a href="#MarioFaceShipZone-Tico061"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=MarioFaceShipZone-Tico061-0>
+  <div class="name orange">Luma <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Even heroes need a hand sometimes!</br>If you have<font class=blue> one more </font><img class=icon src="icon/wiimote.png" alt="[Wii Remote icon]"><span class=ico></span>, a <font class=orange><img class=icon src="icon/costarluma.png" alt="[Co-Star Luma icon]"><span class=ico></span> friend</br></font>can help you.</div>
+  </div>
+  <a href="#MarioFaceShipZone-Tico061-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">An orange Luma near the deck of Starship Mario.</div>
+</div>
+
+<div id=MarioFaceShipZone-Tico061-1>
+  <div class="name orange">Luma <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Your <font class=orange><img class=icon src="icon/costarluma.png" alt="[Co-Star Luma icon]"><span class=ico></span> friend</font> can stop enemies with</br><img class=icon src="icon/Abutton.png" alt="[A Button icon]"><span class=ico></span> and then <font class=blue>shake <img class=icon src="icon/wiimote.png" alt="[Wii Remote icon]"><span class=ico></span> </font>to <font class=red>spin them</br>into the air</font>!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Tico061-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div id=MarioFaceShipZone-Tico064>
+  <div class="name yellow">Luma <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>This has turned out to be a fine ship!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Tico064"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The yellow Luma near the deck of Starship Mario, when it is first repaired.</div>
+</div>
+
+<div id=MarioFaceShipZone-SignBoard005>
+  <div class=name>Sign Board <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign><font class=blue>While sliding down a wall, press</font> <img class=icon src="icon/Abutton.png" alt="[A Button icon]"><span class=ico></span> to</br><font class=red>wall-jump</font>! See how high you can</br>get with this <font class=red>technique</font>!</div>
+  </div>
+  <a href="#MarioFaceShipZone-SignBoard005"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">A Sign Board near the deck of Starship Mario.</div>
+</div>
+
+<div id=MarioFaceShipZone-SignBoard004>
+  <div class=name>Sign Board <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign><font class=blue>Press </font><img class=icon src="icon/Zbutton.png" alt="[Z Button icon]"><span class=ico></span> in the air to do a <font class=red>ground</br>pound</font>! You can use it to flatten</br>your foes.</div>
+  </div>
+  <a href="#MarioFaceShipZone-SignBoard004"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">A Sign Board near the back of Starship Mario.</div>
+</div>
+
+<div id=MarioFaceShipZone-SignBoard002>
+  <div class=name>Sign Board <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign>If you <font class=blue>jump </font>while crouching with <img class=icon src="icon/Zbutton.png" alt="[Z Button icon]"><span class=ico></span>,</br>you'll do a <font class=red>backward somersault</font>!</br>You can go super high!</div>
+  </div>
+  <a href="#MarioFaceShipZone-SignBoard002"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">A Sign Board on the mustache of Starship Mario.</div>
+</div>
+
+<div class=conversation id=MarioFaceShipZone-Tico000>
+<a href="#MarioFaceShipZone-Tico000"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=MarioFaceShipZone-Tico000-0>
+  <div class="name yellow">Luma <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Point <img class=icon src="icon/wiimote.png" alt="[Wii Remote icon]"><span class=ico></span> at the screen to make</br>the <img class=icon src="icon/pointerP1.png" alt="[P1 Pointer icon]"><span class=ico></span> <font class=red>cursor </font>appear!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Tico000-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The yellow Luma at the bottom of Starship Mario.</div>
+</div>
+
+<div id=MarioFaceShipZone-Tico000-1>
+  <div class="name yellow">Luma <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>All you have to do is touch a</br><img class=icon src="icon/starbit.png" alt="[Purple Star Bit icon]"><span class=ico></span> <font class=purple>Star Bit </font>with the <img class=icon src="icon/pointerP1.png" alt="[P1 Pointer icon]"><span class=ico></span> <font class=red>cursor </font>to</br>pick it up!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Tico000-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+
+<div id=MarioFaceShipZone-Tico000-2>
+  <div class="name yellow">Luma <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Then you can aim with the <img class=icon src="icon/pointerP1.png" alt="[P1 Pointer icon]"><span class=ico></span> <font class=red>cursor</font></br>and press <img class=icon src="icon/Bbutton.png" alt="[B Button icon]"><span class=ico></span> to shoot a <img class=icon src="icon/starbit.png" alt="[Purple Star Bit icon]"><span class=ico></span>!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Tico000-2"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div id=Tico-Tico_StarPiece1_Flow000>
+  <div class="name">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Thank you!</div>
+  </div>
+  <a href="#Tico-Tico_StarPiece1_Flow000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The first of five randomly selected phrases for blue Lumas to say when shot with a Star Bit.</div>
+</div>
+
+<div id=Tico-Tico_StarPiece1_Flow001>
+  <div class="name">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>So yummy!</div>
+  </div>
+  <a href="#Tico-Tico_StarPiece1_Flow001"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The second of five randomly selected phrases for blue Lumas to say when shot with a Star Bit.</div>
+</div>
+
+<div id=Tico-Tico_StarPiece1_Flow002>
+  <div class="name">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>So generous! So tasty!</div>
+  </div>
+  <a href="#Tico-Tico_StarPiece1_Flow002"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The third of five randomly selected phrases for blue Lumas to say when shot with a Star Bit.</div>
+</div>
+
+<div id=Tico-Tico_StarPiece1_Flow003>
+  <div class="name">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Happy deliciousness...</div>
+  </div>
+  <a href="#Tico-Tico_StarPiece1_Flow003"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The fourth of five randomly selected phrases for blue Lumas to say when shot with a Star Bit.</div>
+</div>
+
+<div id=Tico-Tico_StarPiece1_Flow004>
+  <div class="name">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Thanks so much!</div>
+  </div>
+  <a href="#Tico-Tico_StarPiece1_Flow004"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The last of five randomly selected phrases for blue Lumas to say when shot with a Star Bit.</div>
+</div>
+
+<div class=conversation id=MarioFaceShipZone-Tico001>
+<a href="#MarioFaceShipZone-Tico001"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=MarioFaceShipZone-Tico001-0>
+  <div class="name blue">Luma <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>While out adventuring, you can grab</br>a <img class=icon src="icon/coin.png" alt="[Coin icon]"><span class=ico></span> <font class=yellow>coin </font>to <font class=blue>restore some life</font>!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Tico001-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The blue Luma at the bottom of Starship Mario.</div>
+</div>
+
+<div id=MarioFaceShipZone-Tico001-1>
+  <div class="name blue">Luma <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>If you don't see any <img class=icon src="icon/coin.png" alt="[Coin icon]"><span class=ico></span> around, you</br>can just <font class=red>stomp an enemy</font> to get one!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Tico001-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div id=Tico-Tico_StarPiece3_Flow000>
+  <div class="name">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Yay! Thanks!</div>
+  </div>
+  <a href="#Tico-Tico_StarPiece3_Flow000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The first of five randomly selected phrases for red Lumas to say when shot with a Star Bit.</div>
+</div>
+
+<div id=Tico-Tico_StarPiece3_Flow001>
+  <div class="name">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>You're so nice!</div>
+  </div>
+  <a href="#Tico-Tico_StarPiece3_Flow001"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The second of five randomly selected phrases for red Lumas to say when shot with a Star Bit.</div>
+</div>
+
+<div id=Tico-Tico_StarPiece3_Flow002>
+  <div class="name">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Ooh, yummy!</div>
+  </div>
+  <a href="#Tico-Tico_StarPiece3_Flow002"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The third of five randomly selected phrases for red Lumas to say when shot with a Star Bit.</div>
+</div>
+
+<div id=Tico-Tico_StarPiece3_Flow003>
+  <div class="name">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Heh!</div>
+  </div>
+  <a href="#Tico-Tico_StarPiece3_Flow003"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The fourth of five randomly selected phrases for red Lumas to say when shot with a Star Bit.</div>
+</div>
+
+<div id=Tico-Tico_StarPiece3_Flow004>
+  <div class="name">Luma <font class="galaxy">Peach's Castle</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Mmm...more...</div>
+  </div>
+  <a href="#Tico-Tico_StarPiece3_Flow004"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The last of five randomly selected phrases for red Lumas to say when shot with a Star Bit.</div>
+</div>
+
+<div id=MarioFaceShipZone-Tico002>
+  <div class="name red">Luma <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>What're you lollygagging around for?</br>Go get those <img class=icon src="icon/powerstar.png" alt="[Power Star icon]"><span class=ico></span> <font class=yellow>Power Stars</font>!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Tico002"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The red Luma at the bottom of Starship Mario.</div>
+</div>
+
+<div id=MarioFaceShipZone-SignBoard006>
+  <div class=name>Sign Board <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign>Do <font class=blue>consecutive jumps </font>to go really</br>high! Run and <font class=red>jump three times to do</br>a triple jump</font>! It looks really cool!</div>
+  </div>
+  <a href="#MarioFaceShipZone-SignBoard006"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">A Sign Board at the bottom of Starship Mario.</div>
+</div>
+
+<div id=MarioFaceShipZone-Tico063>
+  <div class="name yellow">Luma <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>My job is to take energy from</br>each <img class=icon src="icon/powerstar.png" alt="[Power Star icon]"><span class=ico></span> and <font class=blue>convert it into fuel</font>!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Tico063"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Luma in the engine room of Starship Mario.</div>
+</div>
+
+<div class=conversation id=WorldMapEvent-WorldMapNewsStartWorld01_Flow000>
+<a href="#WorldMapEvent-WorldMapNewsStartWorld01_Flow000"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=WorldMapEvent-WorldMapNewsStartWorld01_Flow000-0>
+  <div class="name purple">Lubba <font class="galaxy">World Map</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>So...this is the <font class=red>World Map</font>.</div>
+  </div>
+  <a href="#WorldMapEvent-WorldMapNewsStartWorld01_Flow000-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The first interaction with Lubba when viewing the World Map for the first time.</div>
+</div>
+
+<div id=WorldMapEvent-WorldMapNewsStartWorld01_Flow000-1>
+  <div class="name purple">Lubba <font class="galaxy">World Map</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Just point <img class=icon src="icon/pointerpoint.png" alt="[Hand Pointer (Point) icon]"><span class=ico></span> at <font class=blue>your</font> <font class=blue>destination</font>, and</br>press <img class=icon src="icon/Abutton.png" alt="[A Button icon]"><span class=ico></span> to <font class=red>jump into that galaxy</font>!</div>
+  </div>
+  <a href="#WorldMapEvent-WorldMapNewsStartWorld01_Flow000-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div class=conversation id=WorldMapEvent-WorldMapNewsStartWorld01_Flow001>
+<a href="#WorldMapEvent-WorldMapNewsStartWorld01_Flow001"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=WorldMapEvent-WorldMapNewsStartWorld01_Flow001-0>
+  <div class="name purple">Lubba <font class="galaxy">World Map</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Like I said, this spaceship runs on</br><font class=yellow>energy from <img class=icon src="icon/powerstar.png" alt="[Power Star icon]"><span class=ico></span> Power Stars</font>.</div>
+  </div>
+  <a href="#WorldMapEvent-WorldMapNewsStartWorld01_Flow001-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The second interaction with Lubba when viewing the World Map for the first time. A <img class=icondesc src="icon/arrow.png" alt="[Arrow icon]"><span class=ico style="width: 1vw;"></span> red arrow appears over Yoshi Star Galaxy.</div>
+</div>
+
+<div id=WorldMapEvent-WorldMapNewsStartWorld01_Flow001-1>
+  <div class="name purple">Lubba <font class="galaxy">World Map</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Right now, it looks like we got enough</br>power to go <img class=icon src="icon/arrow.png" alt="[Arrow icon]"><span class=ico></span> <font class=red>this far</font>.<wait time="15"/> We're</br>gonna need more <font class=yellow><img class=icon src="icon/powerstar.png" alt="[Power Star icon]"><span class=ico></span> Power Stars</font>!</div>
+  </div>
+  <a href="#WorldMapEvent-WorldMapNewsStartWorld01_Flow001-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+
+<div id=WorldMapEvent-WorldMapNewsStartWorld01_Flow001-2>
+  <div class="name purple">Lubba <font class="galaxy">World Map</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>So let's do it! For your princess and</br>my crew! <wait time="15"/>Take it away, Captain!</div>
+  </div>
+  <a href="#WorldMapEvent-WorldMapNewsStartWorld01_Flow001-2"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div id=MeisterTalk-Meister_PriorityTalkBatteryEmpty_Flow001>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout><img class=icon src="icon/wiimote.png" alt="[Wii Remote icon]"><span class=ico></span></div>
+  </div>
+  <a href="#MeisterTalk-Meister_PriorityTalkBatteryEmpty_Flow001"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">When playing the game with P1's Wii remote batteries somewhere between 0% and 47.41% charge, and if the player is far from Lubba.</div>
+</div>
+
+<div class=conversation id=MeisterTalk-Meister_PriorityTalkBatteryEmpty_Flow000>
+<a href="#MeisterTalk-Meister_PriorityTalkBatteryEmpty_Flow000"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=MeisterTalk-Meister_PriorityTalkBatteryEmpty_Flow000-0>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Oh no! It looks like your <font class=red><img class=icon src="icon/wiimote.png" alt="[Wii Remote icon]"><span class=ico></span> batteries</br></font>are running low!</div>
+  </div>
+  <a href="#MeisterTalk-Meister_PriorityTalkBatteryEmpty_Flow000-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">When playing the game with P1's Wii remote batteries somewhere between 0% and 47.41% charge.</div>
+</div>
+
+<div id=MeisterTalk-Meister_PriorityTalkBatteryEmpty_Flow000-1>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>What if they run out in a dangerous</br>place?! Be careful!</div>
+  </div>
+  <a href="#MeisterTalk-Meister_PriorityTalkBatteryEmpty_Flow000-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div id=MeisterTalk-Meister_PriorityTalkMidnight_Flow001>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>So...sleepy...</div>
+  </div>
+  <a href="#MeisterTalk-Meister_PriorityTalkMidnight_Flow001"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">When playing the game after the Wii system time is set to somewhere between 12:00 AM and 4:59 AM, and if the player is far from Lubba.</div>
+</div>
+
+<div id=MeisterTalk-Meister_PriorityTalkMidnight_Flow000>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Geez. It's kinda early, isn't it?</br>I feel so sleepy...</div>
+  </div>
+  <a href="#MeisterTalk-Meister_PriorityTalkMidnight_Flow000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">When playing the game after the Wii system time is set to somewhere between 12:00 AM and 4:59 AM.</div>
+</div>
+
+<div id=MeisterTalk-Meister_NormalTalkWorld1_Flow000>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>OK! First things first! If ya wanna</br>fly, ya gotta learn how to steer! Grab</br>the helm and give her a spin!</div>
+  </div>
+  <a href="#MeisterTalk-Meister_NormalTalkWorld1_Flow000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">Talking to Lubba during World 1, and when he has no other messages to say.</div>
+</div>
+
+<div id=HoleSphere3Zone-SignBoard002>
+  <div class="name">Sign Board <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout><font class=red>P2</font>!<font class=red> </font>Point <img class=icon src="icon/pointerP2.png" alt="[P2 Pointer icon]"><span class=ico></span> at</br><font class=blue>enemies</font>! Press <font class=blue><img class=icon src="icon/Abutton.png" alt="[A Button icon]"><span class=ico></span></font>!</div>
+  </div>
+  <a href="#HoleSphere3Zone-SignBoard002"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The sign on the underside of the Starter Planet in the second star in Sky Station Galaxy. Only appears in P2 mode.</div>
+</div>
+
+<div id=HoleSphere3Zone-Tico002_Flow005>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Over here!</div>
+  </div>
+  <a href="#HoleSphere3Zone-Tico002_Flow005"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Luma stuck in the key cage on the Starter Planet in the second star in Sky Station Galaxy, when the player is far away and hasn't spoken to the Luma yet.</div>
+</div>
+
+<div id=HoleSphere3Zone-Tico002_Flow004>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Get me out of here! There must be</br>a <font class=red>key </font>somewhere!</div>
+  </div>
+  <a href="#HoleSphere3Zone-Tico002_Flow004"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Luma stuck in the key cage on the Starter Planet in the second star in Sky Station Galaxy automatically talking to the player.</div>
+</div>
+
+<div id=HoleSphere3Zone-Tico002_Flow003>
+  <div class="name yellow">Luma <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Oh, thank you! Now I can transform</br>into a <img class=icon src="icon/star.png" alt="[Launch Star icon]"><span class=ico></span> <font class=yellow>Launch Star</font>! Just hop in and</br>shake <img class=icon src="icon/wiimote.png" alt="[Wii Remote icon]"><span class=ico></span> to go flying!</div>
+  </div>
+  <a href="#HoleSphere3Zone-Tico002_Flow003"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Luma stuck in the key cage on the Starter Planet in the second star in Sky Station Galaxy, after being freed.</div>
+</div>
+
+<div id=IslandFleetGalaxy-SuperSpinDriver004>
+  <div class="name">Launch Star <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>In here!</div>
+  </div>
+  <a href="#IslandFleetGalaxy-SuperSpinDriver004"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Launch Star at the end of the Sky Fleet Ship in the second star in Sky Station Galaxy, when the player first lands on the ship.</div>
+</div>
+
+<div id=ManekuriAZone-SignBoard001_Flow001>
+  <div class="name">Sign Board <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Watch out!</div>
+  </div>
+  <a href="#ManekuriAZone-SignBoard001_Flow001"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Sign Board on the Flipswitch Fleet Planet in the second star in Sky Station Galaxy, when far away from it.</div>
+</div>
+
+<div id=ManekuriAZone-SignBoard001_Flow000>
+  <div class="name">Sign Board <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign>Watch out for <font class=red>Cosmic Clones </font>ahead!</br>If they come after you, RUN!</div>
+  </div>
+  <a href="#ManekuriAZone-SignBoard001_Flow000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Sign Board on the Flipswitch Fleet Planet in the second star in Sky Station Galaxy.</div>
+</div>
+
+<div id=HoleSphere3Zone-SignBoard005>
+  <div class="name">Sign Board <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign>Hello, friend! Please go<font class=blue> around back</font>!</br>             <img class=icon src="icon/yoshi.png" alt="[Yoshi icon]"><span class=ico></span> <font class=green>Yoshi </font>the space dragon</div>
+  </div>
+  <a href="#HoleSphere3Zone-SignBoard005"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The sign in front of Yoshi's house in the third star in Sky Station Galaxy.</div>
+</div>
+
+<div id=HoleSphere3Zone-SignBoard004>
+  <div class="name">Sign Board <font class="galaxy">Sky Station Galaxy</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign>Hello! I'm out helping some friends</br>right now. Sorry if I missed you!</br>            <img class=icon src="icon/yoshi.png" alt="[Yoshi icon]"><span class=ico></span> <font class=green>Yoshi </font>the space dragon</div>
+  </div>
+  <a href="#HoleSphere3Zone-SignBoard004"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The sign on top of Yoshi's house in the third star in Sky Station Galaxy.</div>
+</div>
+
+<div class=conversation id=Meister-Meister_10EventTalk_Flow000>
+<a href="#Meister-Meister_10EventTalk_Flow000"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=Meister-Meister_10EventTalk_Flow000-0>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Wish I could give you more help than</br>just cheering from the sidelines... </div>
+  </div>
+  <a href="#Meister-Meister_10EventTalk_Flow000-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">After collecting the second star in Sky Station Galaxy.</div>
+</div>
+
+<div id=Meister-Meister_10EventTalk_Flow000-1>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Ya know, a friend with another <img class=icon src="icon/wiimote.png" alt="[Wii Remote icon]"><span class=ico></span> can</br>join up with you! Then one of my</br><font class=yellow><img class=icon src="icon/costarluma.png" alt="[Co-Star Luma icon]"><span class=ico></span> <font class=orange>Co-Star Lumas<font class=yellow> <font class=black>can <font class=red>help out</font>!</div>
+  </div>
+  <a href="#Meister-Meister_10EventTalk_Flow000-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+
+<div id=Meister-Meister_10EventTalk_Flow000-2>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>They can help you take down enemies</br>and get you some extra <img class=icon src="icon/starbit.png" alt="[Purple Star Bit icon]"><span class=ico></span><font class=purple> Star Bits</font>...</div>
+  </div>
+  <a href="#Meister-Meister_10EventTalk_Flow000-2"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+
+<div id=Meister-Meister_10EventTalk_Flow000-3>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>So if ya want a <font class=yellow><img class=icon src="icon/costarluma.png" alt="[Co-Star Luma icon]"><span class=ico></span> <font class=orange>partner<font class=none>, don't be</br>shy about asking a friend to jump in!</div>
+  </div>
+  <a href="#Meister-Meister_10EventTalk_Flow000-3"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div class=conversation id=MarioFaceShipZone-Tico003>
+<a href="#MarioFaceShipZone-Tico003"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=MarioFaceShipZone-Tico003-0>
+  <div class="name yellow">Luma <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Do you know about <img class=icon src="icon/cometmedal.png" alt="[Comet Medal icon]"><span class=ico></span> <font class=red>Comet Medals</font>?</br>Grab them to make <font class=blue>comets </font>appear</br>over galaxies!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Tico003-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The yellow Luma near the deck of Starship Mario, after collecting two Power Stars.</div>
+</div>
+
+<div id=MarioFaceShipZone-Tico003-1>
+  <div class="name yellow">Luma <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>What IS a <font class=blue>comet</font>? Well, I'm not exactly</br>sure... Tell me if you find out!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Tico003-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div id=YoshiHomeAPlanetZone-SignBoard008>
+  <div class="name">Sign Board <font class="galaxy">Yoshi Star Galaxy</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout><font class=red>P2</font>! Aim <img class=icon src="icon/pointerP2.png" alt="[P2 Pointer icon]"><span class=ico></span> at <font class=blue>enemies</font>!</br>Press <img class=icon src="icon/Abutton.png" alt="[A Button icon]"><span class=ico></span>!</div>
+  </div>
+  <a href="#YoshiHomeAPlanetZone-SignBoard008"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Sign Board at the beginning of the first planet in all stars. Only appears in 2P mode.</div>
+</div>
+
+<div id=YoshiHomeAPlanetZone-Tico002_Flow003>
+  <div class="name yellow">Luma <font class="galaxy">Yoshi Star Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>I thought <img class=icon src="icon/yoshi.png" alt="[Yoshi icon]"><span class=ico></span> <font class=green>Yoshi</font> would be more</br>helpful in getting the <img class=icon src="icon/powerstar.png" alt="[Power Star icon]"><span class=ico></span>...<wait time="15"/>but he just</br>kept running around in circles!</div>
+  </div>
+  <a href="#YoshiHomeAPlanetZone-Tico002_Flow003"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The first line from the yellow Luma at the start of the first star, if Yoshi is still captured.</div>
+</div>
+
+<div id=YoshiHomeAPlanetZone-Tico002_Flow006>
+  <div class="name yellow">Luma <font class="galaxy">Yoshi Star Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Then he got himself trapped inside</br>that <font class=green>egg</font>! If you can get him out and</br>keep him focused,<font class=green> </font>he might be useful!</div>
+  </div>
+  <a href="#YoshiHomeAPlanetZone-Tico002_Flow006"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The second line from the yellow Luma at the start of the first star, if Yoshi is still captured. The camera moves to show Yoshi's egg trapped in a forcefield.</div>
+</div>
+
+<div class=conversation id=YoshiHomeAPlanetZone-SignBoard005>
+<a href="#YoshiHomeAPlanetZone-SignBoard005"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=YoshiHomeAPlanetZone-SignBoard005-0>
+  <div class="name">Sign Board <font class="galaxy">Yoshi Star Galaxy</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign>You can change your camera view</br>with <img class=icon src="icon/Dpad.png" alt="[D-Pad icon]"><span class=ico></span>. You'll hear a beep if you</br>can't get a better view.</div>
+  </div>
+  <a href="#YoshiHomeAPlanetZone-SignBoard005-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Sign Board in the middle of the first planet.</div>
+</div>
+
+<div id=YoshiHomeAPlanetZone-SignBoard005-1>
+  <div class="name">Sign Board <font class="galaxy">Yoshi Star Galaxy</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign><font class=red>Press <img class=icon src="icon/Cbutton.png" alt="[C Button icon]"><span class=ico></span> </font>on <img class=icon src="icon/nunchuk.png" alt="[Nunchuk icon]"><span class=ico></span> to <font class=blue>reset</font> the view.</div>
+  </div>
+  <a href="#YoshiHomeAPlanetZone-SignBoard005-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div id=YoshiHomeAPlanetZone-Tico002_Flow000>
+  <div class="name yellow">Luma <font class="galaxy">Yoshi Star Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk><font class=green><img class=icon src="icon/yoshi.png" alt="[Yoshi icon]"><span class=ico></span> Yoshi</font> can <font class=blue>eat all kinds of things</font>!</div>
+  </div>
+  <a href="#YoshiHomeAPlanetZone-Tico002_Flow000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The first line from the yellow Luma at the start of the first star, once the Magikoopa is defeated and Yoshi is freed.</div>
+</div>
+
+<div id=YoshiHomeAPlanetZone-Tico002_Flow004>
+  <div class="name yellow">Luma <font class="galaxy">Yoshi Star Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>See that <font class=blue>big fruit</font> over there?</br>I wonder if <font class=green>Yoshi</font> could gulp it down</br>in one bite...</div>
+  </div>
+  <a href="#YoshiHomeAPlanetZone-Tico002_Flow004"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The second line from the yellow Luma at the start of the first star, once the Magikoopa is defeated and Yoshi is freed. The camera moves to show a large fruit at the end of the first planet.</div>
+</div>
+
+<div class=conversation id=Yoshi-DemoMeetYoshi_Flow000>
+<a href="#Yoshi-DemoMeetYoshi_Flow000"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=Yoshi-DemoMeetYoshi_Flow000-0>
+  <div class="name green">Yoshi <font class="galaxy">Yoshi Star Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>You saved me!</div>
+  </div>
+  <a href="#Yoshi-DemoMeetYoshi_Flow000-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">Yoshi to the player, the first time the player frees Yoshi from his egg.</div>
+</div>
+
+<div id=Yoshi-DemoMeetYoshi_Flow000-1>
+  <div class="name green">Yoshi <font class="galaxy">Yoshi Star Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>I was trying to save my friends, but</br>then I got <font class=red>turned into an egg </font>and</br>trapped!</div>
+  </div>
+  <a href="#Yoshi-DemoMeetYoshi_Flow000-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+
+<div id=Yoshi-DemoMeetYoshi_Flow000-2>
+  <div class="name green">Yoshi <font class="galaxy">Yoshi Star Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>I know! We should team up! <wait time="15"/>Come on!</br>Hop on my back!</div>
+  </div>
+  <a href="#Yoshi-DemoMeetYoshi_Flow000-2"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div id=YoshiHomeAPlanetZone-SignBoard080>
+  <div class="name">Sign Board <font class="galaxy">Yoshi Star Galaxy</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout><font class=orange>P2</font>! Press<font class=orange> </font><img class=icon src="icon/Abutton.png" alt="[A Button icon]"><span class=ico></span> on<font class=red> </font>a<font class=red> crystal</font>!</br>Shake <img class=icon src="icon/wiimote.png" alt="[Wii Remote icon]"><span class=ico></span> to break it!</div>
+  </div>
+  <a href="#YoshiHomeAPlanetZone-SignBoard080"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">A Sign Board near the teleporter the first planet. Only appears in 2P mode.</div>
+</div>
+
+<div id=YoshiHomeAPlanetZone-SignBoard010>
+  <div class="name">Sign Board <font class="galaxy">Yoshi Star Galaxy</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Grab with <img class=icon src="icon/yoshi.png" alt="[Yoshi icon]"><span class=ico></span>'s <font class=red>tongue</br></font>and pull back with <img class=icon src="icon/joystick.png" alt="[Joystick icon]"><span class=ico></span>!</div>
+  </div>
+  <a href="#YoshiHomeAPlanetZone-SignBoard010"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Sign Board at the end of the first planet on the first star.</div>
+</div>
+
+<div id=YoshiHomeAPlanetZone-Tico002_Flow005>
+  <div class="name yellow">Luma <font class="galaxy">Yoshi Star Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>He really ate that<font class=blue> big fruit</font>? Whoa...</br><wait time="15"/>It's like he never gets full...</div>
+  </div>
+  <a href="#YoshiHomeAPlanetZone-Tico002_Flow005"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The yellow Luma at the start of the first star, once Yoshi eats the big fruit at the end of the first planet. The camera moves to show the Launch Star that is now there.</div>
+</div>
+
+<div id=YoshiHomeBPlanetZone-SignBoard020>
+  <div class="name">Sign Board <font class="galaxy">Yoshi Star Galaxy</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign>If <font class=green><img class=icon src="icon/yoshi.png" alt="[Yoshi icon]"><span class=ico></span> Yoshi </font>gets hit, he'll run away!</br><font class=red>Be careful</font>! Hop onto his back quickly</br>or he'll <font class=blue>come back here</font>.</div>
+  </div>
+  <a href="#YoshiHomeBPlanetZone-SignBoard020"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">A Sign Board near the bone pillar on the third planet of the first star.</div>
+</div>
+
+<div id=YoshiHomeBPlanetZone-SignBoard000>
+  <div class="name">Sign Board <font class="galaxy">Yoshi Star Galaxy</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout><font class=orange>P2</font>! Grab <img class=icon src="icon/coin.png" alt="[Coin icon]"><span class=ico></span>!</div>
+  </div>
+  <a href="#YoshiHomeBPlanetZone-SignBoard000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">A Sign Board in front of the bone pillar on the third planet of the first star. Only appears in P2 mode.</div>
+</div>
+
+<div class=conversation id=YoshiHomeBPlanetZone-SignBoard010>
+<a href="#YoshiHomeBPlanetZone-SignBoard010"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=YoshiHomeBPlanetZone-SignBoard010-0>
+  <div class="name">Sign Board <font class="galaxy">Yoshi Star Galaxy</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign><font class=blue>Press and hold</font> <img class=icon src="icon/Abutton.png" alt="[A Button icon]"><span class=ico></span> while riding</br><img class=icon src="icon/yoshi.png" alt="[Yoshi icon]"><span class=ico></span> <font class=green>Yoshi </font>to do a <font class=red>flutter jump</font>!</div>
+  </div>
+  <a href="#YoshiHomeBPlanetZone-SignBoard010-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Sign Board on one of the first ledges on the third planet of the first star.</div>
+</div>
+
+<div id=YoshiHomeBPlanetZone-SignBoard010-1>
+  <div class="name">Sign Board <font class="galaxy">Yoshi Star Galaxy</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign>It's perfect for when you need to</br><font class=blue>go just a LITTLE higher</font> than normal!</div>
+  </div>
+  <a href="#YoshiHomeBPlanetZone-SignBoard010-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div id=Meister-Meister_101EventNotice_Flow000>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Say, I don't mean to pry or anything...</br>but what is that thing over there?</div>
+  </div>
+  <a href="#Meister-Meister_101EventNotice_Flow000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The first interaction with Lubba after collecting the first star in Yoshi Star Galaxy.</div>
+</div>
+
+<div id=Meister-Meister_101EventNotice_Flow001>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>I mean, be straight with me, pal. You</br>hatching <font class=green>alien eggs </font>now? Har har!</div>
+  </div>
+  <a href="#Meister-Meister_101EventNotice_Flow001"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The second interaction with Lubba after collecting the first star in Yoshi Star Galaxy.</div>
+</div>
+
+<div id=MarioFaceShipZone-SignBoard010>
+  <div class="name">Sign Board <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign>You can<font class=red> hop on </font><img class=icon src="icon/yoshi.png" alt="[Yoshi icon]"><span class=ico></span> <font class=green>Yoshi </font>with a spin!</br>You don't even have to jump!</div>
+  </div>
+  <a href="#MarioFaceShipZone-SignBoard010"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The north-most Sign Board on the berry platform.</div>
+</div>
+
+<div class=conversation id=MarioFaceShipZone-SignBoard011>
+<a href="#MarioFaceShipZone-SignBoard011"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=MarioFaceShipZone-SignBoard011-0>
+  <div class="name">Sign Board <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign>If you're riding <img class=icon src="icon/yoshi.png" alt="[Yoshi icon]"><span class=ico></span> <font class=green>Yoshi</font> and</br>you need to walk around, just</br><font class=red>hold down <img class=icon src="icon/Zbutton.png" alt="[Z Button icon]"><span class=ico></span> on <img class=icon src="icon/nunchuk.png" alt="[Nunchuk icon]"><span class=ico></span> and press <img class=icon src="icon/Abutton.png" alt="[A Button icon]"><span class=ico></span></font>!</div>
+  </div>
+  <a href="#MarioFaceShipZone-SignBoard011-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The east-most Sign Board on the berry platform.</div>
+</div>
+
+<div id=MarioFaceShipZone-SignBoard011-1>
+  <div class="name">Sign Board <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign>You'll even do a cool aerial flip</br>on your dismount!</div>
+  </div>
+  <a href="#MarioFaceShipZone-SignBoard011-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div class=conversation id=MarioFaceShipZone-SignBoard012>
+<a href="#MarioFaceShipZone-SignBoard012"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=MarioFaceShipZone-SignBoard012-0>
+  <div class="name">Sign Board <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign><font class=blue>Press and hold</font> <img class=icon src="icon/Abutton.png" alt="[A Button icon]"><span class=ico></span> while riding</br><img class=icon src="icon/yoshi.png" alt="[Yoshi icon]"><span class=ico></span> <font class=green>Yoshi </font>to do a <font class=red>flutter jump</font>!</div>
+  </div>
+  <a href="#MarioFaceShipZone-SignBoard012-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The west-most Sign Board on the berry platform.</div>
+</div>
+
+<div id=MarioFaceShipZone-SignBoard012-1>
+  <div class="name">Sign Board <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign>It's perfect for when you need to</br><font class=blue>go just a LITTLE higher</font> than normal!</div>
+  </div>
+  <a href="#MarioFaceShipZone-SignBoard012-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div id=YoshiHomeAPlanetZone-SignBoard006>
+  <div class="name">Sign Board <font class="galaxy">Yoshi Star Galaxy</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign><font class=red>Hop on </font><img class=icon src="icon/yoshi.png" alt="[Yoshi icon]"><span class=ico></span> <font class=green>Yoshi </font>just by <font class=red>spinning</font>.</br>You don't even have to jump!</div>
+  </div>
+  <a href="#YoshiHomeAPlanetZone-SignBoard006"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The first Sign Board at the beginning of the first planet in the second star.</div>
+</div>
+
+<div class=conversation id=YoshiHomeAPlanetZone-SignBoard050>
+<a href="#YoshiHomeAPlanetZone-SignBoard050"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=YoshiHomeAPlanetZone-SignBoard050-0>
+  <div class="name">Sign Board <font class="galaxy">Yoshi Star Galaxy</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign><font class=blue>Press and hold</font> <img class=icon src="icon/Abutton.png" alt="[A Button icon]"><span class=ico></span> while riding</br><img class=icon src="icon/yoshi.png" alt="[Yoshi icon]"><span class=ico></span> <font class=green>Yoshi </font>to do a <font class=red>flutter jump</font>!</div>
+  </div>
+  <a href="#YoshiHomeAPlanetZone-SignBoard050-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The second Sign Board at the beginning of the first planet in the second star.</div>
+</div>
+
+<div id=YoshiHomeAPlanetZone-SignBoard050-1>
+  <div class="name">Sign Board <font class="galaxy">Yoshi Star Galaxy</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign>It's perfect for when you need to</br><font class=blue>go just a LITTLE higher</font> than normal!</div>
+  </div>
+  <a href="#YoshiHomeAPlanetZone-SignBoard050-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+</div>
+</div>
+
+<div id=YoshiHomeAPlanetZone-Tico007_Flow002>
+  <div class="name yellow">Luma <font class="galaxy">Yoshi Star Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>If you get <font class=blue>hit</font>, <green><img class=icon src="icon/yoshi.png" alt="[Yoshi icon]"><span class=ico></span> Yoshi </font>will run away.</br><font class=red>Jump back on</font> before he <font class=red>disappears</font>!</div>
+  </div>
+  <a href="#YoshiHomeAPlanetZone-Tico007_Flow002"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The yellow Luma near the Launch Star in a cage on the first planet in the second star, if the player is not riding on Yoshi.</div>
+</div>
+
+<div id=YoshiHomeAPlanetZone-Tico007_Flow001>
+  <div class="name yellow">Luma <font class="galaxy">Yoshi Star Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Even <font class=green><img class=icon src="icon/yoshi.png" alt="[Yoshi icon]"><span class=ico></span> Yoshi </font>can't eat one of those</br><font class=red>pointy things</font>... Can he?</div>
+  </div>
+  <a href="#YoshiHomeAPlanetZone-Tico007_Flow001"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The yellow Luma near the Launch Star in a cage on the first planet in the second star, if the player is riding on Yoshi.</div>
+</div>
+
+<div id=YoshiTicoRescueZone-SignBoard000>
+  <div class="name">Sign Board <font class="galaxy">Yoshi Star Galaxy</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout><font class=orange>P2</font>! Point at a Spiny.</br>Push <img class=icon src="icon/Abutton.png" alt="[A Button icon]"><span class=ico></span>. Shake <img class=icon src="icon/wiimote.png" alt="[Wii Remote icon]"><span class=ico></span>!</div>
+  </div>
+  <a href="#YoshiTicoRescueZone-SignBoard000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Sign Board at the start of the second planet in the second star. Only appears in 2P mode.</div>
+</div>
+
+<div id=YoshiTicoRescueZone-Tico000>
+  <div class="name yellow">Luma <font class="galaxy">Yoshi Star Galaxy</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Thank you!</div>
+  </div>
+  <a href="#YoshiTicoRescueZone-Tico000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The yellow Luma trapped in a cage on the second planet in the second star, before transforming into a Launch Star.</div>
+</div>
+
+<div id=YosshiHomeGalaxy-SuperSpinDriver002>
+  <div class="name">Launch Star <font class="galaxy">Yoshi Star Galaxy</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Let me guide you!</div>
+  </div>
+  <a href="#YosshiHomeGalaxy-SuperSpinDriver002"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Launch Star on the second planet in the second star.</div>
+</div>
+
+<div id=YoshiHomeAPlanetZone-SignBoard007>
+  <div class="name">Sign Board <font class="galaxy">Yoshi Star Galaxy</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Get 'em all!</div>
+  </div>
+  <a href="#YoshiHomeAPlanetZone-SignBoard007"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The sign at the beginning of the third star.</div>
+</div>
+
+<div id=Meister-Meister_TicoFatIntroduce_Flow000>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Looks like you found a <font class=red><img class=icon src="icon/hungryluma.png" alt="[Hungry Luma icon]"><span class=ico></span> Hungry</br>Luma</font>. Hope you've got a stack of</br>Star Bits, 'cause those guys can EAT!</div>
+  </div>
+  <a href="#Meister-Meister_TicoFatIntroduce_Flow000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">Lubba after calling a Hungry Luma to Starship Mario.</div>
+</div>
+
+<div id=MeisterTalk-Meister_PriorityTalkTicoFatExplain_Flow000>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Ya know, <font class=red><img class=icon src="icon/hungryluma.png" alt="[Hungry Luma icon]"><span class=ico></span> somebody looks kinda</br>hungry</font>.</div>
+  </div>
+  <a href="#MeisterTalk-Meister_PriorityTalkTicoFatExplain_Flow000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">Talking to Lubba again after calling a Hungry Luma to Starship Mario.</div>
+</div>
+
+<div id=TicoFat-TicoFat_Request001>
+  <div class="name">Hungry Luma <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Hey, you! Yeah, you! Got any tasty</br><img class=icon src="icon/starbit.png" alt="[Purple Star Bit icon]"><span class=ico></span> <font class=red>Star Bits</font> I can snack on?</div>
+  </div>
+  <a href="#TicoFat-TicoFat_Request001"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The first interaction after walking up to the Hungry Luma.</div>
+</div>
+
+<div id=TicoFat-TicoFat_Request002>
+  <div class="name">Hungry Luma <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Soooooo hungry... Feed me delicious</br><img class=icon src="icon/starbit.png" alt="[Purple Star Bit icon]"><span class=ico></span> <font class=red>Star Bits</font>! I need to chow on</br>--hungrylumaprice--. Then I'll TRANSFORM!</div>
+  </div>
+  <a href="#TicoFat-TicoFat_Request002"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The second interaction after walking up to the Hungry Luma.</div>
+</div>
+
+<div id=TicoFat-TicoFat_StarPiece001>
+  <div class="name">Hungry Luma <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>MOOOOORE!</div>
+  </div>
+  <a href="#TicoFat-TicoFat_StarPiece001"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Hungry Luma, when the cursor is hovering over him.</div>
+</div>
+
+<div id=TicoFat-TicoFat_StarPiece002>
+  <div class="name">Hungry Luma <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Yaaay!</div>
+  </div>
+  <a href="#TicoFat-TicoFat_StarPiece002"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Hungry Luma, when the cursor is not hovering over him, the player is nearby, and he has been fed 0 Star Bits.</div>
+</div>
+
+<div id=TicoFat-TicoFat_StarPiece003>
+  <div class="name">Hungry Luma <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>More! More!</div>
+  </div>
+  <a href="#TicoFat-TicoFat_StarPiece003"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Hungry Luma, when the cursor is not hovering over him, the player is nearby, and he has been fed half or less than half the amount of required Star Bits.</div>
+</div>
+
+<div id=TicoFat-TicoFat_StarPiece004>
+  <div class="name">Hungry Luma <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>I'm still not full...</div>
+  </div>
+  <a href="#TicoFat-TicoFat_StarPiece004"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Hungry Luma, when the cursor is not hovering over him, the player is nearby, and he has been fed 75% or less than 75% of the amount of required Star Bits.</div>
+</div>
+
+<div id=TicoFat-TicoFat_StarPiece005>
+  <div class="name">Hungry Luma <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Mmmmm... I'm almost full!</div>
+  </div>
+  <a href="#TicoFat-TicoFat_StarPiece005"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Hungry Luma, when the cursor is not hovering over him, the player is nearby, and he has been fed 95% or less than 95% of the amount of required Star Bits.</div>
+</div>
+
+<div id=TicoFat-TicoFat_StarPiece006>
+  <div class="name">Hungry Luma <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>A little more...</div>
+  </div>
+  <a href="#TicoFat-TicoFat_StarPiece006"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Hungry Luma, when the cursor is not hovering over him, the player is nearby, and he has been fed 99% or less than 99% of the amount of required Star Bits.</div>
+</div>
+
+<div class=conversation id=TicoFat-TicoFat_StarPiece007>
+<a href="#TicoFat-TicoFat_StarPiece007"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=TicoFat-TicoFat_StarPiece007-0>
+  <div class="name">Hungry Luma <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>That's the stuff! Ohh...so FULL!</br>I think I'm about to...</div>
+  </div>
+  <a href="#TicoFat-TicoFat_StarPiece007-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Hungry Luma, when he is fed 100% of the amount of required Star Bits.</div>
+</div>
+
+<div id=TicoFat-TicoFat_StarPiece007-1>
+  <div class="name">Hungry Luma <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk><font class="talkLarge red">TRANS<wait time="15"/><soundeffect>FOOOOORM!<font class=none></div>
+  </div>
+  <a href="#TicoFat-TicoFat_StarPiece007-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Hungry Luma then flies away from Starship Mario and transforms into a new galaxy on the World Map.</div>
+</div>
+</div>
+
+<div id=MeisterTalk-Meister_PriorityTalkTicoFatDisappear_Flow000>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>He transformed after his little meal...</br>Maybe you should go visit his <font class=red>galaxy</font>!</div>
+  </div>
+  <a href="#MeisterTalk-Meister_PriorityTalkTicoFatDisappear_Flow000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">Talking to Lubba again after feeding a Hungry Luma all required Star Bits.</div>
+</div>
+
+<script>
+(function () {
+  console.log("hi");
+  var nameElements = document.getElementsByClassName("name");
+  for(i = 0; i < nameElements.length; i++) {
+    console.log(nameElements[i]);
+    var name = nameElements[i].innerHTML.replace(/ <.*$/,''); //remove everything past <
+	console.log(name);
+	if(document.getElementsByClassName(name).length < 1) {
+		var option = document.createElement("option");
+		option.value = name;
+		option.innerHTML = name;
+		option.className = name;
+		document.getElementById("charactertag").appendChild(option);
+	}
+  }
+  for(i = 0; i < nameElements.length; i++) {
+    console.log(nameElements[i]);
+    var name = nameElements[i].firstElementChild.innerText; 
+	console.log(name);
+	if(document.getElementsByClassName(name).length < 1) {
+		var option = document.createElement("option");
+		option.value = name;
+		option.innerHTML = name;
+		option.className = name;
+		document.getElementById("stagetag").appendChild(option);
+	}
+  }
+})();
+
+function characterSort() {
+  var characterName = document.getElementById("charactertag").value;
+  var nameElements = document.getElementsByClassName("name");
+  console.log(characterName);
+  for(i = 0; i < nameElements.length; i++) {
+    var name = nameElements[i].innerHTML.replace(/ <.*$/,''); //remove everything past <
+    if(characterName != "None"){
+      console.log(nameElements[i]);
+      if(name != characterName) {
+		if(nameElements[i].parentElement.parentElement.className === "conversation") {
+			nameElements[i].parentElement.parentElement.style.display = "none";
+		} else {
+			nameElements[i].parentElement.style.display = "none";
+		}
+      }
+      else {
+			if(nameElements[i].parentElement.parentElement.className === "conversation") {
+				nameElements[i].parentElement.parentElement.style.display = "revert";
+			} else {
+				nameElements[i].parentElement.style.display = "revert";
+			}
+		}
+    } else {
+      nameElements[i].parentElement.style.display = "revert";
+	  nameElements[i].parentElement.parentElement.style.display = "revert";
+    }
+  } 
+}
+
+function stageSort() {
+  var stageName = document.getElementById("stagetag").value;
+  var nameElements = document.getElementsByClassName("name");
+  for(i = 0; i < nameElements.length; i++) {
+    var stage = nameElements[i].firstElementChild.innerText;
+    if(stageName != "None"){
+      console.log(stage);
+      if(stage.trim() != stageName) {
+		if(nameElements[i].parentElement.parentElement.className === "conversation") {
+			nameElements[i].parentElement.parentElement.style.display = "none";
+		} else {
+			nameElements[i].parentElement.style.display = "none";
+		}
+      }
+      else {
+			if(nameElements[i].parentElement.parentElement.className === "conversation") {
+				nameElements[i].parentElement.parentElement.style.display = "revert";
+			} else {
+				nameElements[i].parentElement.style.display = "revert";
+			}
+		}
+    } else {
+      nameElements[i].parentElement.style.display = "revert";
+	  nameElements[i].parentElement.parentElement.style.display = "revert";
+    }
+  } 
+}
+
+function setup_replace(to_replace, div_class, select_id) {
+  const texts = [];
+  for (const div of document.getElementsByClassName(div_class)) {
+    const walker = document.createTreeWalker(div, NodeFilter.SHOW_TEXT, null, false);
+    let text;
+    while (text = walker.nextNode()) {
+      texts.push([text, text.data])
+    }
+  }
+  const selector = document.getElementById(select_id)
+  function onchange() {
+    for (const [text, orig_text] of texts) {
+      text.data = orig_text.replace(to_replace, selector.value)
+    }
+  }
+  selector.addEventListener("change", onchange)
+  onchange()
+}
+setup_replace("--character--", "container", "playerChoice")
+// thanks to Twitter/GitHub user "coolreader18" for this bit of code :D
+function setup_replace(to_replace, div_class, select_id) {
+  const texts = [];
+  // collect all of the text nodes under any .text_div into `texts`
+  for (const div of document.getElementsByClassName(div_class)) {
+    const walker = document.createTreeWalker(div, NodeFilter.SHOW_TEXT, null, false);
+    let text;
+    while (text = walker.nextNode()) {
+      texts.push([text, text.data])
+    }
+  }
+  const inp = document.getElementById(select_id)
+  function onchange() {
+    for (const [text, orig_text] of texts) {
+      text.data = orig_text.replace(to_replace, inp.value)
+    }
+  }
+  inp.addEventListener("input", onchange)
+  onchange()
+}
+setup_replace("--hungrylumaprice--", "container", "hlPrice")
+</script>
+
+</body>
+</html>
