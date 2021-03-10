@@ -23,7 +23,7 @@ Special Thanks
 
 My Patreons:
 * Tier Whatever the Fuck
-  * Stephanie Wolf
+  * chronikerDelta
 * Tier 1
   * Nate Matthews
   * SuperStarGuy
