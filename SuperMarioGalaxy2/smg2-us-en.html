@@ -3615,6 +3615,16 @@
   <div class="description">On the first platform on the Pond Planet.</div>
 </div>
 
+<div id=testing>
+  <div class="name">Sign Board <font class="galaxy">Fluffy Bluff Galaxy</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign>sure, i can work on Peruse, but</br>now the only way i can do it</br> is on a chromebook. a CHROMEBOOK!!</div>
+  </div>
+  <a href="#testing"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">i'm LITERALLY crying</div>
+</div>
+
 
 <script>
 (function () {
@@ -3623,26 +3633,26 @@
   for(i = 0; i < nameElements.length; i++) {
     console.log(nameElements[i]);
     var name = nameElements[i].innerHTML.replace(/ <.*$/,''); //remove everything past <
-	console.log(name);
-	if(document.getElementsByClassName(name).length < 1) {
-		var option = document.createElement("option");
-		option.value = name;
-		option.innerHTML = name;
-		option.className = name;
-		document.getElementById("charactertag").appendChild(option);
-	}
+        console.log(name);
+        if(document.getElementsByClassName(name).length < 1) {
+                var option = document.createElement("option");
+                option.value = name;
+                option.innerHTML = name;
+                option.className = name;
+                document.getElementById("charactertag").appendChild(option);
+        }
   }
   for(i = 0; i < nameElements.length; i++) {
     console.log(nameElements[i]);
     var name = nameElements[i].firstElementChild.innerText; 
-	console.log(name);
-	if(document.getElementsByClassName(name).length < 1) {
-		var option = document.createElement("option");
-		option.value = name;
-		option.innerHTML = name;
-		option.className = name;
-		document.getElementById("stagetag").appendChild(option);
-	}
+        console.log(name);
+        if(document.getElementsByClassName(name).length < 1) {
+                var option = document.createElement("option");
+                option.value = name;
+                option.innerHTML = name;
+                option.className = name;
+                document.getElementById("stagetag").appendChild(option);
+        }
   }
 })();
 
@@ -3655,22 +3665,22 @@ function characterSort() {
     if(characterName != "None"){
       console.log(nameElements[i]);
       if(name != characterName) {
-		if(nameElements[i].parentElement.parentElement.className === "conversation") {
-			nameElements[i].parentElement.parentElement.style.display = "none";
-		} else {
-			nameElements[i].parentElement.style.display = "none";
-		}
+                if(nameElements[i].parentElement.parentElement.className === "conversation") {
+                        nameElements[i].parentElement.parentElement.style.display = "none";
+                } else {
+                        nameElements[i].parentElement.style.display = "none";
+                }
       }
       else {
-			if(nameElements[i].parentElement.parentElement.className === "conversation") {
-				nameElements[i].parentElement.parentElement.style.display = "revert";
-			} else {
-				nameElements[i].parentElement.style.display = "revert";
-			}
-		}
+                        if(nameElements[i].parentElement.parentElement.className === "conversation") {
+                                nameElements[i].parentElement.parentElement.style.display = "revert";
+                        } else {
+                                nameElements[i].parentElement.style.display = "revert";
+                        }
+                }
     } else {
       nameElements[i].parentElement.style.display = "revert";
-	  nameElements[i].parentElement.parentElement.style.display = "revert";
+          nameElements[i].parentElement.parentElement.style.display = "revert";
     }
   } 
 }
@@ -3683,22 +3693,22 @@ function stageSort() {
     if(stageName != "None"){
       console.log(stage);
       if(stage.trim() != stageName) {
-		if(nameElements[i].parentElement.parentElement.className === "conversation") {
-			nameElements[i].parentElement.parentElement.style.display = "none";
-		} else {
-			nameElements[i].parentElement.style.display = "none";
-		}
+                if(nameElements[i].parentElement.parentElement.className === "conversation") {
+                        nameElements[i].parentElement.parentElement.style.display = "none";
+                } else {
+                        nameElements[i].parentElement.style.display = "none";
+                }
       }
       else {
-			if(nameElements[i].parentElement.parentElement.className === "conversation") {
-				nameElements[i].parentElement.parentElement.style.display = "revert";
-			} else {
-				nameElements[i].parentElement.style.display = "revert";
-			}
-		}
+                        if(nameElements[i].parentElement.parentElement.className === "conversation") {
+                                nameElements[i].parentElement.parentElement.style.display = "revert";
+                        } else {
+                                nameElements[i].parentElement.style.display = "revert";
+                        }
+                }
     } else {
       nameElements[i].parentElement.style.display = "revert";
-	  nameElements[i].parentElement.parentElement.style.display = "revert";
+          nameElements[i].parentElement.parentElement.style.display = "revert";
     }
   } 
 }
