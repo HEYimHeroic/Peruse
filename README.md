@@ -20,10 +20,3 @@ Special Thanks
 * [Twitter](https://twitter.com/coolreader18)/[GitHub user "coolreader18"](https://github.com/coolreader18/)
 * [GitHub user "sticks-stuff"](https://github.com/sticks-stuff)
 * [Twitter user "mkkdotcom"](https://twitter.com/mkkdotcom)
-
-My Patreons:
-* Tier Whatever the Fuck
-  * chronikerDelta
-* Tier 1
-  * Nate Matthews
-  * SuperStarGuy
