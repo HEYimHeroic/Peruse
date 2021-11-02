@@ -309,6 +309,20 @@
   <option value="Mario">Mario</option>
   <option value="Luigi">Luigi</option>
 </select>
+
+<label for="backgroundColor">Background Color:</label>
+
+<input type="color" id="backgroundColor" name="backgroundColor" value="#ffffff">
+
+<script>
+  document.getElementById("backgroundColor").addEventListener("change", watchColorPicker, false);
+  function watchColorPicker(event) {
+    document.querySelectorAll("body").forEach(function(p) {
+      p.style.backgroundColor = event.target.value;
+    });
+  }  
+</script>
+
 </br>
 <label for="playerChoice1">Enter a price for the Hungry Lumas (default is "300"):</label>
 
