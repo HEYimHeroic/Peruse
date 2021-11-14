@@ -65,6 +65,77 @@
   white-space: pre;
 }
 
+.smgLetterTo {
+  position: absolute;
+  top: 3.333vw;
+  left: 3.542vw;
+  text-align: left;
+  font-size: 2.604vw;
+  font-family: Delfino;
+  line-height: 1.157;
+  letter-spacing: 0vw;
+  word-spacing: 0.434vw;
+  white-space: pre;
+}
+
+.smgLetterBody {
+  position: absolute;
+  top: 8.229vw;
+  left: 4.063vw;
+  text-align: left;
+  font-size: 2.292vw;
+  font-family: Delfino;
+  line-height: 2.659vw;
+  letter-spacing: 0vw;
+  word-spacing: 0.434vw;
+  white-space: pre;
+}
+
+.smgLetterFrom {
+  position: absolute;
+  top: 27.708vw;
+  right: 21.875vw;
+  text-align: right;
+  font-size: 2.604vw;
+  font-family: Delfino;
+  line-height: 1.157;
+  letter-spacing: 0vw;
+  word-spacing: 0.434vw;
+  white-space: pre;
+}
+
+.letterPeach {
+  color: #ff5a96;
+}
+
+.letterRosetta {
+  color: #3C96C8;
+}
+
+.letterLuiji {
+  color: #5A8C64;
+}
+
+.letterRabbit {
+  color: #966E46;
+}
+
+.letterBee {
+  color: #964F32;
+}
+
+.letterCaretaker {
+  color: #3C3640;
+}
+
+.letterPichan {
+  color: #3C3640;
+}
+
+.letterChimp {
+  color: #3232DC;
+}
+
 .smgBook {
   position: relative;
   display: flex;
@@ -241,6 +312,14 @@
   filter: drop-shadow(0.174vw 0.174vw #3c3c3c4d);
 }
 
+.iconFix {
+  height: 3.698vw;
+  position: absolute;
+  -webkit-filter: drop-shadow(0.174vw 0.174vw #3c3c3c4d);
+  filter: drop-shadow(0.174vw 0.174vw #3c3c3c4d);
+  transform: translate(0%, 36%);
+}
+
 .iconBook {
   height: 2.5vw;
   position: relative;
@@ -268,6 +347,13 @@
   display: inline-block;
   width: 3.177vw;
   height: 0.1vw
+}
+
+.icoFix {
+  display: inline-block;
+  width: 3.177vw;
+  height: 0.1vw
+  transform: translate(0%, 25%);
 }
 
 .icoLarge {
@@ -328,6 +414,16 @@
 <label for="playerChoice1">Enter a price for the Hungry Lumas (default is "300"):</label>
 
 <input type="text" id="hlPrice" value="300" maxlength="10" placeholder="300"/> Note that it can not normally be blank, can only contain numbers, and normally only goes up to 4 characters.
+
+</br>
+<label for="saScore">Enter a highscore for The Chimp (default is "10000"):</label>
+
+<input type="text" id="saScore" value="10000" maxlength="10" placeholder="10000"/> Note that it can not normally be blank, can only contain numbers, and normally only goes up to 5 characters.
+
+</br>
+<label for="plScore">Enter a current score for the player (default is "100"):</label>
+
+<input type="text" id="plScore" value="100" maxlength="10" placeholder="100"/> Note that it can not normally be blank, can only contain numbers, and normally only goes up to 5 characters.
 
 <div class=conversation id=Layout_PrologueText-PrologueText_Pro>
 <a href="#Layout_PrologueText-PrologueText_Pro"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
@@ -1799,7 +1895,7 @@
     <div class=smgSign><font class=blue>Press </font><img class=icon src="icon/Zbutton.png" alt="[Z Button icon]"><span class=ico></span> in the air to do a <font class=red>ground</br>pound</font>! You can use it to flatten</br>your foes.</div>
   </div>
   <a href="#MarioFaceShipZone-SignBoard004"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
-  <div class="description">A Sign Board near the back of Starship Mario.</div>
+  <div class="description">A Sign Board behind Starship Mario's right ear.</div>
 </div>
 
 <div id=MarioFaceShipZone-SignBoard002>
@@ -3039,7 +3135,7 @@
     <div class=smgTalk>Which will it be?</div>
   </div>
   <a href="#TicoShop-TicoShop004"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
-  <div class="description">Selecting "Buy" when talking to Lumalee, and having 30 Star Bits or more.</br>The player is again given two choices: "<img class=icondesc src="icon/1up.png" alt="[1-UP Mushroom icon]"><span class=ico style="width: 1vw;"></span> 1-Up " and "<img class=icondesc src="icon/lifeup.png" alt="[Life Mushroom icon]"><span class=ico style="width: 1vw;"></span> Life". They both lead to <a href="#TicoShop-TicoShop005">#TicoShop-TicoShop005</a>.</div>
+  <div class="description">Selecting "Buy" when talking to Lumalee, and having 30 Star Bits or more.</br>The player is again given two choices: "<img class=icondesc src="icon/1up.png" alt="[1-Up Mushroom icon]"><span class=ico style="width: 1vw;"></span> 1-Up " and "<img class=icondesc src="icon/lifeup.png" alt="[Life Mushroom icon]"><span class=ico style="width: 1vw;"></span> Life". They both lead to <a href="#TicoShop-TicoShop005">#TicoShop-TicoShop005</a>.</div>
 </div>
 
 <div id=TicoShop-TicoShop005>
@@ -3049,7 +3145,7 @@
     <div class=smgTalk>All right! Now fill me up with</br>exact change!</div>
   </div>
   <a href="#TicoShop-TicoShop005"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
-  <div class="description">Selecting either "<img class=icondesc src="icon/1up.png" alt="[1-UP Mushroom icon]"><span class=ico style="width: 1vw;"></span> 1-Up " or "<img class=icondesc src="icon/lifeup.png" alt="[Life Mushroom icon]"><span class=ico style="width: 1vw;"></span> Life" when talking to Lumalee. A short animation plays afterwards where Lumalee is fed 30 Star Bits.</div>
+  <div class="description">Selecting either "<img class=icondesc src="icon/1up.png" alt="[1-Up Mushroom icon]"><span class=ico style="width: 1vw;"></span> 1-Up " or "<img class=icondesc src="icon/lifeup.png" alt="[Life Mushroom icon]"><span class=ico style="width: 1vw;"></span> Life" when talking to Lumalee. A short animation plays afterwards where Lumalee is fed 30 Star Bits.</div>
 </div>
 
 <div class=conversation id=TicoShop-TicoShop006>
@@ -3119,7 +3215,7 @@
   <div class="name yellow">Yellow Toad <font class="galaxy">Starship Mario</font></div>
   <div class=container>
     <img src="smg.png" style="width: 64.323vw;">
-    <div class=smgTalk>Hey--everyone's waiting for you on</br>the <font class=red>Starshroom</font>! We found a <img class=icon src="icon/1up.png" alt="[1-UP Mushroom icon]"><span class=ico></span>,</br>so we're keeping it there for you.</div>
+    <div class=smgTalk>Hey--everyone's waiting for you on</br>the <font class=red>Starshroom</font>! We found a <img class=icon src="icon/1up.png" alt="[1-Up Mushroom icon]"><span class=ico></span>,</br>so we're keeping it there for you.</div>
   </div>
   <a href="#MarioFaceShipZone-Kinopio004_Flow011"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
   <div class="description">Yellow Toad standing in front of a Warp Pad in Starship Mario's right ear.</div>
@@ -3144,7 +3240,7 @@
     <div class=smgTalk>When that <font class=red><img class=icon src="icon/bowser.png" alt="[Bowser icon]"><span class=ico></span> monster </font>did us in, I fell</br>to the ground in front of that castle...</div>
   </div>
   <a href="#MarioFaceShipZone-Tico050_Flow000-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
-  <div class="description">The yellow Luma on the Starshroom.</div>
+  <div class="description">The yellow Luma on the Starshroom during World 1.</div>
 </div>
 
 <div id=MarioFaceShipZone-Tico050_Flow000-1>
@@ -3246,7 +3342,7 @@
     <div class=smgTalk>That spaceship is supposed to look</br>like Mario, but if you ask me, it looks</br>more like <img class=icon src="icon/luigi.png" alt="[Luigi icon]"><span class=ico></span> <font class=green>Luigi</font>.</div>
   </div>
   <a href="#MarioFaceShipZone-Kinopio005_Flow000-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
-  <div class="description">Mailtoad on the Starshroom.</div>
+  <div class="description">Mailtoad on the Starshroom during World 1.</div>
 </div>
 
 <div id=MarioFaceShipZone-Kinopio005_Flow000-1>
@@ -4274,6 +4370,118 @@ thinking about it! <wait time="15"/>Ready, Captain?</div>
 </div>
 </div>
 
+<div class=conversation id=MeisterTalk-Meister_NormalTalkWorld2_Flow000>
+<a href="#MeisterTalk-Meister_NormalTalkWorld2_Flow000"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=MeisterTalk-Meister_NormalTalkWorld2_Flow000-0>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>There's a lotta <font class=red><img class=icon src="icon/hungryluma.png" alt="[Hungry Luma icon]"><span class=ico></span> <font class=red>Hungry Lumas </font>out</br>there in space.</div>
+  </div>
+  <a href="#MeisterTalk-Meister_NormalTalkWorld2_Flow000-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">Talking to Lubba during World 2 (before 18 Power Stars), and when he has no other messages to say.</div>
+</div>
+
+<div id=MeisterTalk-Meister_NormalTalkWorld2_Flow000-1>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Those guys have <font class=red>huge appetites</font>, so</br>try to collect as many <font class=blue><img class=icon src="icon/starbit.png" alt="[Purple Star Bit icon]"><span class=ico></span> Star Bits <font class=black>as</br>you can<font class=blue></font>! You're gonna need 'em!</div>
+  </div>
+  <a href="#MeisterTalk-Meister_NormalTalkWorld2_Flow000-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description"> </div>
+</div>
+</div>
+
+<div class=conversation id=MarioFaceShipZone-Tico050_Flow001>
+<a href="#MarioFaceShipZone-Tico050_Flow001"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=MarioFaceShipZone-Tico050_Flow001-0>
+  <div class="name yellow">Luma <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Captain --character--, the <font class=red>young master</font></br><img class=icon src="icon/masterluma.png" alt="[Master Luma icon]"><span class=ico></span> <font class=red>Luma </font>in your cap has a <font class=blue>special</br>power</font>!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Tico050_Flow001-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The yellow Luma on the Starshroom during World 2.</div>
+</div>
+
+<div id=MarioFaceShipZone-Tico050_Flow001-1>
+  <div class="name yellow">Luma <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>It's the power to <font class=blue>spin</font>, Captain!</br>Just shake <img class=icon src="icon/wiimote.png" alt="[Wii Remote icon]"><span class=ico></span>!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Tico050_Flow001-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description"> </div>
+</div>
+</div>
+
+<div class=conversation id=MarioFaceShipZone-Kinopio001_Flow001>
+<a href="#MarioFaceShipZone-Kinopio001_Flow001"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=MarioFaceShipZone-Kinopio001_Flow001-0>
+  <div class="name red">Captain Toad <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>We have access to a new world! Now</br>we can boldly explore new places.</div>
+  </div>
+  <a href="#MarioFaceShipZone-Kinopio001_Flow001-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">Captain Toad on the Starshroom, during World 2.</div>
+</div>
+
+<div id=MarioFaceShipZone-Kinopio001_Flow001-1>
+  <div class="name red">Captain Toad <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Everyone shall see the glory of the</br><font class=red>Toad Brigade <font class=black>as we streak across</br>the cosmos<font class=red></font>!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Kinopio001_Flow001-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description"> </div>
+</div>
+</div>
+
+<div class=conversation id=MarioFaceShipZone-Kinopio002_Flow001>
+<a href="#MarioFaceShipZone-Kinopio002_Flow001"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=MarioFaceShipZone-Kinopio002_Flow001-0>
+  <div class="name blue">Hint Toad <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>If you get a <img class=icon src="icon/grandstar.png" alt="[Grand Star icon]"><span class=ico></span> <font class=red>Grand Star<font class=black>, <font class=red></font>you</br>can use its power to open up a <font class=blue>portal</br>to a new world</font>!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Kinopio002_Flow001-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">Hint Toad on the Starshroom, during World 2.</div>
+</div>
+
+<div id=MarioFaceShipZone-Kinopio002_Flow001-1>
+  <div class="name blue">Hint Toad <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Then you'll be able to travel to new</br>worlds and search for even more</br><img class=icon src="icon/powerstar.png" alt="[Power Star icon]"><span class=ico></span> <font class=yellow>Power Stars</font>!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Kinopio002_Flow001-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description"> </div>
+</div>
+
+<div id=MarioFaceShipZone-Kinopio002_Flow001-2>
+  <div class="name blue">Hint Toad <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Keep that up, and I bet you'll be</br>able to figure out where <font class=blue>Bowser</font> is!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Kinopio002_Flow001-2"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description"> </div>
+</div>
+</div>
+
+<div id=MarioFaceShipZone-Kinopio005_Flow000>
+  <div class="name purple">Mailtoad <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Here--have a <img class=icon src="icon/1up.png" alt="[1-Up Mushroom icon]"><span class=ico></span> <font class=green>1-Up Mushroom</font>!</br>Hope it's useful!</div>
+  </div>
+  <a href="#MarioFaceShipZone-Kinopio005_Flow000-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">Mailtoad on the Starshroom during World 2, before 13 Power Stars.</div>
+</div>
+
 <div id=Meister-Meister_200EventNotice_Flow000>
   <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
   <div class=container>
@@ -4317,6 +4525,18 @@ thinking about it! <wait time="15"/>Ready, Captain?</div>
 </div>
 </div>
 
+<div id=Layout_PostLetter-PostmanLetterPeach_Body>
+  <div class="name">Letter <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smgLetterPeach.png" style="width: 53vw;">
+    <div class="smgLetterTo letterPeach">Mario</br></div>
+    <div class="smgLetterBody letterPeach">I am very far away right now. But I'm</br>OK! I know you will come save me!</br></br>P.S. I've attached something to this</br>letter. I hope it will be useful...</br></div>
+    <div class="smgLetterFrom letterPeach">Peach</div>
+  </div>
+  <a href="#Layout_PostLetter-PostmanLetterPeach_Body"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">Peach's letter addressed to Mario. Included is typically at least one <img class=icondesc src="icon/1up.png" alt="[1-Up Mushroom icon]"><span class=ico style="width: 1vw;"></span> 1-Up Mushroom.</div>
+</div>
+
 <div class=conversation id=MarioFaceShipZone-KinopioPostmanOpen_Flow002>
 <a href="#MarioFaceShipZone-KinopioPostmanOpen_Flow002"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
 <div id=MarioFaceShipZone-KinopioPostmanOpen_Flow002-0>
@@ -4336,7 +4556,7 @@ thinking about it! <wait time="15"/>Ready, Captain?</div>
     <div class=smgTalk>Aw... Even when she's kidnapped, the</br>princess is so thoughtful!</div>
   </div>
   <a href="#MarioFaceShipZone-KinopioPostmanOpen_Flow002-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
-  <div class="description">(I'll add the letters themselves later... I can't be bothered to add a new textbox layout right now lol)</div>
+  <div class="description"> </div>
 </div>
 
 <div id=MarioFaceShipZone-KinopioPostmanOpen_Flow002-2>
@@ -4346,6 +4566,558 @@ thinking about it! <wait time="15"/>Ready, Captain?</div>
     <div class=smgTalk>Well, come see me next time there's</br>a mail delivery.</font></div>
   </div>
   <a href="#MarioFaceShipZone-KinopioPostmanOpen_Flow002-2"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description"> </div>
+</div>
+</div>
+
+<div id=MarioFaceShipZone-KinopioPostmanNoNewLetter_Flow000>
+  <div class="name purple">Mailtoad <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Hello! I've held on to every <font class=red><img class=icon src="icon/letter.png" alt="[Mail icon]"><span class=ico></span> <font class=black>I've</br>received! Here--look...<font class=red></font></div>
+  </div>
+  <a href="#MarioFaceShipZone-KinopioPostmanNoNewLetter_Flow000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">Talking to Mailtoad when he has no letters to deliver. The player then gets to browse all previous letters they've received.</div>
+</div>
+
+<div id=MarioFaceShipZone-KinopioPostmanNoNewLetter_Flow001>
+  <div class="name purple">Mailtoad <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Come see me next time there's a</br>mail delivery!</div>
+  </div>
+  <a href="#MarioFaceShipZone-KinopioPostmanNoNewLetter_Flow001"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">Mailtoad when he has no letters to deliver, and the player is finished browsing all previous letters they've received.</div>
+</div>
+
+<div id=MarioFaceShipZone-KinopioPostmanLetterPeach_Flow000>
+  <div class="name purple">Mailtoad <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>--character--! You got a letter from</br><font class=red>Princess Peach</font>!</div>
+  </div>
+  <a href="#MarioFaceShipZone-KinopioPostmanLetterPeach_Flow000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">Mailtoad once per day when the player first plays their save file. The letter is <a href="#Layout_PostLetter-PostmanLetterPeach_Body">#Layout_PostLetter-PostmanLetterPeach_Body</a>.</div>
+</div>
+
+<div class=conversation id=MarioFaceShipZone-KinopioPostmanLetterPeach_Flow001>
+<a href="#MarioFaceShipZone-KinopioPostmanLetterPeach_Flow001"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=MarioFaceShipZone-KinopioPostmanLetterPeach_Flow001-0>
+  <div class="name purple">Mailtoad <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk><font class=black>Princess Peach included <font class=red>five<font class=black> <img class=icon src="icon/1up.png" alt="[1-Up Mushroom icon]"><span class=ico></span> <font class=green>1-Up</br>Mushrooms <font class=black>in her letter!</div>
+  </div>
+  <a href="#MarioFaceShipZone-KinopioPostmanLetterPeach_Flow001-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">Mailtoad after the player is finished reading the daily Peach letter, and if they're playing as Mario.</div>
+</div>
+
+<div id=MarioFaceShipZone-KinopioPostmanLetterPeach_Flow001-1>
+  <div class="name purple">Mailtoad <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Aw... Even when she's kidnapped, the</br>princess is so thoughtful!</div>
+  </div>
+  <a href="#MarioFaceShipZone-KinopioPostmanLetterPeach_Flow001-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description"> </div>
+</div>
+
+<div id=MarioFaceShipZone-KinopioPostmanLetterPeach_Flow001-2>
+  <div class="name purple">Mailtoad <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Well, come see me next time there's</br>a mail delivery.</font></div>
+  </div>
+  <a href="#MarioFaceShipZone-KinopioPostmanLetterPeach_Flow001-2"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description"> </div>
+</div>
+</div>
+
+<div class=conversation id=MarioFaceShipZone-KinopioPostmanLetterPeach_Flow002>
+<a href="#MarioFaceShipZone-KinopioPostmanLetterPeach_Flow002"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=MarioFaceShipZone-KinopioPostmanLetterPeach_Flow002-0>
+  <div class="name purple">Mailtoad <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk><font class=black>There were <font class=red>five<font class=black> <img class=icon src="icon/1up.png" alt="[1-Up Mushroom icon]"><span class=ico></span> <font class=green>1-Up Mushrooms<font class=black></br>attached to the <font class=red>letter<font class=black>!</div>
+  </div>
+  <a href="#MarioFaceShipZone-KinopioPostmanLetterPeach_Flow002-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">Mailtoad after the player is finished reading the daily Peach letter, and if they're playing as Luigi.</div>
+</div>
+
+<div id=MarioFaceShipZone-KinopioPostmanLetterPeach_Flow002-1>
+  <div class="name purple">Mailtoad <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Huh? It's addressed to <img class=icon src="icon/mario.png" alt="[Mario icon]"><span class=ico></span> <font class=red>Mario<font class=black>...</br>But, don't worry, <img class=icon src="icon/luigi.png" alt="[Luigi icon]"><span class=ico></span> <font class=green>Luigi<font class=black>! I'm sure it</br>was just a typo...</font></div>
+  </div>
+  <a href="#MarioFaceShipZone-KinopioPostmanLetterPeach_Flow002-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description"> </div>
+</div>
+</div>
+
+<div id=DashYoshiBridgeSlopeZone-Moc001>
+  <div class="name">Whittle <font class="galaxy">Hightail Falls Galaxy</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Climb fast!</div>
+  </div>
+  <a href="#DashYoshiBridgeSlopeZone-Moc001"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">A Whittle on the first planet before the first steep hill.</div>
+</div>
+
+<div id=DashYoshiBridgeSlopeZone-Moc000>
+  <div class="name">Whittle <font class="galaxy">Hightail Falls Galaxy</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout><font class=red>S</font><font class=red>picy <font class=black>pepper<font class=red></font>!</div>
+  </div>
+  <a href="#DashYoshiBridgeSlopeZone-Moc000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">A Whittle on the first planet next to the first Dash Pepper.</div>
+</div>
+
+<div id=DashYoshiWallClimbZone-SignBoard000>
+  <div class="name">Sign Board <font class="galaxy">Hightail Falls Galaxy</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign>To control <font class=red>Dash Yoshi</font>, tilt<font class=red> <img class=icon src="icon/joystick.png" alt="[Joystick icon]"><span class=ico></span><font class=blue> <font class=red><font class=black>in the</br>direction you want to go!<font class=red></font></div>
+  </div>
+  <a href="#DashYoshiWallClimbZone-SignBoard000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The sign in front of Yoshi's house in the first star in Sky Station Galaxy.</div>
+</div>
+
+<div id=DashYoshiWallClimbZone-PenguinMaster000>
+  <div class="name gray">Penguru <font class="galaxy">Hightail Falls Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Your skill has brought you very far...</br>Quite a view, is it not? <wait time="15"/>From here, it's</br>clear how important every <img class=icon src="icon/coin.png" alt="[Coin icon]"><span class=ico></span> truly is.</div>
+  </div>
+  <a href="#DashYoshiWallClimbZone-PenguinMaster000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">Penguru in the first star, at the top of the Giant Ramp Planet.</div>
+</div>
+
+<div id=MarioFaceShipZone-KinopioPostmanLetterNormal_Flow000>
+  <div class="name purple">Mailtoad <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>--character--! I have a <font class=red><img class=icon src="icon/letter.png" alt="[Mail icon]"><span class=ico></span> letter<font class=black> for you!<font class=red></font></div>
+  </div>
+  <a href="#MarioFaceShipZone-KinopioPostmanLetterNormal_Flow000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">Mailtoad when he has a new letter to deliver.</div>
+</div>
+
+<div id=Layout_PostLetter-PostmanLetterScoreAttack3_Body>
+  <div class="name">Letter <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smgLetterChimp.png" style="width: 53vw;">
+    <div class="smgLetterTo letterChimp">Invitation</br></div>
+    <div class="smgLetterBody letterChimp">Hey, remember me? I got a new game</br>over in the <font class=red>★Fluffy Bluff Galaxy★</font>.</br></br>Come on by and we'll do the whole</br>introductions thing. I wanna see</br>what kind of game skills you got.</div>
+    <div class="smgLetterFrom letterChimp">The Chimp</div>
+  </div>
+  <a href="#Layout_PostLetter-PostmanLetterScoreAttack3_Body"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Chimp's letter inviting the player to a challenge star in Fluffy Bluff Galaxy.</div>
+</div>
+
+<div id=MarioFaceShipZone-KinopioPostmanLetterNormal_Flow002>
+  <div class="name purple">Mailtoad <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Come see me next time there's a</br>mail delivery!</div>
+  </div>
+  <a href="#MarioFaceShipZone-KinopioPostmanLetterNormal_Flow002"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">Mailtoad when the player is done reading the new letter.</div>
+</div>
+
+<div id=DashYoshiWallClimbZone-SignBoard000>
+  <div class="name">Sign Board <font class="galaxy">Fluffy Bluff Galaxy</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign>Rack up points by <font class=red>stomping multiple</br>enemies </font>without touching the ground.</br>Spin in midair and <font class=blue>chain-stomp</font>!</div>
+  </div>
+  <a href="#DashYoshiWallClimbZone-SignBoard000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The sign at the beginning of The Chimp's star in Fluffy Bluff Galaxy.</div>
+</div>
+
+<div id=ScoreAttackMan-ScoreAttackMan_Call_Flow000>
+  <div class="name">The Chimp <font class="galaxy">Common</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Hey, pal!</div>
+  </div>
+  <a href="#ScoreAttackMan-ScoreAttackMan_Call_Flow000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Chimp, when the player begins moving from the starting area in a challenge star.</div>
+</div>
+
+<div class=conversation id=ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow000>
+<a href="#ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow000"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow000-0>
+  <div class="name">The Chimp <font class="galaxy">Common</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Say hey, I'm the greatest game player</br>in the galaxy. They call me <font class=red>The Chimp</font>.<wait time="15"/></br>Nice mustache.</div>
+  </div>
+  <a href="#ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow000-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Chimp when first talking to the player in a challenge star.</div>
+</div>
+
+<div id=ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow000-1>
+  <div class="name">The Chimp <font class="galaxy">Common</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>I've got the high <font class=red>score of </font><font class=red>--scoreattackscore--</font></br>on this game here. Pretty simple--just</br><font class=blue>s</font><font class=blue><font class=blue>tomp<font class=blue> the enemies<font class=black>, then grab <img class=icon src="icon/coin.png" alt="[Coin icon]"><span class=ico></span>!</div>
+  </div>
+  <a href="#ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow000-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description"> </div>
+</div>
+
+<div id=ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow000-2>
+  <div class="name">The Chimp <font class="galaxy">Common</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>If you can match or top my score, <font class=black>I'll</br>give you a<font class=black> <font class=black></font><img class=icon src="icon/powerstar.png" alt="[Power Star icon]"><span class=ico></span>... <wait time="15"/>And some respect.<wait time="15"/></br>Maybe. <wait time="15"/>So, you game or what?</div>
+  </div>
+  <a href="#ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow000-2"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The player is given two choices: "No" and "Yes".</br>"No" leads to <a href="#ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow002">#ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow002</a>. "Yes" leads to <a href="#ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow001">#ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow001</a>, and begins the challenge.</div>
+</div>
+</div>
+
+<div id=ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow002>
+  <div class="name">The Chimp <font class="galaxy">Common</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Yeah, I can be pretty intimidating, </br>I know. <wait time="15"/>C'mon--give it a try!</div>
+  </div>
+  <a href="#ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow002"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Chimp, when saying "No" to his challenge. The player is given two choices: "No" and "Yes".</br>"No" repeats this textbox. "Yes" leads to <a href="#ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow001">#ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow001</a>, and begins the challenge.</div>
+</div>
+
+<div id=ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow001>
+  <div class="name">The Chimp <font class="galaxy">Common</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>You're going for <font class=black><font class=red>--scoreattackscore-- points<font class=black>!</br>Good luck! <wait time="15"/>You're gonna need it, pal...</font></div>
+  </div>
+  <a href="#ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow001"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Chimp, when saying "Yes" to his challenge.</div>
+</div>
+
+<div id=ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow003>
+  <div class="name">The Chimp <font class="galaxy">Common</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>You've got <font class=red>--currentscore-- points<font class=black>. Don't</br>tell me you wanna start over?<font class=red></font></div>
+  </div>
+  <a href="#ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow003"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Chimp, when talking to him again during his challenge. The player is given two choices: "Start over" and "Continue".</br>"Start over" leads to <a href="#ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow011">#ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow011</a> and restarts the challenge.</br>"Continue" leads to <a href="#ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow004">#ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow004</a>, and resumes the challenge.</div>
+</div>
+
+<div id=ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow011>
+  <div class="name">The Chimp <font class="galaxy">Common</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Need to give it another try, eh?</div>
+  </div>
+  <a href="#ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow011"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Chimp, when choosing "Start over" during a challenge. The screen transitions to a level reset and leads to <a href="#ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow008">#ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow008</a></div>
+</div>
+
+<div id=ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow004>
+  <div class="name">The Chimp <font class="galaxy">Common</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Show me what you got!</div>
+  </div>
+  <a href="#ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow004"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Chimp, when choosing "Continue" during a challenge.</div>
+</div>
+
+<div id=ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow008>
+  <div class="name">The Chimp <font class="galaxy">Common</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Awww...whatsamatta? Don't you think</br>you can get <font class=red>--scoreattackscore-- points<font class=black>?<font class=red></font>!</div>
+  </div>
+  <a href="#ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow008"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Chimp, restarting a challenge. The challenge begins again after this.</div>
+</div>
+
+<div class=conversation id=ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow007>
+<a href="#ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow007"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow007-0>
+  <div class="name">The Chimp <font class="galaxy">Common</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Well, you scored...<font class=red>--currentscore-- points</font>!</div>
+  </div>
+  <a href="#ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow007-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Chimp, after the player runs out of time before scoring --scoreattackscore-- points.</div>
+</div>
+
+<div id=ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow007-1>
+  <div class="name">The Chimp <font class="galaxy">Common</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>That's not enough... <wait time="15"/>C'mon! You can</br>do better than that!</div>
+  </div>
+  <a href="#ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow007-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The player promptly dies following this.</div>
+</div>
+</div>
+
+<div id=ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow005>
+  <div class="name">The Chimp <font class="galaxy">Common</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Fantastic! That's <font class=red>--currentscore-- points<font class=black>!<font class=red></font></br>You might be an <font class=red>amazing rival</font> to</br>my own skill! Here is your<font class=black> </font><font class=yellow><img class=icon src="icon/powerstar.png" alt="[Power Star icon]"><span class=ico></span><font class=black>!<font class=yellow></font></div>
+  </div>
+  <a href="#ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow005"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Chimp, when the player successfully completes his challenge.</div>
+</div>
+
+<div id=ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow006>
+  <div class="name">The Chimp <font class="galaxy">Common</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>You're pretty good! You racked up</br><font class=red>--currentscore-- points<font class=black>! <font class=red></font><font class=black>Come back if you</br>wanna crack the <font class=red>high score<font class=black>.</font></div>
+  </div>
+  <a href="#ScoreAttackMan-ScoreAttackMan_ScoreAttack_Flow006"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Chimp, after giving the player the Power Star.</div>
+</div>
+
+<div id=Meister-Meister_11EventNotice_Flow000>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Well now...you've found quite a few of</br>those <img class=icon src="icon/powerstar.png" alt="[Power Star icon]"><span class=ico></span> <font class=yellow>Power Stars</font>, huh? We'll</br>keep <font class=red>track</font> of <font class=blue>how many</font> ya got.</div>
+  </div>
+  <a href="#Meister-Meister_11EventNotice_Flow000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The first interaction with Lubba after collecting 16 Power Stars.</div>
+</div>
+
+<div class=conversation id=MeisterTalk-Meister_11EventNotice_Flow001>
+<a href="#MeisterTalk-Meister_11EventNotice_Flow001"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=MeisterTalk-Meister_11EventNotice_Flow001-0>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk><font class=red><font class=black>That's it, <font class=red>the sign next to the helm</br><font class=black>right there<font class=red><font class=black>.<font class=red></font></div>
+  </div>
+  <a href="#MeisterTalk-Meister_11EventNotice_Flow001-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The second interaction with Lubba after collecting 16 Power Stars. The camera shows the blue sign next to the helm of Starship Mario.</div>
+</div>
+
+<div id=MeisterTalk-Meister_11EventNotice_Flow001-1>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>It'll also show ya the <font class=blue>whereabouts</font> of</br>some <font class=black>other </font><font class=blue><font class=black><img class=icon src="icon/powerstar.png" alt="[Power Star icon]"><span class=ico></span> Power Stars<font class=blue><font class=black>, if you're</br>interested.<font class=blue></font></div>
+  </div>
+  <a href="#MeisterTalk-Meister_11EventNotice_Flow001-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description"> </div>
+</div>
+</div>
+
+<div id=GoroMarioHomeZone-Kinopio003>
+  <div class="name yellow">Yellow Toad <font class="galaxy">Boulder Bowl Galaxy</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Hard work... Zzz...</div>
+  </div>
+  <a href="#GoroMarioHomeZone-Kinopio003"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">Yellow Toad sleeping by the big purple rock on the first planet.</div>
+</div>
+
+<div class=conversation id=GoroMarioHomeZone-Kinopio000_Flow000>
+<a href="#GoroMarioHomeZone-Kinopio000_Flow000"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=GoroMarioHomeZone-Kinopio000_Flow000-0>
+  <div class="name green">Banktoad <font class="galaxy">Boulder Bowl Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>I'm NEVER going to be able to break</br>this thing... I can't believe the</br>captain is making me do this!</div>
+  </div>
+  <a href="#GoroMarioHomeZone-Kinopio000_Flow000-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">Banktoad mining the big purple rock on the first planet with a pickaxe.</div>
+</div>
+
+<div id=GoroMarioHomeZone-Kinopio000_Flow000-1>
+  <div class="name green">Banktoad <font class="galaxy">Boulder Bowl Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk><font class=talkSmall>Grumble grumble...</div>
+  </div>
+  <a href="#GoroMarioHomeZone-Kinopio000_Flow000-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description"> </div>
+</div>
+</div>
+
+<div id=GoroMarioHomeZone-Kinopio000_Flow002>
+  <div class="name green">Banktoad <font class="galaxy">Boulder Bowl Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>WHOA! You made that look easy!</div>
+  </div>
+  <a href="#GoroMarioHomeZone-Kinopio000_Flow002"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">Banktoad after breaking the big purple rock with the Rock Mushroom.</div>
+</div>
+
+<div class=conversation id=GoroMarioHomeZone-SignBoard002>
+<a href="#GoroMarioHomeZone-SignBoard002"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=GoroMarioHomeZone-SignBoard002-0>
+  <div class="name">Sign Board <font class="galaxy">Yoshi Star Galaxy</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign>You can change your camera view</br>with <img class=icon src="icon/Dpad.png" alt="[D-Pad icon]"><span class=ico></span>. You'll hear a beep if you</br>can't get a better view.</div>
+  </div>
+  <a href="#GoroMarioHomeZone-SignBoard002-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Sign Board behind the big purple rock on the first planet.</div>
+</div>
+
+<div id=GoroMarioHomeZone-SignBoard002-1>
+  <div class="name">Sign Board <font class="galaxy">Yoshi Star Galaxy</font></div>
+  <div class=container>
+    <img src="smgSign.png" style="width: 64.323vw;">
+    <div class=smgSign><font class=red>Press <img class=icon src="icon/Cbutton.png" alt="[C Button icon]"><span class=ico></span> </font>on <img class=icon src="icon/nunchuk.png" alt="[Nunchuk icon]"><span class=ico></span> to <font class=blue>reset</font> the view.</div>
+  </div>
+  <a href="#GoroMarioHomeZone-SignBoard002-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description"> </div>
+</div>
+</div>
+
+<div id=GoroMarioHomeBZone-SignBoard000>
+  <div class="name">Sign Board <font class="galaxy">Boulder Bowl Galaxy</font></div>
+  <div class=container>
+    <img src="smgShout.png" style="width: 64.323vw;">
+    <div class=smgShout>Get 'em, <font class=orange>P2</font>!</div>
+  </div>
+  <a href="#GoroMarioHomeBZone-SignBoard000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The sign at the beginning of the second planet in the first star in Boulder Bowl Galaxy. Only appears in P2 mode.</div>
+</div>
+
+<div class=conversation id=BigPeanutPlanetZone-Tico010>
+<a href="#BigPeanutPlanetZone-Tico010"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=BigPeanutPlanetZone-Tico010-0>
+  <div class="name yellow">Luma <font class="galaxy">Boulder Bowl Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>If you need health, shoot a <img class=icon src="icon/starbit.png" alt="[Purple Star Bit icon]"><span class=ico></span> at one</br>of those <font class=yellow>shiny spots on the ground</font>.</div>
+  </div>
+  <a href="#BigPeanutPlanetZone-Tico010-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The Luma at the start of the third planet.</div>
+</div>
+
+<div id=BigPeanutPlanetZone-Tico010-1>
+  <div class="name yellow">Luma <font class="galaxy">Boulder Bowl Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>A <img class=icon src="icon/coin.png" alt="[Coin icon]"><span class=ico></span> will pop out that will <font class=blue>restore</br>some of your life</font>!</div>
+  </div>
+  <a href="#BigPeanutPlanetZone-Tico010-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description"> </div>
+</div>
+</div>
+
+<div id=GoroRockGalaxy-Kinopio000_Flow000>
+  <div class="name purple">Mailtoad <font class="galaxy">Boulder Bowl Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>The captain told me to dig... But</br>there's no way there's anything here!</div>
+  </div>
+  <a href="#GoroRockGalaxy-Kinopio000_Flow000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">Mailtoad mining a large gray rock with a pickaxe on the third planet.</div>
+</div>
+
+<div id=GoroRockGalaxy-Kinopio000_Flow001>
+  <div class="name purple">Mailtoad <font class="galaxy">Boulder Bowl Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>NO...WAY! A <font class=green>pipe</font> appeared!</div>
+  </div>
+  <a href="#GoroRockGalaxy-Kinopio000_Flow001"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">Mailtoad after the player destroys the large gray rock he was mining at on the third planet.</div>
+</div>
+
+<div id=GoroRockGalaxy-Kinopio000_Flow001>
+  <div class="name blue">Hint Toad <font class="galaxy">Boulder Bowl Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>I can't see a thing without my</br>glasses! I hope they're safe!</div>
+  </div>
+  <a href="#GoroRockGalaxy-Kinopio000_Flow001"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">Hint Toad with his glasses on his ground, mining at them with a pickaxe on the third planet.</div>
+</div>
+
+<div class=conversation id=BigPeanutPlanetZone-Kinopio000>
+<a href="#BigPeanutPlanetZone-Kinopio000"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=BigPeanutPlanetZone-Kinopio000-0>
+  <div class="name red">Captain Toad <font class="galaxy">Boulder Bowl Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Treasure hunting, treasure hunting...</div>
+  </div>
+  <a href="#BigPeanutPlanetZone-Kinopio000-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">Captain Toad next to Hint Toad on the third planet.</div>
+</div>
+
+<div id=BigPeanutPlanetZone-Kinopio000-1>
+  <div class="name red">Captain Toad <font class="galaxy">Boulder Bowl Galaxy</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk><font class=talkLarge>Hey! <wait time="15"/><font class=talkNormal>Are you looking for a <img class=iconFix src="icon/powerstar.png" alt="[Power Star icon]"><span class=icoFix></span> too?</div>
+  </div>
+  <a href="#BigPeanutPlanetZone-Kinopio000-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description"> </div>
+</div>
+</div>
+
+<div id=Meister-Meister_203EventNotice_Flow000>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk><font class=black>You seem to have brought back a,</br>whuzzat? A rock, huh? <wait time="15"/>Yeah...<wait time="30"/></br>Good work there, pal... I guess.</font></div>
+  </div>
+  <a href="#Meister-Meister_203EventNotice_Flow000"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The first interaction with Lubba in the engine room after collecting the first star in Boulder Bowl Galaxy. The camera is focused on a Rock Mushroom in a display case.</div>
+</div>
+
+<div id=Meister-Meister_203EventNotice_Flow001>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Well, looks like we got the room for</br>it, so I don't mind having it around!</div>
+  </div>
+  <a href="#Meister-Meister_203EventNotice_Flow001"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">The second interaction with Lubba in the engine room after collecting the first star in Boulder Bowl Galaxy. The camera pulls back to Lubba and Mario.</div>
+</div>
+
+<div class=conversation id=MeisterTalk-Meister_NormalTalkWorld2_Flow001>
+<a href="#MeisterTalk-Meister_NormalTalkWorld2_Flow001"><img class=iconLink src="icon/linkConv.png" alt="[Conversation Link button]"></a>
+<div id=MeisterTalk-Meister_NormalTalkWorld2_Flow001-0>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Say, you been collecting <img class=icon src="icon/coin.png" alt="[Coin icon]"><span class=ico></span> <font class=red>coins</font>?</div>
+  </div>
+  <a href="#MeisterTalk-Meister_NormalTalkWorld2_Flow001-0"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description">Talking to Lubba during World 2 (after 18 Power Stars), and when he has no other messages to say.</div>
+</div>
+
+<div id=MeisterTalk-Meister_NormalTalkWorld2_Flow001-1>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>I really like <font class=yellow><img class=icon src="icon/coin.png" alt="[Coin icon]"><span class=ico></span> coins</font>. I just love that</br>noise they make... That <soundeffect><font class=yellow>BA-DINGG</font>!</br>Har har! I can't get enough!</div>
+  </div>
+  <a href="#MeisterTalk-Meister_NormalTalkWorld2_Flow001-1"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
+  <div class="description"> </div>
+</div>
+
+<div id=MeisterTalk-Meister_NormalTalkWorld2_Flow001-2>
+  <div class="name purple">Lubba <font class="galaxy">Starship Mario</font></div>
+  <div class=container>
+    <img src="smg.png" style="width: 64.323vw;">
+    <div class=smgTalk>Tell ya what--I'll give you a <img class=icon src="icon/1up.png" alt="[1-Up Mushroom icon]"><span class=ico></span> <font class=green>1-Up</br></font>for every <font class=red>100 </font>coins you collect. So</br>bring me as many as you can find!</div>
+  </div>
+  <a href="#MeisterTalk-Meister_NormalTalkWorld2_Flow001-2"><img class=iconLink src="icon/link.png" alt="[Textbox Link button]"></a>
   <div class="description"> </div>
 </div>
 </div>
@@ -4476,6 +5248,8 @@ function setup_replace(to_replace, div_class, select_id) {
   onchange()
 }
 setup_replace("--hungrylumaprice--", "container", "hlPrice")
+setup_replace("--scoreattackscore--", "container", "saScore")
+setup_replace("--currentscore--", "container", "plScore")
 </script>
 
 </body>
